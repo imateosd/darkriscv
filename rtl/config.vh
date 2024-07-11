@@ -195,7 +195,7 @@
 //`define __RMW_CYCLE__
 
 // UART speed is set in bits per second, typically 115200 bps:
-//`define __UARTSPEED__ 115200
+`define __UARTSPEED__ 115200
 
 // UART queue:
 //
@@ -213,6 +213,7 @@
 //`define AVNET_MICROBOARD_LX9
 //`define XILINX_AC701_A200
 //`define QMTECH_SDRAM_LX16
+`define BASYS_3_A35 // IMD
 
 // the following defines are automatically defined:
 
@@ -399,11 +400,18 @@
     `define XILINX6CLK 1
 `endif
 
+`ifdef BASYS_3_A35 //IMD
+    `define BOARD_ID 19
+    `define BOARD_CK 100000000
+//    `define INVRES 0
+`endif
+
+
 // to port to a new board, use TESTMODE to test:
 // - the reset button is working
 // - the LED is blinking at 1Hz
 // - the UART is looped
-//`define TESTMODE
+// `define TESTMODE
 
 `ifndef BOARD_ID
     `define BOARD_ID 0

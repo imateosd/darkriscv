@@ -29,11 +29,11 @@
  */
 
 `timescale 1ns / 1ps
-`include "../rtl/config.vh"
+`include "config.vh"
 
 module darksocv
 (
-    input        XCLK,      // external clock
+    input        CLK,      // external clock
     input        XRES,      // external reset
 
     input        UART_RXD,  // UART receive line
@@ -43,8 +43,8 @@ module darksocv
     output [3:0] DEBUG      // osciloscope
 );
 
-    wire CLK,RES;
-    
+    wire CLK,XRES;
+        
     darkpll darkpll0(.XCLK(XCLK),.XRES(XRES),.CLK(CLK),.RES(RES));
 
     // ro/rw memories
@@ -72,7 +72,7 @@ module darksocv
         $readmemh("darksocv.ram.mem",RAM);
     `else
         $readmemh("../src/darksocv.rom.mem",ROM);
-        $readmemh("../src/darksocv.ram.mem",RAM);
+        $readmemh("../src/darksocv.ram.mem",RAM); 
     `endif
     end
 
@@ -99,7 +99,7 @@ module darksocv
     `ifdef XILINX_SIMULATOR
         $readmemh("darksocv.mem",MEM);
 	 `elsif MODEL_TECH
-		  $readmemh("../../../../src/darksocv.mem",MEM);
+		  $readmemh("../src/darksocv.mem",MEM);
     `else
         $readmemh("../src/darksocv.mem",MEM,0);
     `endif
