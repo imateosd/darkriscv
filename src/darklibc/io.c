@@ -74,6 +74,7 @@ char *board_name(int id)
            id==16 ? "lattice ecp5-85F ulx3s" :
            id==17 ? "qmtech cyclone 10lp c016" :
            id==18 ? "piswords ch34x lx16" :
+           id==19 ? "basys3 artix-7 a35" :
                     "unknown";
 }
 

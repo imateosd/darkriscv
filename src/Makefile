@@ -46,7 +46,7 @@ endif
 ifndef CROSS
 
     export ARCH = rv32e
-    #ARCH = rv32i
+    #export ARCH = rv32i
     
     export ABI = ilp32e
     #ABI = ilp32
@@ -62,7 +62,7 @@ ifndef CROSS
     #CROSS = riscv32-embedded-elf
     
     #export CCPATH = /opt/riscv/bin
-    export CCPATH = /usr/local/share/gcc-$(CROSS)/bin/
+    export CCPATH = /usr/local/share/gcc-$(CROSS)/gcc-$(CROSS)/bin/
     #CCPATH = /usr/local/share/toolchain-$(CROSS)/bin
     #HARVARD = 1
 endif
@@ -112,7 +112,7 @@ ifdef SMALL
 endif
 
 # uncomment for hardware mul
-#export MAC = 1
+# export MAC = 1
 
 ifdef MAC
     CFLAGS += -DMAC=1

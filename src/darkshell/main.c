@@ -34,7 +34,7 @@
 int main(void)
 {
     unsigned mtvec=0;
-
+    printf("Compiled by Irene Mateos Domínguez\n");
     printf("board: %s (id=%d)\n",board_name(io->board_id),io->board_id);
     printf("build: %s for %s\n",BUILD,ARCH);
 
