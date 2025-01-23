@@ -33,17 +33,26 @@
 
 module darksocv
 (
-    input        CLK,      // external clock
-    input        XRES,      // external reset
+    input wire       XCLK,      // external clock
+    input wire       XRES,      // external reset
 
-    input        UART_RXD,  // UART receive line
-    output       UART_TXD,  // UART transmit line
+    input wire       UART_RXD,  // UART receive line
+    output wire      UART_TXD,  // UART transmit line
 
-    output [3:0] LED,       // on-board leds
-    output [3:0] DEBUG      // osciloscope
+    output wire[3:0] LED,       // on-board leds
+    output wire[3:0] DEBUG,      // osciloscope
+    inout  wire[7:0] GPIO,       // gpio
+    
+    inout wire       I2C_SDA,    // I2C SDA
+    inout wire       I2C_SCL,    // I2C SCL
+    
+    output wire      SPI_CLK,     // SPI CLK
+    input wire       SPI_MISO,    // SPI MISO
+    output wire      SPI_MOSI,    // SPI MOSI
+    output wire      SPI_CS     // SPI CS
 );
 
-    wire CLK,XRES;
+    wire CLK,RES;
         
     darkpll darkpll0(.XCLK(XCLK),.XRES(XRES),.CLK(CLK),.RES(RES));
 
@@ -124,10 +133,21 @@ module darksocv
     wire        RW;
 `endif
 
-    wire [31:0] IOMUX [0:4];
+    wire [31:0] IOMUX [0:6];
 
-    reg  [15:0] GPIOFF = 0;
+    reg  [15:0] GPIO_OUT_FF = 0;
+    reg  [15:0] GPIO_IN_FF;
+    reg  [15:0] GPIO_CTRL_FF = 0; // 0 input, 1 output
+    reg  [15:0] GPIO_DATA_FF = 0;
+    
     reg  [15:0] LEDFF  = 0;
+
+
+    // For I2C Master
+    reg  [23:0] i_byte_len;
+    reg  [7:0]  slave_addr;
+    reg  [15:0] i_sub_addr;
+    reg  [7:0]  i_data_write;
 
     wire HLT;
 
@@ -281,7 +301,9 @@ module darksocv
 
     //assign DATAI = DADDR[31] ? IOMUX[DADDR[3:2]]  : RAMFF;
     //assign DATAI = DADDR[31] ? IOMUXFF : RAMFF;
-    assign DATAI = XADDR[31] ? IOMUX[XADDR[4:2]==3'b100 ? 3'b100 : XADDR[3:2]] : RAMFF;
+//    assign DATAI = XADDR[31] ? IOMUX[ XADDR[4] == 1 ? XADDR[4:2] == 3'b111 ? 3'b101 : XADDR[4:2] : XADDR[3:2]] : RAMFF;
+    assign DATAI = XADDR[31] ? IOMUX[ XADDR[4] == 1 ? XADDR[4:2] : XADDR[3:2]] : RAMFF;
+
 
     // io for debug
 
@@ -303,11 +325,35 @@ module darksocv
     wire   [7:0] CORE_ID = 0;                       // core id
 `endif
 
+    //For I2C Master
+    wire [7:0]  i2c_data_out;
+    wire        i2c_valid_out;
+    wire        i2c_valid_out_latched;
+    wire        i2c_req_data_chunk;
+    wire        i2c_req_data_latched;
+    wire        i2c_busy;
+    wire        i2c_nack;
+
+    // For SPI Master
+    wire        spi_tx_ready;
+    wire        spi_tx_ready_latched;
+    wire        spi_rx_data_ready;
+    wire        spi_rx_data_ready_latched;
+    wire [7:0]  spi_rx_byte;
+    wire [1:0]  spi_rx_count; // [$clog2(MAX_BYTES_PER_CS+1)-1:0] en este caso con lo que hay escrito en la instanciación [1:0]
+
     assign IOMUX[0] = { BOARD_IRQ, CORE_ID, BOARD_CM, BOARD_ID };
     //assign IOMUX[1] = from UART!
-    assign IOMUX[2] = { GPIOFF, LEDFF };
+    assign IOMUX[2] = {GPIO_DATA_FF, LEDFF };
     assign IOMUX[3] = TIMERFF;
     assign IOMUX[4] = TIMEUS;
+    assign IOMUX[5] = {8'd0, spi_tx_ready_latched, spi_rx_byte, spi_rx_data_ready_latched, spi_rx_count, 12'd0}; // SPI
+//    assign IOMUX[6] = {20'd0, busy, req_data_chunk, nack, valid_out, data_out};
+    assign IOMUX[6] = {i2c_busy, i2c_req_data_latched, i2c_nack, i2c_valid_out_latched, 20'd0, i2c_data_out}; // I2C
+    assign IOMUX[7] = { 16'd0, GPIO_CTRL_FF }; // GPIO
+    
+    
+    
 
     reg [31:0] TIMER = 0;
 
@@ -315,58 +361,91 @@ module darksocv
 
     always@(posedge CLK)
     begin
-        if(WR&&DADDR[31]&&DADDR[3:0]==4'b1000)
-        begin
-            LEDFF <= DATAO[15:0];
-        end
-
-        if(WR&&DADDR[31]&&DADDR[3:0]==4'b1010)
-        begin
-            GPIOFF <= DATAO[31:16];
-        end
-
-        if(RES)
+        if(RES) begin
             TIMERFF <= (`BOARD_CK/1000000)-1; // timer set to 1MHz by default
-        else
-        if(WR&&DADDR[31]&&DADDR[3:0]==4'b1100)
-        begin
-            TIMERFF <= DATAO[31:0];
-        end
-
-        if(RES)
-            IACK <= 0;
-        else
-        if(WR&&DADDR[31]&&DADDR[3:0]==4'b0011)
-        begin
-            //$display("clear io.irq = %x (ireq=%x, iack=%x)",DATAO[32:24],IREQ,IACK);
-
-            IACK[7] <= DATAO[7+24] ? IREQ[7] : IACK[7];
-            IACK[6] <= DATAO[6+24] ? IREQ[6] : IACK[6];
-            IACK[5] <= DATAO[5+24] ? IREQ[5] : IACK[5];
-            IACK[4] <= DATAO[4+24] ? IREQ[4] : IACK[4];
-            IACK[3] <= DATAO[3+24] ? IREQ[3] : IACK[3];
-            IACK[2] <= DATAO[2+24] ? IREQ[2] : IACK[2];
-            IACK[1] <= DATAO[1+24] ? IREQ[1] : IACK[1];
-            IACK[0] <= DATAO[0+24] ? IREQ[0] : IACK[0];
-        end
-
-        if(RES)
             IREQ <= 0;
-        else
-        if(TIMERFF)
+            IACK <= 0;
+            LEDFF <= 8'h00;
+            GPIO_CTRL_FF <= 8'hff; // Default to all outputs
+            GPIO_OUT_FF <= 8'h00;
+            GPIO_IN_FF <= 8'h00;
+        end else
         begin
-            TIMER <= TIMER ? TIMER-1 : TIMERFF;
-
-            if(TIMER==0 && IREQ==IACK)
+            // Write operations
+            if (WR)
             begin
-                IREQ[7] <= !IACK[7];
+                case (DADDR)
+                    32'h8000_0003: begin
+                            //$display("clear io.irq = %x (ireq=%x, iack=%x)",DATAO[32:24],IREQ,IACK);
 
-                //$display("timr0 set");
+                            IACK[7] <= DATAO[7+24] ? IREQ[7] : IACK[7];
+                            IACK[6] <= DATAO[6+24] ? IREQ[6] : IACK[6];
+                            IACK[5] <= DATAO[5+24] ? IREQ[5] : IACK[5];
+                            IACK[4] <= DATAO[4+24] ? IREQ[4] : IACK[4];
+                            IACK[3] <= DATAO[3+24] ? IREQ[3] : IACK[3];
+                            IACK[2] <= DATAO[2+24] ? IREQ[2] : IACK[2];
+                            IACK[1] <= DATAO[1+24] ? IREQ[1] : IACK[1];
+                            IACK[0] <= DATAO[0+24] ? IREQ[0] : IACK[0];
+                        end 
+                    32'h8000_0008: LEDFF <= DATAO[15:0];    // Write to LEDFF (outputs)
+                    32'h8000_000a: begin
+                            GPIO_OUT_FF <= DATAO[31:16]; // Write to GPIO_OUT_FF outputs    
+                        end
+                    32'h8000_000c: TIMERFF <= DATAO[31:0];
+                    32'h8000_001c: GPIO_CTRL_FF <= DATAO[15:0]; // Set GPIO direction
+                endcase
             end
+//            if(WR&&DADDR[31]&&DADDR[3:0]==5'b01000)
+//            begin
+//                LEDFF <= DATAO[15:0];
+//            end
+    
+//            if(WR&&DADDR[31]&&DADDR[3:0]==5'b01010)
+//            begin
+//                GPIO_OUT_FF <= DATAO[31:16];
+//            end    
+    
+//            if(WR&&DADDR[31]&&DADDR[4:0]==5'b01100)
+//            begin
+//                TIMERFF <= DATAO[31:0];
+//            end
 
-            XTIMER  <= XTIMER+(TIMER==0);
-            TIMEUS <= (TIMER == TIMERFF) ? TIMEUS + 1'b1 : TIMEUS;
-        end
+//            if(WR&&DADDR[31]&&DADDR[4:0]==5'b00011)
+//            begin
+//                //$display("clear io.irq = %x (ireq=%x, iack=%x)",DATAO[32:24],IREQ,IACK);
+    
+//                IACK[7] <= DATAO[7+24] ? IREQ[7] : IACK[7];
+//                IACK[6] <= DATAO[6+24] ? IREQ[6] : IACK[6];
+//                IACK[5] <= DATAO[5+24] ? IREQ[5] : IACK[5];
+//                IACK[4] <= DATAO[4+24] ? IREQ[4] : IACK[4];
+//                IACK[3] <= DATAO[3+24] ? IREQ[3] : IACK[3];
+//                IACK[2] <= DATAO[2+24] ? IREQ[2] : IACK[2];
+//                IACK[1] <= DATAO[1+24] ? IREQ[1] : IACK[1];
+//                IACK[0] <= DATAO[0+24] ? IREQ[0] : IACK[0];
+//            end
+
+    
+            if(TIMERFF)
+            begin
+                TIMER <= TIMER ? TIMER-1 : TIMERFF;
+    
+                if(TIMER==0 && IREQ==IACK)
+                begin
+                    IREQ[7] <= !IACK[7];
+    
+                    //$display("timr0 set");
+                end
+    
+                XTIMER  <= XTIMER+(TIMER==0);
+                TIMEUS <= (TIMER == TIMERFF) ? TIMEUS + 1'b1 : TIMEUS;
+            end
+            
+            // Capture input values only for pins configured as inputs
+            GPIO_IN_FF <= GPIO & ~GPIO_CTRL_FF; //TODO process GPIO before usage!
+            // Actualizar el FF de estado de los GPIO (recoje el estado de entrada y de salida de los pines)                         
+            GPIO_DATA_FF <= (GPIO_OUT_FF & GPIO_CTRL_FF) | (GPIO_IN_FF & ~GPIO_CTRL_FF);
+
+       end
     end
 
     assign BOARD_IRQ = IREQ^IACK;
@@ -387,8 +466,8 @@ module darksocv
     (
       .CLK(CLK),
       .RES(RES),
-      .RD(!HLT&&RD&&DADDR[31]&&DADDR[3:2]==1),
-      .WR(!HLT&&WR&&DADDR[31]&&DADDR[3:2]==1),
+      .RD(!HLT&&RD&&DADDR[31]&&DADDR[4:2]==1),
+      .WR(!HLT&&WR&&DADDR[31]&&DADDR[4:2]==1),
       .BE(BE),
       .DATAI(DATAO),
       .DATAO(IOMUX[1]),
@@ -402,6 +481,106 @@ module darksocv
       .FINISH_REQ(FINISH_REQ),
 `endif
       .DEBUG(UDEBUG)
+    );
+    
+    i2c_master
+    i2c_master0
+    (
+        .i_clk(CLK),
+        .reset_n(!RES),
+        .i_addr_w_rw( DATAO[23:16] ),       //7 bit address, LSB is the read write bit, with 0 being write, 1 being read
+        .i_sub_addr( DATAO[15:8] ),        //contains sub addr to send to slave, partition is decided on bit_sel
+        .i_sub_len( 1'b0 ),          //denotes whether working with an 8 bit or 16 bit sub_addr, 0 is 8bit, 1 is 16 bit
+        .i_byte_len( {29'd0, DATAO[26:24]} ),        //denotes whether a single or sequential read or write will be performed (denotes number of bytes to read or write)
+        .i_data_write( DATAO[7:0] ),           //Data to write if performing write action              
+        .req_trans(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000 && DATAO[27]), // When the 'start' bit of the i2c register is written, the transaction is requested to start
+
+        /** For Reads **/
+        .data_out(i2c_data_out),
+        .valid_out(i2c_valid_out),
+   
+         /** I2C Lines **/
+        .scl_o(I2C_SCL),
+        .sda_o(I2C_SDA),
+        
+        /** Comms to Master Module **/
+        .req_data_chunk(i2c_req_data_chunk),//Request master to send new data chunk in i_data_write
+        .busy(i2c_busy),                    //denotes whether module is currently communicating with a slave
+        .nack(i2c_nack)
+    );
+    
+    flag_register
+    i2c_valid_out_flag_register
+    (
+        .clk(CLK),
+        .rst_n(!RES),
+        .flag_in(i2c_valid_out),
+        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000 && DATAO[28]), // clear via writing 1 to the bit on software
+        .flag_out(i2c_valid_out_latched)
+    );
+    
+    flag_register
+    i2c_req_data_flag_register
+    (
+        .clk(CLK),
+        .rst_n(!RES),
+        .flag_in(i2c_req_data_chunk),
+        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000 && DATAO[30]), // clear via writing 1 to the bit on software
+        .flag_out(i2c_req_data_latched)
+    );
+    
+    
+// Instantiation of SPI_Master_With_Single_CS
+    SPI_Master_With_Single_CS #(
+        .SPI_MODE(0),               // SPI Mode: 0, 1, 2, or 3 // TODO make configurable
+        .CLKS_PER_HALF_BIT(2),       // Number of clock cycles per half bit (baud rate control)
+        .MAX_BYTES_PER_CS(2),        // Maximum number of bytes per CS low period
+        .CS_INACTIVE_CLKS(1)         // Number of clocks CS remains inactive between transfers
+    ) 
+    spi_master0(
+        // Control/Data Signals
+        
+        
+        .i_Rst_L(!RES),              // Active-low reset signal
+        .i_Clk(CLK),                 // Clock signal
+    
+        // TX (MOSI) Signals
+        .i_TX_Count(DATAO[10:8]),       // Number of bytes to transmit when CS is low
+        .i_TX_Byte(DATAO[7:0]),         // Data byte to transmit over MOSI
+        .i_TX_DV(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[11]), // Data valid signal indicating a new byte is ready to be sent
+        .o_TX_Ready(spi_tx_ready),       // Output signal indicating the module is ready for the next byte
+    
+        // RX (MISO) Signals
+        .o_RX_Count(spi_rx_count),       // Output signal indicating how many bytes have been received
+        .o_RX_DV(spi_rx_data_ready),     // Data valid pulse (1 clock cycle). Output signal indicating a valid byte is received
+        .o_RX_Byte(spi_rx_byte),         // Received byte from MISO
+    
+        // SPI Interface
+        .o_SPI_Clk(SPI_CLK),         // SPI clock output
+        .i_SPI_MISO(SPI_MISO),       // SPI MISO input (Master In, Slave Out)
+        .o_SPI_MOSI(SPI_MOSI),       // SPI MOSI output (Master Out, Slave In)
+        .o_SPI_CS_n(SPI_CS)          // Chip select output (active low)
+    );
+
+
+    flag_register
+    spi_tx_ready_flag_register
+    (
+        .clk(CLK),
+        .rst_n(!RES),
+        .flag_in(spi_tx_ready),
+        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[23]), // clear via writing 1 to the bit on software
+        .flag_out(spi_tx_ready_latched)
+    );
+    
+    flag_register 
+    spi_rx_data_ready_flag_register
+    (
+        .clk(CLK),
+        .rst_n(!RES),
+        .flag_in(spi_rx_data_ready),
+        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[14]), // clear via writing 1 to the bit on software
+        .flag_out(spi_rx_data_ready_latched)
     );
 
     // darkriscv
@@ -473,6 +652,14 @@ module darksocv
 `endif
 	 
     assign DEBUG = { XTIMER, KDEBUG[2:0] }; // UDEBUG;
+    
+    // GPIO Pin Control
+    genvar j;
+    generate
+        for (j = 0; j < 8; j = j + 1) begin : gpio_loop
+            assign GPIO[j] = GPIO_CTRL_FF[j] ? GPIO_OUT_FF[j] : 1'bz; // Tristate logic for output
+        end
+    endgenerate
 
 `ifdef SIMULATION
 

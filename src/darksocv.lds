@@ -93,11 +93,9 @@ SECTIONS
 #endif
 
         /* enable this in order to use the uart boot! */
-
 #if !HARVARD
         . = 512;
 #endif
-
         _text = .;
         *(.text*)
         _etext = .;

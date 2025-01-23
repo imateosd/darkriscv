@@ -30,11 +30,12 @@
 
 #include <io.h>
 #include <stdio.h>
+#include <i2c.h>
 
 int main(void)
 {
     unsigned mtvec=0;
-    printf("Compiled by Irene Mateos Domínguez\n");
+    printf("Compiled by Irene Mateos Domínguez to be loaded through UART bootloader\n");
     printf("board: %s (id=%d)\n",board_name(io->board_id),io->board_id);
     printf("build: %s for %s\n",BUILD,ARCH);
 
@@ -218,6 +219,7 @@ int main(void)
               if(argv[1]) io->timer = atoi(argv[1]);
 
               printf("timer = %d\n",io->timer);
+              printf("timer = %x\n",io->timer);
           }
           else
           if(!strcmp(argv[0],"gpio"))
@@ -225,6 +227,49 @@ int main(void)
               if(argv[1]) io->gpio = xtoi(argv[1]);
 
               printf("gpio = %x\n",io->gpio);
+          }
+          else
+          if(!strcmp(argv[0],"i2c"))
+          {
+            printf("Starting i2c operation with argc %d\n", argc);
+            if(argc == 4)
+            {
+                i2cSendByte( (char)xtoi(argv[1]), (char)xtoi(argv[2]), (char)xtoi(argv[3]) );
+                printf("sent via i2c = %x\n",(char)xtoi(argv[3]));
+            }
+            else if(argc == 3)
+            {
+                char data_read = 0;
+                data_read = i2cReadByte( (char)xtoi(argv[1]), (char)xtoi(argv[2]) );
+
+                // char data_read = 0xAA;
+                printf("read via i2c = %x\n",data_read);
+            }
+          }
+          if(!strcmp(argv[0],"spi"))
+          {
+            
+            if(argv[1])
+            {
+                // io->spi = 0x0a00 + xtoi(argv[1]); // Start, 1 byte, send what the user wants
+                // printf("Sent %x\n", 0x0a00 + xtoi(argv[1]) );
+
+                char received_byte = spi_send_receive_data( xtoi(argv[1]) );
+                printf("Received %x\n", received_byte);
+            }
+            else
+                io->spi = 0x0a55; // Start, 2 byte, send 55
+            
+            printf("spi = %x\n",io->spi);
+
+            
+          }
+          else
+          if(!strcmp(argv[0],"gpio_ctrl"))
+          {
+              if(argv[1]) io->gpio_ctrl = xtoi(argv[1]);
+
+              printf("gpio_ctrl = %x\n",io->gpio_ctrl);
           }
           else
           if(!strcmp(argv[0],"mul"))

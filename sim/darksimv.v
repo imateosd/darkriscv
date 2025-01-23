@@ -38,6 +38,7 @@ module darksimv;
     reg CLK = 0;
     
     reg RES = 1;
+    
 
     initial while(1) #(500e6/`BOARD_CK) CLK = !CLK; // clock generator w/ freq defined by config.vh
 
@@ -57,22 +58,26 @@ module darksimv;
     `endif
 `endif
         $display("reset (startup)");
-        #1e3    RES = 0;            // wait 1us in reset state
-        //#1000e3 RES = 1;            // run  1ms
-        //$display("reset (restart)");
-        //#1e3    RES = 0;            // wait 1us in reset state
-        //#1000e3 $finish();          // run  1ms
+        #1e3 RES = 0;            // wait 1us in reset state
+        #1e3 RES = 1;            // run  1ms
+        #1e3 RES = 0;            // run  1ms
+        $display("reset (restart)");
+//        #6000e3 RES = 0;            // run  6s
+//        #1e3    RES = 0;            // wait 1us in reset state
+        #1000e3 $finish();          // run  1s
     end
 
     wire TX;
     wire RX = 1;
-
+    
     darksocv soc0
     (
         .XCLK(CLK),
         .XRES(|RES),
         .UART_RXD(RX),
         .UART_TXD(TX)
+//        .GPIO(GPIO), // Connect GPIO signal
+//        .LED(LED)    // Connect LED signal
     );
 
 endmodule

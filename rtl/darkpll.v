@@ -33,11 +33,11 @@
 
 module darkpll
 (
-    input        XCLK,      // external clock
-    input        XRES,      // external reset
+    input wire       XCLK,      // external clock
+    input wire       XRES,      // external reset
 
-    output       CLK,       // internal clock
-    output       RES        // internal reset
+    output wire      CLK,       // internal clock
+    output wire      RES        // internal reset
 );
 
     // internal/external reset logic

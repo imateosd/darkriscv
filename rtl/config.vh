@@ -1,3 +1,5 @@
+`default_nettype none
+
 /*
  * Copyright (c) 2018, Marcelo Samsoniuk
  * All rights reserved.
@@ -111,7 +113,7 @@
 // The interrupt support cannot be used with threading (because makes no
 // much sense?)... also, it requires the 3 stage pipeline (again, makes no
 // much sense use it with the 2-stage pipeline).
-//`define __INTERRUPT__
+`define __INTERRUPT__
 
 // initial PC
 //
@@ -141,7 +143,7 @@
 // eabling the __PERFMETER__ define, in order to check how the clock cycles
 // are used in the core. The report is displayed when the FINISH_REQ signal
 // is actived by the UART.
-`define __PERFMETER__
+//`define __PERFMETER__
 
 // icarus register debug:
 //
@@ -165,7 +167,7 @@
 // be better allocated, but in this case is not possible protect the .text
 // area as in the case of separate memory banks.
 // WARNING: this setup must match with the src/darksocv.ld.src file!
-//`define __HARVARD__
+// `define __HARVARD__
 
 // memory size:
 //
@@ -180,7 +182,7 @@
 `ifdef __HARVARD__
     `define MLEN 13 // MEM[12:0] ->  8KBytes LENGTH = 0x2000
 `else
-    `define MLEN 12 // MEM[12:0] -> 4KBytes LENGTH = 0x1000
+    `define MLEN 14 // MEM[12:0] -> 4KBytes LENGTH = 0x1000
     //`define MLEN 15 // MEM[12:0] -> 32KBytes LENGTH = 0x8000 for coremark!
 `endif
 
@@ -411,7 +413,7 @@
 // - the reset button is working
 // - the LED is blinking at 1Hz
 // - the UART is looped
-// `define TESTMODE
+// `define TESTMODE  
 
 `ifndef BOARD_ID
     `define BOARD_ID 0

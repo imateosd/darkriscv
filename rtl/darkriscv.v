@@ -60,37 +60,37 @@ module darkriscv
 //    parameter [31:0] RESET_SP = 4096
 //)
 (
-    input             CLK,   // clock
-    input             RES,   // reset
-    input             HLT,   // halt
+    input wire            CLK,   // clock
+    input wire            RES,   // reset
+    input wire            HLT,   // halt
 
 `ifdef __THREADS__
-    output [`__THREADS__-1:0] TPTR,  // thread pointer
+    output wire [`__THREADS__-1:0] TPTR,  // thread pointer
 `endif
 
 `ifdef __INTERRUPT__
-    input             INT,   // interrupt request
+    input wire            INT,   // interrupt request
 `endif
 
-    input      [31:0] IDATA, // instruction data bus
-    output     [31:0] IADDR, // instruction addr bus
+    input  wire[31:0] IDATA, // instruction data bus
+    output wire[31:0] IADDR, // instruction addr bus
 
-    input      [31:0] DATAI, // data bus (input)
-    output     [31:0] DATAO, // data bus (output)
-    output     [31:0] DADDR, // addr bus
+    input  wire[31:0] DATAI, // data bus (input)
+    output wire[31:0] DATAO, // data bus (output)
+    output wire[31:0] DADDR, // addr bus
 
 `ifdef __FLEXBUZZ__
-    output     [ 2:0] DLEN, // data length
-    output            RW,   // data read/write
+    output wire[ 2:0] DLEN, // data length
+    output wire       RW,   // data read/write
 `else
-    output     [ 3:0] BE,   // byte enable
-    output            WR,    // write enable
-    output            RD,    // read enable
+    output wire[ 3:0] BE,   // byte enable
+    output wire       WR,    // write enable
+    output wire       RD,    // read enable
 `endif
 
-    output            IDLE,   // idle output
+    output wire       IDLE,   // idle output
 
-    output [3:0]  DEBUG       // old-school osciloscope based debug! :)
+    output wire[3:0]  DEBUG       // old-school osciloscope based debug! :)
 );
 
     // dummy 32-bit words w/ all-0s and all-1s:

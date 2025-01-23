@@ -28,13 +28,15 @@
 
 # Add your application here:
 
+
+# APPLICATION = blink
 APPLICATION = darkshell
 #APPLICATION = coremark
 #APPLICATION = badapple
 #APPLICATION = mandelbrot
 
 # un-select SMALL for coremark!
-export SMALL = 1# uncomment for smaller firmware
+# export SMALL = 1# uncomment for smaller firmware
 
 SHELL := /bin/bash
 
@@ -64,7 +66,7 @@ ifndef CROSS
     #export CCPATH = /opt/riscv/bin
     export CCPATH = /usr/local/share/gcc-$(CROSS)/gcc-$(CROSS)/bin/
     #CCPATH = /usr/local/share/toolchain-$(CROSS)/bin
-    #HARVARD = 1
+    # HARVARD = 1
 endif
 
 ifndef BUILD

@@ -1,21 +1,21 @@
 /*
  * Copyright (c) 2018, Marcelo Samsoniuk
  * All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are met:
- * 
+ *
  * * Redistributions of source code must retain the above copyright notice, this
  *   list of conditions and the following disclaimer.
- * 
+ *
  * * Redistributions in binary form must reproduce the above copyright notice,
  *   this list of conditions and the following disclaimer in the documentation
  *   and/or other materials provided with the distribution.
- * 
+ *
  * * Neither the name of the copyright holder nor the names of its
  *   contributors may be used to endorse or promote products derived from
  *   this software without specific prior written permission.
- * 
+ *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
  * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
  * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -25,69 +25,63 @@
  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
  * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
- * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef __IO__
-#define __IO__
+#include <io.h>
+#include <stdio.h>
 
-extern volatile int utimers; // microsecond timer
+int main(void)
+{
+    // unsigned mtvec=0;
 
-struct DARKIO {
+#ifndef SMALL
 
-    unsigned char board_id; // 00
-    unsigned char board_cm; // 01
-    unsigned char core_id;  // 02
-    unsigned char irq;      // 03
+    // set_mtvec(irq_handler);
 
-    struct DARKUART {
-        
-        unsigned char  stat; // 04 
-        unsigned char  fifo; // 05
-        unsigned short baud; // 06/07
-
-    } uart;
-
-    unsigned short led;     // 08/09
-    unsigned short gpio;    // 0a/0b
-
-    unsigned int timer;     // 0c/0d/0e/0f
-    unsigned int timeus;    // 10/11/12/13
-
-    unsigned int spi;       // 14/15/16/17
-    unsigned int i2c;       // 18/19/1a/1b
-
-    unsigned short gpio_ctrl;  // 1c/1d
-};
-
-extern volatile struct DARKIO *io;
-
-extern char *board_name(int);
-
-#ifdef __RISCV__
-#define kmem 0
-#else
-extern unsigned char kmem[8192];
-#endif
-
-#define IRQ_TIMR 0x80
-#define IRQ_UART 0x02
-
-int  check4rv32i(void);
-void set_mtvec(void (*f)(void));
-void set_mepc(void (*f)(void));
-void set_mie(int);
-int  get_mtvec(void);
-int  get_mepc(void);
-int  get_mie(void);
-void banner(void);
-
-__attribute__ ((interrupt ("machine"))) void irq_handler(void);
-
-extern unsigned _text;
-extern unsigned _data;
-extern unsigned _etext; 
-extern unsigned _edata; 
-extern unsigned _stack;
+    // mtvec = get_mtvec();
 
 #endif
+
+    /*io->irq = IRQ_TIMR; // clear interrupts
+    utimers = 0;
+
+
+    while(1)
+    {
+        if(mtvec==0)
+        {
+            while(1)
+            {
+                if(io->irq&IRQ_TIMR)
+                {
+                    if(!utimers--)
+                    {
+                        io->led++;
+                        utimers=999999;
+                    }
+                    io->irq = IRQ_TIMR;
+                }
+
+            }
+        }
+    }*/
+
+    int i,j;
+
+    while(1)
+    {
+        for (i = 0; i<2000000000; i++) // 200000
+        {
+                if(i==1999999999)  //199999
+                    io->led++;
+        }
+        // for (j = 0; j<2000000; j++) // 200000
+        // {
+        //         if(j==1999999)  //199999
+        //             io->led++;
+        // }
+        io->i2c = 0x03030155;
+        printf("i2c = %x\n",io->i2c);   
+    }
+}

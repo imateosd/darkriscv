@@ -76,24 +76,24 @@ module darkuart
 // parameter [15:0] BAUD = 0
 //) 
 (
-    input           CLK,            // clock
-    input           RES,            // reset
+    input  wire         CLK,            // clock
+    input  wire         RES,            // reset
         
-    input           RD,             // bus read
-    input           WR,             // bus write
-    input  [ 3:0]   BE,             // byte enable
-    input  [31:0]   DATAI,          // data input
-    output [31:0]   DATAO,          // data output
-    output          IRQ,            // interrupt req
+    input  wire         RD,             // bus read
+    input  wire         WR,             // bus write
+    input  wire[ 3:0]   BE,             // byte enable
+    input  wire[31:0]   DATAI,          // data input
+    output wire[31:0]   DATAO,          // data output
+    output wire         IRQ,            // interrupt req
 
-    input           RXD,            // UART recv line
-    output          TXD,            // UART xmit line
+    input  wire         RXD,            // UART recv line
+    output wire         TXD,            // UART xmit line
 
 `ifdef SIMULATION
     output reg	    FINISH_REQ = 0,
 `endif
     
-    output [3:0]    DEBUG           // osc debug
+    output wire[3:0]    DEBUG           // osc debug
 );
 
     reg [15:0]  UART_TIMER = `__BAUD__;  // baud rate from config.vh

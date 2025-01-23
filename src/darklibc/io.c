@@ -42,10 +42,13 @@ volatile struct DARKIO io =
     { 0, 0, 0 },    // uart = { stat, fifo, baud }
     0,              // led
     0,              // gpio
-    1000000         // timer
+    1000000,        // timer
+    0,              // i2c
+    0,              // spi
+    0               // gpio ctrl
 };
 
-unsigned char kmem[8192] = "darksocv x86 payload test";
+unsigned char kmem[8192] = "darksocv x86 payload test";  
 
 #endif
 
