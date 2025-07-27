@@ -1,0 +1,36 @@
+This directory provides support for Dark\+R\+I\+S\+CV software.
+
+The software is 100\% written in C language, is compiled by the G\+CC and lots of support files (elf, assembler, maps, etc) are produced in order to help debug and/or study the R\+I\+S\+CV architecture.\hypertarget{md_darkshell_README_autotoc_md8}{}\doxysection{Tips and Tricks}\label{md_darkshell_README_autotoc_md8}
+As long the F\+P\+GA has few B\+R\+A\+Ms available, we need write the software thinking about preserve memory space. However, sometimes the code does not help us... anyway, is possible check the memory space used by each function in the firmware with the following script\+: \begin{DoxyVerb}awk '{ 
+        if($0~/>:/) PTR=$2
+        else 
+        if($0~/:/) DB[PTR]++ 
+      } END { 
+        for(i in DB) print DB[i],i 
+      }' src/darksocv.lst | sort -nr
+\end{DoxyVerb}
+
+
+The script will calculate how many instructions each funcion needs and will print and sort it, producing something like this\+: \begin{DoxyVerb}456 <main>:
+149 <putdx>:
+95 <printf>:
+62 <strtok>:
+62 <gets>:
+59 <banner>:
+47 <board_name>:
+42 <irq_handler>:
+...
+\end{DoxyVerb}
+
+
+So, with those information, is possible try optimize better the large funcions.
+
+T\+O\+DO\+:
+
+
+\begin{DoxyItemize}
+\item add a gdb-\/stub in order to support U\+A\+RT debug
+\item add a S\+R\+EC decoder in order to support application upload via U\+A\+RT
+\item split the \char`\"{}stdio\char`\"{} in other files
+\item add more libc features and optimize the existing features 
+\end{DoxyItemize}

@@ -1,0 +1,446 @@
+\hypertarget{coremark_8h}{}\doxysection{coremark/src/coremark.h File Reference}
+\label{coremark_8h}\index{coremark/src/coremark.h@{coremark/src/coremark.h}}
+{\ttfamily \#include \char`\"{}core\+\_\+portme.\+h\char`\"{}}\newline
+Include dependency graph for coremark.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{coremark_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{coremark_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlist__data__s}{list\+\_\+data\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structlist__head__s}{list\+\_\+head\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structMAT__PARAMS__S}{M\+A\+T\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+S}}
+\item 
+struct \mbox{\hyperlink{structRESULTS__S}{R\+E\+S\+U\+L\+T\+S\+\_\+S}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{coremark_8h_aed72f6a3211b781c1001bfb86e3dc1ac}{T\+O\+T\+A\+L\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}}~2 $\ast$ 1000
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a0dc312052e5cf5a3662fae7273cad7a0}{S\+E\+E\+D\+\_\+\+A\+RG}}~0
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a8ce4c7bc71240827c6f4b063b6e9e7bf}{S\+E\+E\+D\+\_\+\+F\+U\+NC}}~1
+\item 
+\#define \mbox{\hyperlink{coremark_8h_acd4115f1e3ff2fe980ba3fd289507b0b}{S\+E\+E\+D\+\_\+\+V\+O\+L\+A\+T\+I\+LE}}~2
+\item 
+\#define \mbox{\hyperlink{coremark_8h_acf4d568511d5e964c3579616a28ab62b}{M\+E\+M\+\_\+\+S\+T\+A\+T\+IC}}~0
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a13c817b758fd4fe372801294534a60ca}{M\+E\+M\+\_\+\+M\+A\+L\+L\+OC}}~1
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a940b2ef47c80758ee6bc96a9a90aeed4}{M\+E\+M\+\_\+\+S\+T\+A\+CK}}~2
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a76a56fbd0738eacd0b6a821543a4db46}{M\+A\+I\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+AL}}~0
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a22542c7af4b03ae7af082258b55fc3ee}{M\+A\+I\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}}~int
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a28687ff0fca27086bca2dfb0c0aa8708}{I\+D\+\_\+\+L\+I\+ST}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a975162771036c2f925db1baec05f7dd8}{I\+D\+\_\+\+M\+A\+T\+R\+IX}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{coremark_8h_ac9ada408e126226ddfd93c012d9d190e}{I\+D\+\_\+\+S\+T\+A\+TE}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a053549d24017c47a01573504ce0dc37a}{A\+L\+L\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+S\+\_\+\+M\+A\+SK}}~(\mbox{\hyperlink{coremark_8h_a28687ff0fca27086bca2dfb0c0aa8708}{I\+D\+\_\+\+L\+I\+ST}} $\vert$ \mbox{\hyperlink{coremark_8h_a975162771036c2f925db1baec05f7dd8}{I\+D\+\_\+\+M\+A\+T\+R\+IX}} $\vert$ \mbox{\hyperlink{coremark_8h_ac9ada408e126226ddfd93c012d9d190e}{I\+D\+\_\+\+S\+T\+A\+TE}})
+\item 
+\#define \mbox{\hyperlink{coremark_8h_a4c270a22d9730d712754760f43d10126}{N\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+MS}}~3
+\item 
+\#define \mbox{\hyperlink{coremark_8h_ae0df94f23d52ef9e95befd5fe9958cb1}{M\+A\+T\+D\+A\+T\+\_\+\+I\+NT}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{coremark_8h_a3b79522f163f3054aa6527db7129d9e5}{secs\+\_\+ret}}
+\item 
+typedef struct \mbox{\hyperlink{structlist__data__s}{list\+\_\+data\+\_\+s}} \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}}
+\item 
+typedef struct \mbox{\hyperlink{structlist__head__s}{list\+\_\+head\+\_\+s}} \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}}
+\item 
+typedef \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} \mbox{\hyperlink{coremark_8h_a7a031c77b3b21316a3852fa6b1388872}{M\+A\+T\+D\+AT}}
+\item 
+typedef \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{coremark_8h_a68557754fccc4118cd337c853c37812d}{M\+A\+T\+R\+ES}}
+\item 
+typedef struct \mbox{\hyperlink{structMAT__PARAMS__S}{M\+A\+T\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+S}} \mbox{\hyperlink{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}{mat\+\_\+params}}
+\item 
+typedef enum \mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398}{C\+O\+R\+E\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{coremark_8h_afc0d399aad7e2633ec6f0eee8659a665}{core\+\_\+state\+\_\+e}}
+\item 
+typedef struct \mbox{\hyperlink{structRESULTS__S}{R\+E\+S\+U\+L\+T\+S\+\_\+S}} \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398}{C\+O\+R\+E\+\_\+\+S\+T\+A\+TE}} \{ \newline
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a0f7ac4374e33344c67210a6004bddfb0}{C\+O\+R\+E\+\_\+\+S\+T\+A\+RT}} = 0, 
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a903f9b7a1f82e8954961eafddfbbfe31}{C\+O\+R\+E\+\_\+\+I\+N\+V\+A\+L\+ID}}, 
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a55423d27e20331d87e093413013ac081}{C\+O\+R\+E\+\_\+\+S1}}, 
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a7908389aa53f3a282f8c4d9f48f3f049}{C\+O\+R\+E\+\_\+\+S2}}, 
+\newline
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398aff0687dabd01aca4c155ee04fc804f8f}{C\+O\+R\+E\+\_\+\+I\+NT}}, 
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a09b2c15bbe63f30cdcbd6466d62be85b}{C\+O\+R\+E\+\_\+\+F\+L\+O\+AT}}, 
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a52ef67898241d9ad30b6de730c373780}{C\+O\+R\+E\+\_\+\+E\+X\+P\+O\+N\+E\+NT}}, 
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a97f176cbc24896b5b3c204cd448dcaa5}{C\+O\+R\+E\+\_\+\+S\+C\+I\+E\+N\+T\+I\+F\+IC}}, 
+\newline
+\mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398af7d3f12e5c15462fb10704452b84c8d7}{N\+U\+M\+\_\+\+C\+O\+R\+E\+\_\+\+S\+T\+A\+T\+ES}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{coremark_8h_ad53b9c427e6ad4f3748b139e47e5f012}{iterate}} (void $\ast$pres)
+\item 
+void \mbox{\hyperlink{coremark_8h_aab606aad16fab13795b966451d778314}{start\+\_\+time}} (void)
+\item 
+void \mbox{\hyperlink{coremark_8h_a5ac60d08bd8e440f217558cb51768950}{stop\+\_\+time}} (void)
+\item 
+\mbox{\hyperlink{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}{C\+O\+R\+E\+\_\+\+T\+I\+C\+KS}} \mbox{\hyperlink{coremark_8h_a36c8d21c4e144030e08be260d81ce8e3}{get\+\_\+time}} (void)
+\item 
+\mbox{\hyperlink{coremark_8h_a3b79522f163f3054aa6527db7129d9e5}{secs\+\_\+ret}} \mbox{\hyperlink{coremark_8h_ac61dcde2d46065df59dc2dc56932ebc0}{time\+\_\+in\+\_\+secs}} (\mbox{\hyperlink{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}{C\+O\+R\+E\+\_\+\+T\+I\+C\+KS}} ticks)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_af668c6333b787038a655d7df8c5cd6ba}{crcu8}} (\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} data, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_a22f3d50bfdc8bdc8c4dd66faaedcca39}{crc16}} (\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} newval, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_a8665383f7afec115990015cccdd39903}{crcu16}} (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} newval, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_a490f737fe99e6fa4bd8e26fc400b10f8}{crcu32}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} newval, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} \mbox{\hyperlink{coremark_8h_aa5652d902314f7114774bf03c4857656}{check\+\_\+data\+\_\+types}} (void)
+\item 
+void $\ast$ \mbox{\hyperlink{coremark_8h_a4b452d631862198404ebb44c573f2afe}{portable\+\_\+malloc}} (\mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}} size)
+\item 
+void \mbox{\hyperlink{coremark_8h_a8440cafc9bfc5b771d50983b2ecd1424}{portable\+\_\+free}} (void $\ast$p)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{coremark_8h_a91af1f73ce5c38b9bdb2ccb249db0bfe}{parseval}} (char $\ast$valstring)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{coremark_8h_ae0fff4db15c3d2734218c1f4201c4b30}{core\+\_\+list\+\_\+init}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} blksize, \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$memblock, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} seed)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_a9bb1d84f79416080373c08c333dda856}{core\+\_\+bench\+\_\+list}} (\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} finder\+\_\+idx)
+\item 
+void \mbox{\hyperlink{coremark_8h_a561e5bf8ca4aa03228b32892a7d7bad5}{core\+\_\+init\+\_\+state}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} size, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} seed, \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} $\ast$p)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_a8456efad2a49d7f816d0a5b5caca2307}{core\+\_\+bench\+\_\+state}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} blksize, \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} $\ast$memblock, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} seed1, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} seed2, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} step, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{coremark_8h_a95fda192d432d22c2c31bec4ea27b3b2}{core\+\_\+init\+\_\+matrix}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} blksize, void $\ast$memblk, \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} seed, \mbox{\hyperlink{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}{mat\+\_\+params}} $\ast$p)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{coremark_8h_af61aadd6b6cc9eedc2c62ba00ed18e5f}{core\+\_\+bench\+\_\+matrix}} (\mbox{\hyperlink{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}{mat\+\_\+params}} $\ast$p, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} seed, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{coremark_8h_a053549d24017c47a01573504ce0dc37a}\label{coremark_8h_a053549d24017c47a01573504ce0dc37a}} 
+\index{coremark.h@{coremark.h}!ALL\_ALGORITHMS\_MASK@{ALL\_ALGORITHMS\_MASK}}
+\index{ALL\_ALGORITHMS\_MASK@{ALL\_ALGORITHMS\_MASK}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{ALL\_ALGORITHMS\_MASK}{ALL\_ALGORITHMS\_MASK}}
+{\footnotesize\ttfamily \#define A\+L\+L\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+S\+\_\+\+M\+A\+SK~(\mbox{\hyperlink{coremark_8h_a28687ff0fca27086bca2dfb0c0aa8708}{I\+D\+\_\+\+L\+I\+ST}} $\vert$ \mbox{\hyperlink{coremark_8h_a975162771036c2f925db1baec05f7dd8}{I\+D\+\_\+\+M\+A\+T\+R\+IX}} $\vert$ \mbox{\hyperlink{coremark_8h_ac9ada408e126226ddfd93c012d9d190e}{I\+D\+\_\+\+S\+T\+A\+TE}})}
+
+\mbox{\Hypertarget{coremark_8h_a28687ff0fca27086bca2dfb0c0aa8708}\label{coremark_8h_a28687ff0fca27086bca2dfb0c0aa8708}} 
+\index{coremark.h@{coremark.h}!ID\_LIST@{ID\_LIST}}
+\index{ID\_LIST@{ID\_LIST}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{ID\_LIST}{ID\_LIST}}
+{\footnotesize\ttfamily \#define I\+D\+\_\+\+L\+I\+ST~(1 $<$$<$ 0)}
+
+\mbox{\Hypertarget{coremark_8h_a975162771036c2f925db1baec05f7dd8}\label{coremark_8h_a975162771036c2f925db1baec05f7dd8}} 
+\index{coremark.h@{coremark.h}!ID\_MATRIX@{ID\_MATRIX}}
+\index{ID\_MATRIX@{ID\_MATRIX}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{ID\_MATRIX}{ID\_MATRIX}}
+{\footnotesize\ttfamily \#define I\+D\+\_\+\+M\+A\+T\+R\+IX~(1 $<$$<$ 1)}
+
+\mbox{\Hypertarget{coremark_8h_ac9ada408e126226ddfd93c012d9d190e}\label{coremark_8h_ac9ada408e126226ddfd93c012d9d190e}} 
+\index{coremark.h@{coremark.h}!ID\_STATE@{ID\_STATE}}
+\index{ID\_STATE@{ID\_STATE}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{ID\_STATE}{ID\_STATE}}
+{\footnotesize\ttfamily \#define I\+D\+\_\+\+S\+T\+A\+TE~(1 $<$$<$ 2)}
+
+\mbox{\Hypertarget{coremark_8h_a22542c7af4b03ae7af082258b55fc3ee}\label{coremark_8h_a22542c7af4b03ae7af082258b55fc3ee}} 
+\index{coremark.h@{coremark.h}!MAIN\_RETURN\_TYPE@{MAIN\_RETURN\_TYPE}}
+\index{MAIN\_RETURN\_TYPE@{MAIN\_RETURN\_TYPE}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MAIN\_RETURN\_TYPE}{MAIN\_RETURN\_TYPE}}
+{\footnotesize\ttfamily \#define M\+A\+I\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE~int}
+
+\mbox{\Hypertarget{coremark_8h_a76a56fbd0738eacd0b6a821543a4db46}\label{coremark_8h_a76a56fbd0738eacd0b6a821543a4db46}} 
+\index{coremark.h@{coremark.h}!MAIN\_RETURN\_VAL@{MAIN\_RETURN\_VAL}}
+\index{MAIN\_RETURN\_VAL@{MAIN\_RETURN\_VAL}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MAIN\_RETURN\_VAL}{MAIN\_RETURN\_VAL}}
+{\footnotesize\ttfamily \#define M\+A\+I\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+AL~0}
+
+\mbox{\Hypertarget{coremark_8h_ae0df94f23d52ef9e95befd5fe9958cb1}\label{coremark_8h_ae0df94f23d52ef9e95befd5fe9958cb1}} 
+\index{coremark.h@{coremark.h}!MATDAT\_INT@{MATDAT\_INT}}
+\index{MATDAT\_INT@{MATDAT\_INT}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MATDAT\_INT}{MATDAT\_INT}}
+{\footnotesize\ttfamily \#define M\+A\+T\+D\+A\+T\+\_\+\+I\+NT~1}
+
+\mbox{\Hypertarget{coremark_8h_a13c817b758fd4fe372801294534a60ca}\label{coremark_8h_a13c817b758fd4fe372801294534a60ca}} 
+\index{coremark.h@{coremark.h}!MEM\_MALLOC@{MEM\_MALLOC}}
+\index{MEM\_MALLOC@{MEM\_MALLOC}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_MALLOC}{MEM\_MALLOC}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+M\+A\+L\+L\+OC~1}
+
+\mbox{\Hypertarget{coremark_8h_a940b2ef47c80758ee6bc96a9a90aeed4}\label{coremark_8h_a940b2ef47c80758ee6bc96a9a90aeed4}} 
+\index{coremark.h@{coremark.h}!MEM\_STACK@{MEM\_STACK}}
+\index{MEM\_STACK@{MEM\_STACK}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_STACK}{MEM\_STACK}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+S\+T\+A\+CK~2}
+
+\mbox{\Hypertarget{coremark_8h_acf4d568511d5e964c3579616a28ab62b}\label{coremark_8h_acf4d568511d5e964c3579616a28ab62b}} 
+\index{coremark.h@{coremark.h}!MEM\_STATIC@{MEM\_STATIC}}
+\index{MEM\_STATIC@{MEM\_STATIC}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_STATIC}{MEM\_STATIC}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+S\+T\+A\+T\+IC~0}
+
+\mbox{\Hypertarget{coremark_8h_a4c270a22d9730d712754760f43d10126}\label{coremark_8h_a4c270a22d9730d712754760f43d10126}} 
+\index{coremark.h@{coremark.h}!NUM\_ALGORITHMS@{NUM\_ALGORITHMS}}
+\index{NUM\_ALGORITHMS@{NUM\_ALGORITHMS}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_ALGORITHMS}{NUM\_ALGORITHMS}}
+{\footnotesize\ttfamily \#define N\+U\+M\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+MS~3}
+
+\mbox{\Hypertarget{coremark_8h_a0dc312052e5cf5a3662fae7273cad7a0}\label{coremark_8h_a0dc312052e5cf5a3662fae7273cad7a0}} 
+\index{coremark.h@{coremark.h}!SEED\_ARG@{SEED\_ARG}}
+\index{SEED\_ARG@{SEED\_ARG}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{SEED\_ARG}{SEED\_ARG}}
+{\footnotesize\ttfamily \#define S\+E\+E\+D\+\_\+\+A\+RG~0}
+
+\mbox{\Hypertarget{coremark_8h_a8ce4c7bc71240827c6f4b063b6e9e7bf}\label{coremark_8h_a8ce4c7bc71240827c6f4b063b6e9e7bf}} 
+\index{coremark.h@{coremark.h}!SEED\_FUNC@{SEED\_FUNC}}
+\index{SEED\_FUNC@{SEED\_FUNC}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{SEED\_FUNC}{SEED\_FUNC}}
+{\footnotesize\ttfamily \#define S\+E\+E\+D\+\_\+\+F\+U\+NC~1}
+
+\mbox{\Hypertarget{coremark_8h_acd4115f1e3ff2fe980ba3fd289507b0b}\label{coremark_8h_acd4115f1e3ff2fe980ba3fd289507b0b}} 
+\index{coremark.h@{coremark.h}!SEED\_VOLATILE@{SEED\_VOLATILE}}
+\index{SEED\_VOLATILE@{SEED\_VOLATILE}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{SEED\_VOLATILE}{SEED\_VOLATILE}}
+{\footnotesize\ttfamily \#define S\+E\+E\+D\+\_\+\+V\+O\+L\+A\+T\+I\+LE~2}
+
+\mbox{\Hypertarget{coremark_8h_aed72f6a3211b781c1001bfb86e3dc1ac}\label{coremark_8h_aed72f6a3211b781c1001bfb86e3dc1ac}} 
+\index{coremark.h@{coremark.h}!TOTAL\_DATA\_SIZE@{TOTAL\_DATA\_SIZE}}
+\index{TOTAL\_DATA\_SIZE@{TOTAL\_DATA\_SIZE}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{TOTAL\_DATA\_SIZE}{TOTAL\_DATA\_SIZE}}
+{\footnotesize\ttfamily \#define T\+O\+T\+A\+L\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE~2 $\ast$ 1000}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}\label{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}} 
+\index{coremark.h@{coremark.h}!core\_results@{core\_results}}
+\index{core\_results@{core\_results}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_results}{core\_results}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structRESULTS__S}{R\+E\+S\+U\+L\+T\+S\+\_\+S}} \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}}}
+
+\mbox{\Hypertarget{coremark_8h_afc0d399aad7e2633ec6f0eee8659a665}\label{coremark_8h_afc0d399aad7e2633ec6f0eee8659a665}} 
+\index{coremark.h@{coremark.h}!core\_state\_e@{core\_state\_e}}
+\index{core\_state\_e@{core\_state\_e}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_state\_e}{core\_state\_e}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398}{C\+O\+R\+E\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{coremark_8h_afc0d399aad7e2633ec6f0eee8659a665}{core\+\_\+state\+\_\+e}}}
+
+\mbox{\Hypertarget{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}\label{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}} 
+\index{coremark.h@{coremark.h}!list\_data@{list\_data}}
+\index{list\_data@{list\_data}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{list\_data}{list\_data}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlist__data__s}{list\+\_\+data\+\_\+s}} \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}}}
+
+\mbox{\Hypertarget{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}\label{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}} 
+\index{coremark.h@{coremark.h}!list\_head@{list\_head}}
+\index{list\_head@{list\_head}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{list\_head}{list\_head}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structlist__head__s}{list\+\_\+head\+\_\+s}} \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}}}
+
+\mbox{\Hypertarget{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}\label{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}} 
+\index{coremark.h@{coremark.h}!mat\_params@{mat\_params}}
+\index{mat\_params@{mat\_params}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{mat\_params}{mat\_params}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structMAT__PARAMS__S}{M\+A\+T\+\_\+\+P\+A\+R\+A\+M\+S\+\_\+S}} \mbox{\hyperlink{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}{mat\+\_\+params}}}
+
+\mbox{\Hypertarget{coremark_8h_a7a031c77b3b21316a3852fa6b1388872}\label{coremark_8h_a7a031c77b3b21316a3852fa6b1388872}} 
+\index{coremark.h@{coremark.h}!MATDAT@{MATDAT}}
+\index{MATDAT@{MATDAT}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MATDAT}{MATDAT}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} \mbox{\hyperlink{coremark_8h_a7a031c77b3b21316a3852fa6b1388872}{M\+A\+T\+D\+AT}}}
+
+\mbox{\Hypertarget{coremark_8h_a68557754fccc4118cd337c853c37812d}\label{coremark_8h_a68557754fccc4118cd337c853c37812d}} 
+\index{coremark.h@{coremark.h}!MATRES@{MATRES}}
+\index{MATRES@{MATRES}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{MATRES}{MATRES}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{coremark_8h_a68557754fccc4118cd337c853c37812d}{M\+A\+T\+R\+ES}}}
+
+\mbox{\Hypertarget{coremark_8h_a3b79522f163f3054aa6527db7129d9e5}\label{coremark_8h_a3b79522f163f3054aa6527db7129d9e5}} 
+\index{coremark.h@{coremark.h}!secs\_ret@{secs\_ret}}
+\index{secs\_ret@{secs\_ret}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{secs\_ret}{secs\_ret}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{coremark_8h_a3b79522f163f3054aa6527db7129d9e5}{secs\+\_\+ret}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398}} 
+\index{coremark.h@{coremark.h}!CORE\_STATE@{CORE\_STATE}}
+\index{CORE\_STATE@{CORE\_STATE}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{CORE\_STATE}{CORE\_STATE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398}{C\+O\+R\+E\+\_\+\+S\+T\+A\+TE}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_START@{CORE\_START}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_START@{CORE\_START}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a0f7ac4374e33344c67210a6004bddfb0}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a0f7ac4374e33344c67210a6004bddfb0}} 
+C\+O\+R\+E\+\_\+\+S\+T\+A\+RT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_INVALID@{CORE\_INVALID}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_INVALID@{CORE\_INVALID}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a903f9b7a1f82e8954961eafddfbbfe31}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a903f9b7a1f82e8954961eafddfbbfe31}} 
+C\+O\+R\+E\+\_\+\+I\+N\+V\+A\+L\+ID&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_S1@{CORE\_S1}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_S1@{CORE\_S1}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a55423d27e20331d87e093413013ac081}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a55423d27e20331d87e093413013ac081}} 
+C\+O\+R\+E\+\_\+\+S1&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_S2@{CORE\_S2}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_S2@{CORE\_S2}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a7908389aa53f3a282f8c4d9f48f3f049}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a7908389aa53f3a282f8c4d9f48f3f049}} 
+C\+O\+R\+E\+\_\+\+S2&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_INT@{CORE\_INT}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_INT@{CORE\_INT}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398aff0687dabd01aca4c155ee04fc804f8f}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398aff0687dabd01aca4c155ee04fc804f8f}} 
+C\+O\+R\+E\+\_\+\+I\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_FLOAT@{CORE\_FLOAT}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_FLOAT@{CORE\_FLOAT}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a09b2c15bbe63f30cdcbd6466d62be85b}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a09b2c15bbe63f30cdcbd6466d62be85b}} 
+C\+O\+R\+E\+\_\+\+F\+L\+O\+AT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_EXPONENT@{CORE\_EXPONENT}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_EXPONENT@{CORE\_EXPONENT}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a52ef67898241d9ad30b6de730c373780}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a52ef67898241d9ad30b6de730c373780}} 
+C\+O\+R\+E\+\_\+\+E\+X\+P\+O\+N\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORE\_SCIENTIFIC@{CORE\_SCIENTIFIC}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!CORE\_SCIENTIFIC@{CORE\_SCIENTIFIC}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a97f176cbc24896b5b3c204cd448dcaa5}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398a97f176cbc24896b5b3c204cd448dcaa5}} 
+C\+O\+R\+E\+\_\+\+S\+C\+I\+E\+N\+T\+I\+F\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NUM\_CORE\_STATES@{NUM\_CORE\_STATES}!coremark.h@{coremark.h}}\index{coremark.h@{coremark.h}!NUM\_CORE\_STATES@{NUM\_CORE\_STATES}}}\mbox{\Hypertarget{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398af7d3f12e5c15462fb10704452b84c8d7}\label{coremark_8h_ae0dfae7f43f6cf57ac713858f4e76398af7d3f12e5c15462fb10704452b84c8d7}} 
+N\+U\+M\+\_\+\+C\+O\+R\+E\+\_\+\+S\+T\+A\+T\+ES&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{coremark_8h_aa5652d902314f7114774bf03c4857656}\label{coremark_8h_aa5652d902314f7114774bf03c4857656}} 
+\index{coremark.h@{coremark.h}!check\_data\_types@{check\_data\_types}}
+\index{check\_data\_types@{check\_data\_types}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{check\_data\_types()}{check\_data\_types()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} check\+\_\+data\+\_\+types (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a9bb1d84f79416080373c08c333dda856}\label{coremark_8h_a9bb1d84f79416080373c08c333dda856}} 
+\index{coremark.h@{coremark.h}!core\_bench\_list@{core\_bench\_list}}
+\index{core\_bench\_list@{core\_bench\_list}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_bench\_list()}{core\_bench\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} core\+\_\+bench\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$}]{res,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{finder\+\_\+idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_af61aadd6b6cc9eedc2c62ba00ed18e5f}\label{coremark_8h_af61aadd6b6cc9eedc2c62ba00ed18e5f}} 
+\index{coremark.h@{coremark.h}!core\_bench\_matrix@{core\_bench\_matrix}}
+\index{core\_bench\_matrix@{core\_bench\_matrix}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_bench\_matrix()}{core\_bench\_matrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} core\+\_\+bench\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}{mat\+\_\+params}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{seed,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a8456efad2a49d7f816d0a5b5caca2307}\label{coremark_8h_a8456efad2a49d7f816d0a5b5caca2307}} 
+\index{coremark.h@{coremark.h}!core\_bench\_state@{core\_bench\_state}}
+\index{core\_bench\_state@{core\_bench\_state}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_bench\_state()}{core\_bench\_state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} core\+\_\+bench\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{blksize,  }\item[{\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} $\ast$}]{memblock,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{seed1,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{seed2,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{step,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a95fda192d432d22c2c31bec4ea27b3b2}\label{coremark_8h_a95fda192d432d22c2c31bec4ea27b3b2}} 
+\index{coremark.h@{coremark.h}!core\_init\_matrix@{core\_init\_matrix}}
+\index{core\_init\_matrix@{core\_init\_matrix}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_init\_matrix()}{core\_init\_matrix()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} core\+\_\+init\+\_\+matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{blksize,  }\item[{void $\ast$}]{memblk,  }\item[{\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}}}]{seed,  }\item[{\mbox{\hyperlink{coremark_8h_aef6aaed6d31626f70d527fdc1f165b10}{mat\+\_\+params}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a561e5bf8ca4aa03228b32892a7d7bad5}\label{coremark_8h_a561e5bf8ca4aa03228b32892a7d7bad5}} 
+\index{coremark.h@{coremark.h}!core\_init\_state@{core\_init\_state}}
+\index{core\_init\_state@{core\_init\_state}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_init\_state()}{core\_init\_state()}}
+{\footnotesize\ttfamily void core\+\_\+init\+\_\+state (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{size,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{seed,  }\item[{\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_ae0fff4db15c3d2734218c1f4201c4b30}\label{coremark_8h_ae0fff4db15c3d2734218c1f4201c4b30}} 
+\index{coremark.h@{coremark.h}!core\_list\_init@{core\_list\_init}}
+\index{core\_list\_init@{core\_list\_init}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{core\_list\_init()}{core\_list\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}}$\ast$ core\+\_\+list\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{blksize,  }\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{memblock,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{seed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a22f3d50bfdc8bdc8c4dd66faaedcca39}\label{coremark_8h_a22f3d50bfdc8bdc8c4dd66faaedcca39}} 
+\index{coremark.h@{coremark.h}!crc16@{crc16}}
+\index{crc16@{crc16}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{crc16()}{crc16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{newval,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a8665383f7afec115990015cccdd39903}\label{coremark_8h_a8665383f7afec115990015cccdd39903}} 
+\index{coremark.h@{coremark.h}!crcu16@{crcu16}}
+\index{crcu16@{crcu16}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{crcu16()}{crcu16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crcu16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{newval,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a490f737fe99e6fa4bd8e26fc400b10f8}\label{coremark_8h_a490f737fe99e6fa4bd8e26fc400b10f8}} 
+\index{coremark.h@{coremark.h}!crcu32@{crcu32}}
+\index{crcu32@{crcu32}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{crcu32()}{crcu32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crcu32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{newval,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_af668c6333b787038a655d7df8c5cd6ba}\label{coremark_8h_af668c6333b787038a655d7df8c5cd6ba}} 
+\index{coremark.h@{coremark.h}!crcu8@{crcu8}}
+\index{crcu8@{crcu8}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{crcu8()}{crcu8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crcu8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}}}]{data,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a36c8d21c4e144030e08be260d81ce8e3}\label{coremark_8h_a36c8d21c4e144030e08be260d81ce8e3}} 
+\index{coremark.h@{coremark.h}!get\_time@{get\_time}}
+\index{get\_time@{get\_time}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{get\_time()}{get\_time()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}{C\+O\+R\+E\+\_\+\+T\+I\+C\+KS}} get\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_ad53b9c427e6ad4f3748b139e47e5f012}\label{coremark_8h_ad53b9c427e6ad4f3748b139e47e5f012}} 
+\index{coremark.h@{coremark.h}!iterate@{iterate}}
+\index{iterate@{iterate}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{iterate()}{iterate()}}
+{\footnotesize\ttfamily void$\ast$ iterate (\begin{DoxyParamCaption}\item[{void $\ast$}]{pres }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a91af1f73ce5c38b9bdb2ccb249db0bfe}\label{coremark_8h_a91af1f73ce5c38b9bdb2ccb249db0bfe}} 
+\index{coremark.h@{coremark.h}!parseval@{parseval}}
+\index{parseval@{parseval}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{parseval()}{parseval()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} parseval (\begin{DoxyParamCaption}\item[{char $\ast$}]{valstring }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a8440cafc9bfc5b771d50983b2ecd1424}\label{coremark_8h_a8440cafc9bfc5b771d50983b2ecd1424}} 
+\index{coremark.h@{coremark.h}!portable\_free@{portable\_free}}
+\index{portable\_free@{portable\_free}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{portable\_free()}{portable\_free()}}
+{\footnotesize\ttfamily void portable\+\_\+free (\begin{DoxyParamCaption}\item[{void $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a4b452d631862198404ebb44c573f2afe}\label{coremark_8h_a4b452d631862198404ebb44c573f2afe}} 
+\index{coremark.h@{coremark.h}!portable\_malloc@{portable\_malloc}}
+\index{portable\_malloc@{portable\_malloc}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{portable\_malloc()}{portable\_malloc()}}
+{\footnotesize\ttfamily void$\ast$ portable\+\_\+malloc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}}}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_aab606aad16fab13795b966451d778314}\label{coremark_8h_aab606aad16fab13795b966451d778314}} 
+\index{coremark.h@{coremark.h}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{start\_time()}{start\_time()}}
+{\footnotesize\ttfamily void start\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_a5ac60d08bd8e440f217558cb51768950}\label{coremark_8h_a5ac60d08bd8e440f217558cb51768950}} 
+\index{coremark.h@{coremark.h}!stop\_time@{stop\_time}}
+\index{stop\_time@{stop\_time}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{stop\_time()}{stop\_time()}}
+{\footnotesize\ttfamily void stop\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{coremark_8h_ac61dcde2d46065df59dc2dc56932ebc0}\label{coremark_8h_ac61dcde2d46065df59dc2dc56932ebc0}} 
+\index{coremark.h@{coremark.h}!time\_in\_secs@{time\_in\_secs}}
+\index{time\_in\_secs@{time\_in\_secs}!coremark.h@{coremark.h}}
+\doxysubsubsection{\texorpdfstring{time\_in\_secs()}{time\_in\_secs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a3b79522f163f3054aa6527db7129d9e5}{secs\+\_\+ret}} time\+\_\+in\+\_\+secs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}{C\+O\+R\+E\+\_\+\+T\+I\+C\+KS}}}]{ticks }\end{DoxyParamCaption})}
+

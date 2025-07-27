@@ -1,0 +1,318 @@
+\hypertarget{core__portme_8h}{}\doxysection{coremark/core\+\_\+portme.h File Reference}
+\label{core__portme_8h}\index{coremark/core\_portme.h@{coremark/core\_portme.h}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+Include dependency graph for core\+\_\+portme.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{core__portme_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{core__portme_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCORE__PORTABLE__S}{C\+O\+R\+E\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+S}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a454f1ee3aa95cb253fe79cc06d13daff}{H\+A\+S\+\_\+\+F\+L\+O\+AT}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a4f60741b9a341acae30bf6ba7daa7e19}{H\+A\+S\+\_\+\+T\+I\+M\+E\+\_\+H}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_abf744c6bc72b8dda14b1ee43dd2de7ca}{U\+S\+E\+\_\+\+C\+L\+O\+CK}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a91231a0023343eff9f579c0d8f3012b6}{H\+A\+S\+\_\+\+S\+T\+D\+IO}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a57fac1ec334f8efcddfe09a60bedd9d1}{H\+A\+S\+\_\+\+P\+R\+I\+N\+TF}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_ac449233b5b6227e98fb2167ab3e9ac3a}{C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~\char`\"{}Please put compiler version here (e.\+g. gcc 4.\+1)\char`\"{}
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_abfd62cff6f9a21d0c6ad1c932dc6f537}{C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+F\+L\+A\+GS}}~F\+L\+A\+G\+S\+\_\+\+S\+TR /$\ast$ \char`\"{}Please put compiler flags here (e.\+g. -\/o3)\char`\"{} $\ast$/
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_acc189052d35e063b1657701c4e55080a}{M\+E\+M\+\_\+\+L\+O\+C\+A\+T\+I\+ON}}~\char`\"{}S\+T\+A\+CK\char`\"{}
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}~((void $\ast$)0)
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a6a0d5370b892a5a15a1ed81636adcd0a}{align\+\_\+mem}}(x)~(void $\ast$)(4 + (((\mbox{\hyperlink{core__portme_8h_a2dafa3bb751c8546d3db6e03eebb7cd8}{ee\+\_\+ptr\+\_\+int}})(x)-\/1) \& $\sim$3))
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_aab099cc85de6007687b434d6e26a1238}{C\+O\+R\+E\+T\+I\+M\+E\+T\+Y\+PE}}~\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a1b1bcd5785e411b5ce1b2a000c3515e9}{S\+E\+E\+D\+\_\+\+M\+E\+T\+H\+OD}}~\mbox{\hyperlink{coremark_8h_acd4115f1e3ff2fe980ba3fd289507b0b}{S\+E\+E\+D\+\_\+\+V\+O\+L\+A\+T\+I\+LE}}
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a1c6bc5f2a9966eb202f337b4a4343bb7}{M\+E\+M\+\_\+\+M\+E\+T\+H\+OD}}~\mbox{\hyperlink{coremark_8h_a940b2ef47c80758ee6bc96a9a90aeed4}{M\+E\+M\+\_\+\+S\+T\+A\+CK}}
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_aad8b66443738fa8cb6b684196d8009e1}{M\+U\+L\+T\+I\+T\+H\+R\+E\+AD}}~1
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_af479ff0d4c68d458620a8efd94d1a357}{U\+S\+E\+\_\+\+P\+T\+H\+R\+E\+AD}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a8d4d917b8d2c502351e71e6af455d763}{U\+S\+E\+\_\+\+F\+O\+RK}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a71bac3b5577a46319af009cc2c2da083}{U\+S\+E\+\_\+\+S\+O\+C\+K\+ET}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_ace82dc402cfd5cb69a9b01d977bd6c12}{M\+A\+I\+N\+\_\+\+H\+A\+S\+\_\+\+N\+O\+A\+R\+GC}}~1
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_aadd0390a51e47e185701d972e3cfb0ee}{M\+A\+I\+N\+\_\+\+H\+A\+S\+\_\+\+N\+O\+R\+E\+T\+U\+RN}}~0
+\item 
+\#define \mbox{\hyperlink{core__portme_8h_a036cdcb9a4bdbfea5cc2a88ba44eab5b}{V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+R\+UN}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef signed short \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}
+\item 
+typedef unsigned short \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}
+\item 
+typedef signed int \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}}
+\item 
+typedef double \mbox{\hyperlink{core__portme_8h_acec38cb053bfaef186febab7d20aa019}{ee\+\_\+f32}}
+\item 
+typedef unsigned char \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}}
+\item 
+typedef unsigned int \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}
+\item 
+typedef \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{core__portme_8h_a2dafa3bb751c8546d3db6e03eebb7cd8}{ee\+\_\+ptr\+\_\+int}}
+\item 
+typedef size\+\_\+t \mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}}
+\item 
+typedef \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}{C\+O\+R\+E\+\_\+\+T\+I\+C\+KS}}
+\item 
+typedef struct \mbox{\hyperlink{structCORE__PORTABLE__S}{C\+O\+R\+E\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+S}} \mbox{\hyperlink{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}{core\+\_\+portable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{core__portme_8h_a9d2fc7bf749730cb6de804c1b9b50637}{portable\+\_\+init}} (\mbox{\hyperlink{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}{core\+\_\+portable}} $\ast$p, int $\ast$argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{core__portme_8h_aa81723a3d295d9de4f4c9270c88ff317}{portable\+\_\+fini}} (\mbox{\hyperlink{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}{core\+\_\+portable}} $\ast$p)
+\item 
+int \mbox{\hyperlink{core__portme_8h_a49bdf44799fc8403daa1b97e3159a809}{ee\+\_\+printf}} (const char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{core__portme_8h_a87f6f5fda50b1c86ef551fe96bcd5afd}{default\+\_\+num\+\_\+contexts}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{core__portme_8h_a6a0d5370b892a5a15a1ed81636adcd0a}\label{core__portme_8h_a6a0d5370b892a5a15a1ed81636adcd0a}} 
+\index{core\_portme.h@{core\_portme.h}!align\_mem@{align\_mem}}
+\index{align\_mem@{align\_mem}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{align\_mem}{align\_mem}}
+{\footnotesize\ttfamily \#define align\+\_\+mem(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(void $\ast$)(4 + (((\mbox{\hyperlink{core__portme_8h_a2dafa3bb751c8546d3db6e03eebb7cd8}{ee\+\_\+ptr\+\_\+int}})(x)-\/1) \& $\sim$3))}
+
+\mbox{\Hypertarget{core__portme_8h_abfd62cff6f9a21d0c6ad1c932dc6f537}\label{core__portme_8h_abfd62cff6f9a21d0c6ad1c932dc6f537}} 
+\index{core\_portme.h@{core\_portme.h}!COMPILER\_FLAGS@{COMPILER\_FLAGS}}
+\index{COMPILER\_FLAGS@{COMPILER\_FLAGS}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{COMPILER\_FLAGS}{COMPILER\_FLAGS}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+F\+L\+A\+GS~F\+L\+A\+G\+S\+\_\+\+S\+TR /$\ast$ \char`\"{}Please put compiler flags here (e.\+g. -\/o3)\char`\"{} $\ast$/}
+
+\mbox{\Hypertarget{core__portme_8h_ac449233b5b6227e98fb2167ab3e9ac3a}\label{core__portme_8h_ac449233b5b6227e98fb2167ab3e9ac3a}} 
+\index{core\_portme.h@{core\_portme.h}!COMPILER\_VERSION@{COMPILER\_VERSION}}
+\index{COMPILER\_VERSION@{COMPILER\_VERSION}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{COMPILER\_VERSION}{COMPILER\_VERSION}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+I\+L\+E\+R\+\_\+\+V\+E\+R\+S\+I\+ON~\char`\"{}Please put compiler version here (e.\+g. gcc 4.\+1)\char`\"{}}
+
+\mbox{\Hypertarget{core__portme_8h_aab099cc85de6007687b434d6e26a1238}\label{core__portme_8h_aab099cc85de6007687b434d6e26a1238}} 
+\index{core\_portme.h@{core\_portme.h}!CORETIMETYPE@{CORETIMETYPE}}
+\index{CORETIMETYPE@{CORETIMETYPE}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{CORETIMETYPE}{CORETIMETYPE}}
+{\footnotesize\ttfamily \#define C\+O\+R\+E\+T\+I\+M\+E\+T\+Y\+PE~\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}
+
+\mbox{\Hypertarget{core__portme_8h_a454f1ee3aa95cb253fe79cc06d13daff}\label{core__portme_8h_a454f1ee3aa95cb253fe79cc06d13daff}} 
+\index{core\_portme.h@{core\_portme.h}!HAS\_FLOAT@{HAS\_FLOAT}}
+\index{HAS\_FLOAT@{HAS\_FLOAT}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{HAS\_FLOAT}{HAS\_FLOAT}}
+{\footnotesize\ttfamily \#define H\+A\+S\+\_\+\+F\+L\+O\+AT~0}
+
+\mbox{\Hypertarget{core__portme_8h_a57fac1ec334f8efcddfe09a60bedd9d1}\label{core__portme_8h_a57fac1ec334f8efcddfe09a60bedd9d1}} 
+\index{core\_portme.h@{core\_portme.h}!HAS\_PRINTF@{HAS\_PRINTF}}
+\index{HAS\_PRINTF@{HAS\_PRINTF}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{HAS\_PRINTF}{HAS\_PRINTF}}
+{\footnotesize\ttfamily \#define H\+A\+S\+\_\+\+P\+R\+I\+N\+TF~0}
+
+\mbox{\Hypertarget{core__portme_8h_a91231a0023343eff9f579c0d8f3012b6}\label{core__portme_8h_a91231a0023343eff9f579c0d8f3012b6}} 
+\index{core\_portme.h@{core\_portme.h}!HAS\_STDIO@{HAS\_STDIO}}
+\index{HAS\_STDIO@{HAS\_STDIO}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{HAS\_STDIO}{HAS\_STDIO}}
+{\footnotesize\ttfamily \#define H\+A\+S\+\_\+\+S\+T\+D\+IO~0}
+
+\mbox{\Hypertarget{core__portme_8h_a4f60741b9a341acae30bf6ba7daa7e19}\label{core__portme_8h_a4f60741b9a341acae30bf6ba7daa7e19}} 
+\index{core\_portme.h@{core\_portme.h}!HAS\_TIME\_H@{HAS\_TIME\_H}}
+\index{HAS\_TIME\_H@{HAS\_TIME\_H}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{HAS\_TIME\_H}{HAS\_TIME\_H}}
+{\footnotesize\ttfamily \#define H\+A\+S\+\_\+\+T\+I\+M\+E\+\_\+H~0}
+
+\mbox{\Hypertarget{core__portme_8h_ace82dc402cfd5cb69a9b01d977bd6c12}\label{core__portme_8h_ace82dc402cfd5cb69a9b01d977bd6c12}} 
+\index{core\_portme.h@{core\_portme.h}!MAIN\_HAS\_NOARGC@{MAIN\_HAS\_NOARGC}}
+\index{MAIN\_HAS\_NOARGC@{MAIN\_HAS\_NOARGC}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{MAIN\_HAS\_NOARGC}{MAIN\_HAS\_NOARGC}}
+{\footnotesize\ttfamily \#define M\+A\+I\+N\+\_\+\+H\+A\+S\+\_\+\+N\+O\+A\+R\+GC~1}
+
+\mbox{\Hypertarget{core__portme_8h_aadd0390a51e47e185701d972e3cfb0ee}\label{core__portme_8h_aadd0390a51e47e185701d972e3cfb0ee}} 
+\index{core\_portme.h@{core\_portme.h}!MAIN\_HAS\_NORETURN@{MAIN\_HAS\_NORETURN}}
+\index{MAIN\_HAS\_NORETURN@{MAIN\_HAS\_NORETURN}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{MAIN\_HAS\_NORETURN}{MAIN\_HAS\_NORETURN}}
+{\footnotesize\ttfamily \#define M\+A\+I\+N\+\_\+\+H\+A\+S\+\_\+\+N\+O\+R\+E\+T\+U\+RN~0}
+
+\mbox{\Hypertarget{core__portme_8h_acc189052d35e063b1657701c4e55080a}\label{core__portme_8h_acc189052d35e063b1657701c4e55080a}} 
+\index{core\_portme.h@{core\_portme.h}!MEM\_LOCATION@{MEM\_LOCATION}}
+\index{MEM\_LOCATION@{MEM\_LOCATION}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_LOCATION}{MEM\_LOCATION}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+L\+O\+C\+A\+T\+I\+ON~\char`\"{}S\+T\+A\+CK\char`\"{}}
+
+\mbox{\Hypertarget{core__portme_8h_a1c6bc5f2a9966eb202f337b4a4343bb7}\label{core__portme_8h_a1c6bc5f2a9966eb202f337b4a4343bb7}} 
+\index{core\_portme.h@{core\_portme.h}!MEM\_METHOD@{MEM\_METHOD}}
+\index{MEM\_METHOD@{MEM\_METHOD}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_METHOD}{MEM\_METHOD}}
+{\footnotesize\ttfamily \#define M\+E\+M\+\_\+\+M\+E\+T\+H\+OD~\mbox{\hyperlink{coremark_8h_a940b2ef47c80758ee6bc96a9a90aeed4}{M\+E\+M\+\_\+\+S\+T\+A\+CK}}}
+
+\mbox{\Hypertarget{core__portme_8h_aad8b66443738fa8cb6b684196d8009e1}\label{core__portme_8h_aad8b66443738fa8cb6b684196d8009e1}} 
+\index{core\_portme.h@{core\_portme.h}!MULTITHREAD@{MULTITHREAD}}
+\index{MULTITHREAD@{MULTITHREAD}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{MULTITHREAD}{MULTITHREAD}}
+{\footnotesize\ttfamily \#define M\+U\+L\+T\+I\+T\+H\+R\+E\+AD~1}
+
+\mbox{\Hypertarget{core__portme_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{core__portme_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}} 
+\index{core\_portme.h@{core\_portme.h}!NULL@{NULL}}
+\index{NULL@{NULL}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \#define N\+U\+LL~((void $\ast$)0)}
+
+\mbox{\Hypertarget{core__portme_8h_a1b1bcd5785e411b5ce1b2a000c3515e9}\label{core__portme_8h_a1b1bcd5785e411b5ce1b2a000c3515e9}} 
+\index{core\_portme.h@{core\_portme.h}!SEED\_METHOD@{SEED\_METHOD}}
+\index{SEED\_METHOD@{SEED\_METHOD}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{SEED\_METHOD}{SEED\_METHOD}}
+{\footnotesize\ttfamily \#define S\+E\+E\+D\+\_\+\+M\+E\+T\+H\+OD~\mbox{\hyperlink{coremark_8h_acd4115f1e3ff2fe980ba3fd289507b0b}{S\+E\+E\+D\+\_\+\+V\+O\+L\+A\+T\+I\+LE}}}
+
+\mbox{\Hypertarget{core__portme_8h_abf744c6bc72b8dda14b1ee43dd2de7ca}\label{core__portme_8h_abf744c6bc72b8dda14b1ee43dd2de7ca}} 
+\index{core\_portme.h@{core\_portme.h}!USE\_CLOCK@{USE\_CLOCK}}
+\index{USE\_CLOCK@{USE\_CLOCK}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{USE\_CLOCK}{USE\_CLOCK}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+C\+L\+O\+CK~0}
+
+\mbox{\Hypertarget{core__portme_8h_a8d4d917b8d2c502351e71e6af455d763}\label{core__portme_8h_a8d4d917b8d2c502351e71e6af455d763}} 
+\index{core\_portme.h@{core\_portme.h}!USE\_FORK@{USE\_FORK}}
+\index{USE\_FORK@{USE\_FORK}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{USE\_FORK}{USE\_FORK}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+F\+O\+RK~0}
+
+\mbox{\Hypertarget{core__portme_8h_af479ff0d4c68d458620a8efd94d1a357}\label{core__portme_8h_af479ff0d4c68d458620a8efd94d1a357}} 
+\index{core\_portme.h@{core\_portme.h}!USE\_PTHREAD@{USE\_PTHREAD}}
+\index{USE\_PTHREAD@{USE\_PTHREAD}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{USE\_PTHREAD}{USE\_PTHREAD}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+P\+T\+H\+R\+E\+AD~0}
+
+\mbox{\Hypertarget{core__portme_8h_a71bac3b5577a46319af009cc2c2da083}\label{core__portme_8h_a71bac3b5577a46319af009cc2c2da083}} 
+\index{core\_portme.h@{core\_portme.h}!USE\_SOCKET@{USE\_SOCKET}}
+\index{USE\_SOCKET@{USE\_SOCKET}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{USE\_SOCKET}{USE\_SOCKET}}
+{\footnotesize\ttfamily \#define U\+S\+E\+\_\+\+S\+O\+C\+K\+ET~0}
+
+\mbox{\Hypertarget{core__portme_8h_a036cdcb9a4bdbfea5cc2a88ba44eab5b}\label{core__portme_8h_a036cdcb9a4bdbfea5cc2a88ba44eab5b}} 
+\index{core\_portme.h@{core\_portme.h}!VALIDATION\_RUN@{VALIDATION\_RUN}}
+\index{VALIDATION\_RUN@{VALIDATION\_RUN}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{VALIDATION\_RUN}{VALIDATION\_RUN}}
+{\footnotesize\ttfamily \#define V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+R\+UN~1}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}\label{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}} 
+\index{core\_portme.h@{core\_portme.h}!core\_portable@{core\_portable}}
+\index{core\_portable@{core\_portable}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{core\_portable}{core\_portable}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structCORE__PORTABLE__S}{C\+O\+R\+E\+\_\+\+P\+O\+R\+T\+A\+B\+L\+E\+\_\+S}} \mbox{\hyperlink{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}{core\+\_\+portable}}}
+
+\mbox{\Hypertarget{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}\label{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}} 
+\index{core\_portme.h@{core\_portme.h}!CORE\_TICKS@{CORE\_TICKS}}
+\index{CORE\_TICKS@{CORE\_TICKS}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{CORE\_TICKS}{CORE\_TICKS}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{core__portme_8h_a17122e8aeb0d3c914afa1ed95fc77f96}{C\+O\+R\+E\+\_\+\+T\+I\+C\+KS}}}
+
+\mbox{\Hypertarget{core__portme_8h_acec38cb053bfaef186febab7d20aa019}\label{core__portme_8h_acec38cb053bfaef186febab7d20aa019}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_f32@{ee\_f32}}
+\index{ee\_f32@{ee\_f32}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_f32}{ee\_f32}}
+{\footnotesize\ttfamily typedef double \mbox{\hyperlink{core__portme_8h_acec38cb053bfaef186febab7d20aa019}{ee\+\_\+f32}}}
+
+\mbox{\Hypertarget{core__portme_8h_a2dafa3bb751c8546d3db6e03eebb7cd8}\label{core__portme_8h_a2dafa3bb751c8546d3db6e03eebb7cd8}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_ptr\_int@{ee\_ptr\_int}}
+\index{ee\_ptr\_int@{ee\_ptr\_int}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_ptr\_int}{ee\_ptr\_int}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} \mbox{\hyperlink{core__portme_8h_a2dafa3bb751c8546d3db6e03eebb7cd8}{ee\+\_\+ptr\+\_\+int}}}
+
+\mbox{\Hypertarget{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}\label{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_s16@{ee\_s16}}
+\index{ee\_s16@{ee\_s16}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_s16}{ee\_s16}}
+{\footnotesize\ttfamily typedef signed short \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}
+
+\mbox{\Hypertarget{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}\label{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_s32@{ee\_s32}}
+\index{ee\_s32@{ee\_s32}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_s32}{ee\_s32}}
+{\footnotesize\ttfamily typedef signed int \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}}}
+
+\mbox{\Hypertarget{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}\label{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_size\_t@{ee\_size\_t}}
+\index{ee\_size\_t@{ee\_size\_t}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_size\_t}{ee\_size\_t}}
+{\footnotesize\ttfamily typedef size\+\_\+t \mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}}}
+
+\mbox{\Hypertarget{core__portme_8h_a6c154274618c47554763b12ee0981b0a}\label{core__portme_8h_a6c154274618c47554763b12ee0981b0a}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_u16@{ee\_u16}}
+\index{ee\_u16@{ee\_u16}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_u16}{ee\_u16}}
+{\footnotesize\ttfamily typedef unsigned short \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}
+
+\mbox{\Hypertarget{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}\label{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_u32@{ee\_u32}}
+\index{ee\_u32@{ee\_u32}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_u32}{ee\_u32}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}
+
+\mbox{\Hypertarget{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}\label{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_u8@{ee\_u8}}
+\index{ee\_u8@{ee\_u8}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_u8}{ee\_u8}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{core__portme_8h_a49bdf44799fc8403daa1b97e3159a809}\label{core__portme_8h_a49bdf44799fc8403daa1b97e3159a809}} 
+\index{core\_portme.h@{core\_portme.h}!ee\_printf@{ee\_printf}}
+\index{ee\_printf@{ee\_printf}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{ee\_printf()}{ee\_printf()}}
+{\footnotesize\ttfamily int ee\+\_\+printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__portme_8h_aa81723a3d295d9de4f4c9270c88ff317}\label{core__portme_8h_aa81723a3d295d9de4f4c9270c88ff317}} 
+\index{core\_portme.h@{core\_portme.h}!portable\_fini@{portable\_fini}}
+\index{portable\_fini@{portable\_fini}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{portable\_fini()}{portable\_fini()}}
+{\footnotesize\ttfamily void portable\+\_\+fini (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}{core\+\_\+portable}} $\ast$}]{p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__portme_8h_a9d2fc7bf749730cb6de804c1b9b50637}\label{core__portme_8h_a9d2fc7bf749730cb6de804c1b9b50637}} 
+\index{core\_portme.h@{core\_portme.h}!portable\_init@{portable\_init}}
+\index{portable\_init@{portable\_init}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{portable\_init()}{portable\_init()}}
+{\footnotesize\ttfamily void portable\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a879d32c4fafc1cbaf6b062c0f69927ef}{core\+\_\+portable}} $\ast$}]{p,  }\item[{int $\ast$}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{core__portme_8h_a87f6f5fda50b1c86ef551fe96bcd5afd}\label{core__portme_8h_a87f6f5fda50b1c86ef551fe96bcd5afd}} 
+\index{core\_portme.h@{core\_portme.h}!default\_num\_contexts@{default\_num\_contexts}}
+\index{default\_num\_contexts@{default\_num\_contexts}!core\_portme.h@{core\_portme.h}}
+\doxysubsubsection{\texorpdfstring{default\_num\_contexts}{default\_num\_contexts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} default\+\_\+num\+\_\+contexts}
+

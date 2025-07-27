@@ -1,0 +1,85 @@
+\hypertarget{io_8c}{}\doxysection{darklibc/io.c File Reference}
+\label{io_8c}\index{darklibc/io.c@{darklibc/io.c}}
+{\ttfamily \#include $<$io.\+h$>$}\newline
+Include dependency graph for io.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{io_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{io_8c_afbf23e72a5f938716337bfb7488ed68c}{board\+\_\+name}} (int id)
+\item 
+\mbox{\hyperlink{io_8c_a9582b508658cae24d30b6e424aee9842}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((interrupt(\char`\"{}machine\char`\"{})))
+\item 
+int \mbox{\hyperlink{io_8c_a9094a6acf7be909cb2bfc3cc8e91aeb6}{mac}} (int acc, short x, short y)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile struct \mbox{\hyperlink{structDARKIO}{D\+A\+R\+K\+IO}} \mbox{\hyperlink{io_8c_abc6bba2da20afa69c195c860bbfe4f22}{io}}
+\item 
+unsigned char \mbox{\hyperlink{io_8c_a582dd14708b0f7d1d78777e31372e39b}{kmem}} \mbox{[}8192\mbox{]} = \char`\"{}darksocv x86 payload test\char`\"{}
+\item 
+volatile int \mbox{\hyperlink{io_8c_a29ad96232e5adb5ddc3e80200a86f6df}{utimers}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{io_8c_a9582b508658cae24d30b6e424aee9842}\label{io_8c_a9582b508658cae24d30b6e424aee9842}} 
+\index{io.c@{io.c}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(interrupt(\char`\"{}machine\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8c_afbf23e72a5f938716337bfb7488ed68c}\label{io_8c_afbf23e72a5f938716337bfb7488ed68c}} 
+\index{io.c@{io.c}!board\_name@{board\_name}}
+\index{board\_name@{board\_name}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{board\_name()}{board\_name()}}
+{\footnotesize\ttfamily char$\ast$ board\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8c_a9094a6acf7be909cb2bfc3cc8e91aeb6}\label{io_8c_a9094a6acf7be909cb2bfc3cc8e91aeb6}} 
+\index{io.c@{io.c}!mac@{mac}}
+\index{mac@{mac}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{mac()}{mac()}}
+{\footnotesize\ttfamily int mac (\begin{DoxyParamCaption}\item[{int}]{acc,  }\item[{short}]{x,  }\item[{short}]{y }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{io_8c_abc6bba2da20afa69c195c860bbfe4f22}\label{io_8c_abc6bba2da20afa69c195c860bbfe4f22}} 
+\index{io.c@{io.c}!io@{io}}
+\index{io@{io}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{io}{io}}
+{\footnotesize\ttfamily volatile struct \mbox{\hyperlink{structDARKIO}{D\+A\+R\+K\+IO}} io}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    4, 100, 0, 0,   }
+\DoxyCodeLine{    \{ 0, 0, 0 \},    }
+\DoxyCodeLine{    0,              }
+\DoxyCodeLine{    0,              }
+\DoxyCodeLine{    1000000,        }
+\DoxyCodeLine{    0,              }
+\DoxyCodeLine{    0,              }
+\DoxyCodeLine{    0               }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{io_8c_a582dd14708b0f7d1d78777e31372e39b}\label{io_8c_a582dd14708b0f7d1d78777e31372e39b}} 
+\index{io.c@{io.c}!kmem@{kmem}}
+\index{kmem@{kmem}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{kmem}{kmem}}
+{\footnotesize\ttfamily unsigned char kmem\mbox{[}8192\mbox{]} = \char`\"{}darksocv x86 payload test\char`\"{}}
+
+\mbox{\Hypertarget{io_8c_a29ad96232e5adb5ddc3e80200a86f6df}\label{io_8c_a29ad96232e5adb5ddc3e80200a86f6df}} 
+\index{io.c@{io.c}!utimers@{utimers}}
+\index{utimers@{utimers}!io.c@{io.c}}
+\doxysubsubsection{\texorpdfstring{utimers}{utimers}}
+{\footnotesize\ttfamily volatile int utimers = 0}
+

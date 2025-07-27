@@ -1,0 +1,246 @@
+\hypertarget{spi_8h}{}\doxysection{darklibc/include/spi.h File Reference}
+\label{spi_8h}\index{darklibc/include/spi.h@{darklibc/include/spi.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for spi.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{spi_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{spi_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSPI__RegisterBits}{S\+P\+I\+\_\+\+Register\+Bits}}
+\item 
+union \mbox{\hyperlink{unionSPI__Register}{S\+P\+I\+\_\+\+Register}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{spi_8h_a5db0aceecaf7db5fbe2984e88fef3734}{spi\+\_\+init}} ()
+\item 
+void \mbox{\hyperlink{spi_8h_a48771a2f67d9a8aa0ddeaba6f58ecb47}{spi\+\_\+set\+\_\+clock\+\_\+frequency}} (uint32\+\_\+t frequency)
+\item 
+void \mbox{\hyperlink{spi_8h_ac37a30789738b69befffdc29f61d77d1}{spi\+\_\+set\+\_\+data\+\_\+mode}} (uint8\+\_\+t mode)
+\item 
+void \mbox{\hyperlink{spi_8h_a85ec55446b6d4cfb5806e805af8630fd}{spi\+\_\+enable}} ()
+\item 
+void \mbox{\hyperlink{spi_8h_a1b20de0da423e7d6da1c99eec9d63216}{spi\+\_\+disable}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{spi_8h_a810c1e922ce5ce450eacf87de60fae5f}{spi\+\_\+send\+\_\+receive\+\_\+data}} (uint8\+\_\+t data)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{spi_8h_a7e9be6b52c855e67579167e121afc0ff}{spi\+\_\+transaction\+\_\+single\+\_\+byte}} (\mbox{\hyperlink{unionSPI__Register}{S\+P\+I\+\_\+\+Register}})
+\begin{DoxyCompactList}\small\item\em Performs a single byte S\+PI transaction. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{spi_8h_a888c52f8da382a9340cad2236903b03a}{spi\+\_\+write\+\_\+read\+\_\+single\+\_\+byte}} (uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Transmits a single byte via S\+PI and simultaneously receives a byte. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{spi_8h_af95ddb9dce4207f2812e69fe23cdcfdf}{spi\+\_\+read\+\_\+single\+\_\+byte}} (uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Reads a single byte from the S\+PI bus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spi_8h_a64720029b092f8abec3b0de75d54581c}{spi\+\_\+write\+\_\+single\+\_\+byte}} (uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Writes a single byte to the S\+PI bus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spi_8h_abf0a322c43d6c5b87be7f3b98fe4f8a1}{spi\+\_\+read\+\_\+multiple\+\_\+bytes}} (uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Reads multiple bytes from the S\+PI interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spi_8h_a19b41fba51c28ae1d5833e5a7107cd92}{spi\+\_\+write\+\_\+multiple\+\_\+bytes}} (uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Writes multiple bytes to the S\+PI bus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{spi_8h_a7920334b46c20cfe3a11c0ccafbb7f94}{spi\+\_\+write\+\_\+read\+\_\+multiple\+\_\+bytes}} (uint8\+\_\+t $\ast$, uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Writes and reads multiple bytes over S\+PI. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{spi_8h_a1b20de0da423e7d6da1c99eec9d63216}\label{spi_8h_a1b20de0da423e7d6da1c99eec9d63216}} 
+\index{spi.h@{spi.h}!spi\_disable@{spi\_disable}}
+\index{spi\_disable@{spi\_disable}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_disable()}{spi\_disable()}}
+{\footnotesize\ttfamily void spi\+\_\+disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{spi_8h_a85ec55446b6d4cfb5806e805af8630fd}\label{spi_8h_a85ec55446b6d4cfb5806e805af8630fd}} 
+\index{spi.h@{spi.h}!spi\_enable@{spi\_enable}}
+\index{spi\_enable@{spi\_enable}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_enable()}{spi\_enable()}}
+{\footnotesize\ttfamily void spi\+\_\+enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{spi_8h_a5db0aceecaf7db5fbe2984e88fef3734}\label{spi_8h_a5db0aceecaf7db5fbe2984e88fef3734}} 
+\index{spi.h@{spi.h}!spi\_init@{spi\_init}}
+\index{spi\_init@{spi\_init}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_init()}{spi\_init()}}
+{\footnotesize\ttfamily void spi\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{spi_8h_abf0a322c43d6c5b87be7f3b98fe4f8a1}\label{spi_8h_abf0a322c43d6c5b87be7f3b98fe4f8a1}} 
+\index{spi.h@{spi.h}!spi\_read\_multiple\_bytes@{spi\_read\_multiple\_bytes}}
+\index{spi\_read\_multiple\_bytes@{spi\_read\_multiple\_bytes}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_read\_multiple\_bytes()}{spi\_read\_multiple\_bytes()}}
+{\footnotesize\ttfamily void spi\+\_\+read\+\_\+multiple\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads multiple bytes from the S\+PI interface. 
+
+This function reads a specified number of bytes from the S\+PI interface and stores them in the provided buffer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx\+\_\+data} & Pointer to the buffer where the received data will be stored. \\
+\hline
+{\em length} & The number of bytes to read from the S\+PI interface. \\
+\hline
+{\em slave} & The slave device to communicate with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{spi_8h_af95ddb9dce4207f2812e69fe23cdcfdf}\label{spi_8h_af95ddb9dce4207f2812e69fe23cdcfdf}} 
+\index{spi.h@{spi.h}!spi\_read\_single\_byte@{spi\_read\_single\_byte}}
+\index{spi\_read\_single\_byte@{spi\_read\_single\_byte}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_read\_single\_byte()}{spi\_read\_single\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+read\+\_\+single\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads a single byte from the S\+PI bus. 
+
+This function performs a read operation on the S\+PI bus and returns the byte that was read. Used to receive data from an S\+PI slave device.
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The number of bytes to be in the complete transaction. Should be 1 when not called as part of a multi-\/byte transaction. \\
+\hline
+{\em slave} & The slave device to communicate with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The byte read from the S\+PI bus. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{spi_8h_a810c1e922ce5ce450eacf87de60fae5f}\label{spi_8h_a810c1e922ce5ce450eacf87de60fae5f}} 
+\index{spi.h@{spi.h}!spi\_send\_receive\_data@{spi\_send\_receive\_data}}
+\index{spi\_send\_receive\_data@{spi\_send\_receive\_data}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_send\_receive\_data()}{spi\_send\_receive\_data()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+send\+\_\+receive\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{spi_8h_a48771a2f67d9a8aa0ddeaba6f58ecb47}\label{spi_8h_a48771a2f67d9a8aa0ddeaba6f58ecb47}} 
+\index{spi.h@{spi.h}!spi\_set\_clock\_frequency@{spi\_set\_clock\_frequency}}
+\index{spi\_set\_clock\_frequency@{spi\_set\_clock\_frequency}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_set\_clock\_frequency()}{spi\_set\_clock\_frequency()}}
+{\footnotesize\ttfamily void spi\+\_\+set\+\_\+clock\+\_\+frequency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{frequency }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{spi_8h_ac37a30789738b69befffdc29f61d77d1}\label{spi_8h_ac37a30789738b69befffdc29f61d77d1}} 
+\index{spi.h@{spi.h}!spi\_set\_data\_mode@{spi\_set\_data\_mode}}
+\index{spi\_set\_data\_mode@{spi\_set\_data\_mode}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_set\_data\_mode()}{spi\_set\_data\_mode()}}
+{\footnotesize\ttfamily void spi\+\_\+set\+\_\+data\+\_\+mode (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{spi_8h_a7e9be6b52c855e67579167e121afc0ff}\label{spi_8h_a7e9be6b52c855e67579167e121afc0ff}} 
+\index{spi.h@{spi.h}!spi\_transaction\_single\_byte@{spi\_transaction\_single\_byte}}
+\index{spi\_transaction\_single\_byte@{spi\_transaction\_single\_byte}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_transaction\_single\_byte()}{spi\_transaction\_single\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+transaction\+\_\+single\+\_\+byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unionSPI__Register}{S\+P\+I\+\_\+\+Register}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Performs a single byte S\+PI transaction. 
+
+This function initiates a single byte transaction over the S\+PI interface using the provided S\+PI register configuration.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+spi\+\_\+register} & \mbox{[}\mbox{\hyperlink{unionSPI__Register}{S\+P\+I\+\_\+\+Register}}\mbox{]} The S\+PI register configuration to be used for the transaction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}uint8\+\_\+t\mbox{]} The byte received from the S\+PI transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{spi_8h_a19b41fba51c28ae1d5833e5a7107cd92}\label{spi_8h_a19b41fba51c28ae1d5833e5a7107cd92}} 
+\index{spi.h@{spi.h}!spi\_write\_multiple\_bytes@{spi\_write\_multiple\_bytes}}
+\index{spi\_write\_multiple\_bytes@{spi\_write\_multiple\_bytes}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_write\_multiple\_bytes()}{spi\_write\_multiple\_bytes()}}
+{\footnotesize\ttfamily void spi\+\_\+write\+\_\+multiple\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Writes multiple bytes to the S\+PI bus. 
+
+This function sends a sequence of bytes over the S\+PI bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Pointer to the array of bytes to be sent. \\
+\hline
+{\em length} & Number of bytes to be sent. \\
+\hline
+{\em slave} & The slave device to communicate with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{spi_8h_a7920334b46c20cfe3a11c0ccafbb7f94}\label{spi_8h_a7920334b46c20cfe3a11c0ccafbb7f94}} 
+\index{spi.h@{spi.h}!spi\_write\_read\_multiple\_bytes@{spi\_write\_read\_multiple\_bytes}}
+\index{spi\_write\_read\_multiple\_bytes@{spi\_write\_read\_multiple\_bytes}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_write\_read\_multiple\_bytes()}{spi\_write\_read\_multiple\_bytes()}}
+{\footnotesize\ttfamily void spi\+\_\+write\+\_\+read\+\_\+multiple\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t $\ast$}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Writes and reads multiple bytes over S\+PI. 
+
+This function transmits and receives a specified number of bytes over the S\+PI bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx\+\_\+data} & Pointer to the data to be transmitted. \\
+\hline
+{\em rx\+\_\+data} & Pointer to the buffer where received data will be stored. \\
+\hline
+{\em length} & Number of bytes to be transmitted and received. \\
+\hline
+{\em slave} & The slave device to communicate with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{spi_8h_a888c52f8da382a9340cad2236903b03a}\label{spi_8h_a888c52f8da382a9340cad2236903b03a}} 
+\index{spi.h@{spi.h}!spi\_write\_read\_single\_byte@{spi\_write\_read\_single\_byte}}
+\index{spi\_write\_read\_single\_byte@{spi\_write\_read\_single\_byte}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_write\_read\_single\_byte()}{spi\_write\_read\_single\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t spi\+\_\+write\+\_\+read\+\_\+single\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Transmits a single byte via S\+PI and simultaneously receives a byte. 
+
+This function sends a single byte of data through the S\+PI interface and reads a byte of data received from the S\+PI slave device. Used for full-\/duplex communication where data is sent and received simultaneously.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The byte of data to be transmitted. \\
+\hline
+{\em length} & The number of bytes to be in the transaction. \\
+\hline
+{\em length} & The number of bytes to be in the complete transaction. Should be 1 when not called as part of a multi-\/byte transaction. \\
+\hline
+{\em slave} & The slave device to communicate with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The byte received from the S\+PI transaction. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{spi_8h_a64720029b092f8abec3b0de75d54581c}\label{spi_8h_a64720029b092f8abec3b0de75d54581c}} 
+\index{spi.h@{spi.h}!spi\_write\_single\_byte@{spi\_write\_single\_byte}}
+\index{spi\_write\_single\_byte@{spi\_write\_single\_byte}!spi.h@{spi.h}}
+\doxysubsubsection{\texorpdfstring{spi\_write\_single\_byte()}{spi\_write\_single\_byte()}}
+{\footnotesize\ttfamily void spi\+\_\+write\+\_\+single\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{,  }\item[{uint8\+\_\+t}]{ }\end{DoxyParamCaption})}
+
+
+
+Writes a single byte to the S\+PI bus. 
+
+This function sends a single byte of data over the S\+PI bus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The byte of data to be sent. \\
+\hline
+{\em length} & The number of bytes to be in the complete transaction. Should be 1 when not called as part of a multi-\/byte transaction. \\
+\hline
+{\em slave} & The slave device to communicate with. \\
+\hline
+\end{DoxyParams}

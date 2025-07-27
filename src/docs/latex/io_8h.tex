@@ -1,0 +1,194 @@
+\hypertarget{io_8h}{}\doxysection{darklibc/include/io.h File Reference}
+\label{io_8h}\index{darklibc/include/io.h@{darklibc/include/io.h}}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{io_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDARKIO}{D\+A\+R\+K\+IO}}
+\item 
+struct \mbox{\hyperlink{structDARKIO_1_1DARKUART}{D\+A\+R\+K\+I\+O\+::\+D\+A\+R\+K\+U\+A\+RT}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{io_8h_a19a76dc56ee4edd8d3da0d526c0b2a13}{I\+R\+Q\+\_\+\+T\+I\+MR}}~0x80
+\item 
+\#define \mbox{\hyperlink{io_8h_a1dedacd23c78778fe4a838ae767d2c8c}{I\+R\+Q\+\_\+\+U\+A\+RT}}~0x02
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{io_8h_ac5e745f1091ec59dc52bbde7ec311200}{board\+\_\+name}} (int)
+\item 
+int \mbox{\hyperlink{io_8h_ab2beea16011e9770459c35d385439e42}{check4rv32i}} (void)
+\item 
+void \mbox{\hyperlink{io_8h_a31d4d0e40d93516b87db36cc33c9016a}{set\+\_\+mtvec}} (void($\ast$f)(void))
+\item 
+void \mbox{\hyperlink{io_8h_aed763cd96497eac1622b0c0eb6635412}{set\+\_\+mepc}} (void($\ast$f)(void))
+\item 
+void \mbox{\hyperlink{io_8h_a29d65958ca617adb336a3b42910ecae1}{set\+\_\+mie}} (int)
+\item 
+int \mbox{\hyperlink{io_8h_a8184dd8c92827cd4e9d86301fb43afe6}{get\+\_\+mtvec}} (void)
+\item 
+int \mbox{\hyperlink{io_8h_a61e7447e1bf482ceeed32736a222b1a8}{get\+\_\+mepc}} (void)
+\item 
+int \mbox{\hyperlink{io_8h_ae5b87693d89d68e9d809ea6386c38693}{get\+\_\+mie}} (void)
+\item 
+void \mbox{\hyperlink{io_8h_aa497366ed7c88c6e5b6d70a4cb398ae9}{banner}} (void)
+\item 
+\mbox{\hyperlink{io_8h_a862634d89c9c9fe173392ccfd2d81eea}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((interrupt(\char`\"{}machine\char`\"{}))) void irq\+\_\+handler(void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile int \mbox{\hyperlink{io_8h_a29ad96232e5adb5ddc3e80200a86f6df}{utimers}}
+\item 
+volatile struct \mbox{\hyperlink{structDARKIO}{D\+A\+R\+K\+IO}} $\ast$ \mbox{\hyperlink{io_8h_a5816a0473bec05f2238eba079845c738}{io}}
+\item 
+unsigned char \mbox{\hyperlink{io_8h_a582dd14708b0f7d1d78777e31372e39b}{kmem}} \mbox{[}8192\mbox{]}
+\item 
+unsigned \mbox{\hyperlink{io_8h_a6dfe3a995cf990522a836bc1cbb7be2a}{\+\_\+text}}
+\item 
+unsigned \mbox{\hyperlink{io_8h_ad8e3f424a60cd11c2d2669c286802c97}{\+\_\+data}}
+\item 
+unsigned \mbox{\hyperlink{io_8h_a52d7e58005b74b69aed03d445d4167c9}{\+\_\+etext}}
+\item 
+unsigned \mbox{\hyperlink{io_8h_afdc3e0d07396efdb4c6074ae1167e555}{\+\_\+edata}}
+\item 
+unsigned \mbox{\hyperlink{io_8h_ab494829220c56200641825b47da9f1d7}{\+\_\+stack}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{io_8h_a19a76dc56ee4edd8d3da0d526c0b2a13}\label{io_8h_a19a76dc56ee4edd8d3da0d526c0b2a13}} 
+\index{io.h@{io.h}!IRQ\_TIMR@{IRQ\_TIMR}}
+\index{IRQ\_TIMR@{IRQ\_TIMR}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{IRQ\_TIMR}{IRQ\_TIMR}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+T\+I\+MR~0x80}
+
+\mbox{\Hypertarget{io_8h_a1dedacd23c78778fe4a838ae767d2c8c}\label{io_8h_a1dedacd23c78778fe4a838ae767d2c8c}} 
+\index{io.h@{io.h}!IRQ\_UART@{IRQ\_UART}}
+\index{IRQ\_UART@{IRQ\_UART}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{IRQ\_UART}{IRQ\_UART}}
+{\footnotesize\ttfamily \#define I\+R\+Q\+\_\+\+U\+A\+RT~0x02}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{io_8h_a862634d89c9c9fe173392ccfd2d81eea}\label{io_8h_a862634d89c9c9fe173392ccfd2d81eea}} 
+\index{io.h@{io.h}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(interrupt(\char`\"{}machine\char`\"{}))}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_aa497366ed7c88c6e5b6d70a4cb398ae9}\label{io_8h_aa497366ed7c88c6e5b6d70a4cb398ae9}} 
+\index{io.h@{io.h}!banner@{banner}}
+\index{banner@{banner}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{banner()}{banner()}}
+{\footnotesize\ttfamily void banner (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_ac5e745f1091ec59dc52bbde7ec311200}\label{io_8h_ac5e745f1091ec59dc52bbde7ec311200}} 
+\index{io.h@{io.h}!board\_name@{board\_name}}
+\index{board\_name@{board\_name}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{board\_name()}{board\_name()}}
+{\footnotesize\ttfamily char$\ast$ board\+\_\+name (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_ab2beea16011e9770459c35d385439e42}\label{io_8h_ab2beea16011e9770459c35d385439e42}} 
+\index{io.h@{io.h}!check4rv32i@{check4rv32i}}
+\index{check4rv32i@{check4rv32i}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{check4rv32i()}{check4rv32i()}}
+{\footnotesize\ttfamily int check4rv32i (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_a61e7447e1bf482ceeed32736a222b1a8}\label{io_8h_a61e7447e1bf482ceeed32736a222b1a8}} 
+\index{io.h@{io.h}!get\_mepc@{get\_mepc}}
+\index{get\_mepc@{get\_mepc}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{get\_mepc()}{get\_mepc()}}
+{\footnotesize\ttfamily int get\+\_\+mepc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_ae5b87693d89d68e9d809ea6386c38693}\label{io_8h_ae5b87693d89d68e9d809ea6386c38693}} 
+\index{io.h@{io.h}!get\_mie@{get\_mie}}
+\index{get\_mie@{get\_mie}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{get\_mie()}{get\_mie()}}
+{\footnotesize\ttfamily int get\+\_\+mie (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_a8184dd8c92827cd4e9d86301fb43afe6}\label{io_8h_a8184dd8c92827cd4e9d86301fb43afe6}} 
+\index{io.h@{io.h}!get\_mtvec@{get\_mtvec}}
+\index{get\_mtvec@{get\_mtvec}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{get\_mtvec()}{get\_mtvec()}}
+{\footnotesize\ttfamily int get\+\_\+mtvec (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_aed763cd96497eac1622b0c0eb6635412}\label{io_8h_aed763cd96497eac1622b0c0eb6635412}} 
+\index{io.h@{io.h}!set\_mepc@{set\_mepc}}
+\index{set\_mepc@{set\_mepc}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{set\_mepc()}{set\_mepc()}}
+{\footnotesize\ttfamily void set\+\_\+mepc (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_a29d65958ca617adb336a3b42910ecae1}\label{io_8h_a29d65958ca617adb336a3b42910ecae1}} 
+\index{io.h@{io.h}!set\_mie@{set\_mie}}
+\index{set\_mie@{set\_mie}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{set\_mie()}{set\_mie()}}
+{\footnotesize\ttfamily void set\+\_\+mie (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{io_8h_a31d4d0e40d93516b87db36cc33c9016a}\label{io_8h_a31d4d0e40d93516b87db36cc33c9016a}} 
+\index{io.h@{io.h}!set\_mtvec@{set\_mtvec}}
+\index{set\_mtvec@{set\_mtvec}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{set\_mtvec()}{set\_mtvec()}}
+{\footnotesize\ttfamily void set\+\_\+mtvec (\begin{DoxyParamCaption}\item[{void($\ast$)(void)}]{f }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{io_8h_ad8e3f424a60cd11c2d2669c286802c97}\label{io_8h_ad8e3f424a60cd11c2d2669c286802c97}} 
+\index{io.h@{io.h}!\_data@{\_data}}
+\index{\_data@{\_data}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily unsigned \+\_\+data}
+
+\mbox{\Hypertarget{io_8h_afdc3e0d07396efdb4c6074ae1167e555}\label{io_8h_afdc3e0d07396efdb4c6074ae1167e555}} 
+\index{io.h@{io.h}!\_edata@{\_edata}}
+\index{\_edata@{\_edata}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{\_edata}{\_edata}}
+{\footnotesize\ttfamily unsigned \+\_\+edata}
+
+\mbox{\Hypertarget{io_8h_a52d7e58005b74b69aed03d445d4167c9}\label{io_8h_a52d7e58005b74b69aed03d445d4167c9}} 
+\index{io.h@{io.h}!\_etext@{\_etext}}
+\index{\_etext@{\_etext}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{\_etext}{\_etext}}
+{\footnotesize\ttfamily unsigned \+\_\+etext}
+
+\mbox{\Hypertarget{io_8h_ab494829220c56200641825b47da9f1d7}\label{io_8h_ab494829220c56200641825b47da9f1d7}} 
+\index{io.h@{io.h}!\_stack@{\_stack}}
+\index{\_stack@{\_stack}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{\_stack}{\_stack}}
+{\footnotesize\ttfamily unsigned \+\_\+stack}
+
+\mbox{\Hypertarget{io_8h_a6dfe3a995cf990522a836bc1cbb7be2a}\label{io_8h_a6dfe3a995cf990522a836bc1cbb7be2a}} 
+\index{io.h@{io.h}!\_text@{\_text}}
+\index{\_text@{\_text}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{\_text}{\_text}}
+{\footnotesize\ttfamily unsigned \+\_\+text}
+
+\mbox{\Hypertarget{io_8h_a5816a0473bec05f2238eba079845c738}\label{io_8h_a5816a0473bec05f2238eba079845c738}} 
+\index{io.h@{io.h}!io@{io}}
+\index{io@{io}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{io}{io}}
+{\footnotesize\ttfamily volatile struct \mbox{\hyperlink{structDARKIO}{D\+A\+R\+K\+IO}}$\ast$ io}
+
+\mbox{\Hypertarget{io_8h_a582dd14708b0f7d1d78777e31372e39b}\label{io_8h_a582dd14708b0f7d1d78777e31372e39b}} 
+\index{io.h@{io.h}!kmem@{kmem}}
+\index{kmem@{kmem}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{kmem}{kmem}}
+{\footnotesize\ttfamily unsigned char kmem\mbox{[}8192\mbox{]}}
+
+\mbox{\Hypertarget{io_8h_a29ad96232e5adb5ddc3e80200a86f6df}\label{io_8h_a29ad96232e5adb5ddc3e80200a86f6df}} 
+\index{io.h@{io.h}!utimers@{utimers}}
+\index{utimers@{utimers}!io.h@{io.h}}
+\doxysubsubsection{\texorpdfstring{utimers}{utimers}}
+{\footnotesize\ttfamily volatile int utimers}
+

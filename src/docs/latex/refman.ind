@@ -1,0 +1,1061 @@
+\begin{theindex}
+
+  \item {\_\_attribute\_\_}
+    \subitem {io.c}, \hyperpage{88}
+    \subitem {io.h}, \hyperpage{76}
+  \item {\_\_div\_mod\_si3}
+    \subitem {stdio.c}, \hyperpage{91}
+  \item {\_\_divsi3}
+    \subitem {stdio.c}, \hyperpage{91}
+  \item {\_\_modsi3}
+    \subitem {stdio.c}, \hyperpage{91}
+  \item {\_\_mulsi3}
+    \subitem {stdio.c}, \hyperpage{91}
+  \item {\_\_udiv\_umod\_si3}
+    \subitem {stdio.c}, \hyperpage{92}
+  \item {\_\_udivsi3}
+    \subitem {stdio.c}, \hyperpage{92}
+  \item {\_\_umodsi3}
+    \subitem {stdio.c}, \hyperpage{92}
+  \item {\_\_umulsi3}
+    \subitem {stdio.c}, \hyperpage{92}
+  \item {\_data}
+    \subitem {io.h}, \hyperpage{77}
+  \item {\_edata}
+    \subitem {io.h}, \hyperpage{77}
+  \item {\_etext}
+    \subitem {io.h}, \hyperpage{77}
+  \item {\_stack}
+    \subitem {io.h}, \hyperpage{77}
+  \item {\_text}
+    \subitem {io.h}, \hyperpage{78}
+
+  \indexspace
+
+  \item {A}
+    \subitem {MAT\_PARAMS\_S}, \hyperpage{23}
+  \item {align\_mem}
+    \subitem {core\_portme.h}, \hyperpage{40}
+  \item {ALL\_ALGORITHMS\_MASK}
+    \subitem {coremark.h}, \hyperpage{65}
+  \item {atoi}
+    \subitem {stdio.c}, \hyperpage{92}
+    \subitem {stdio.h}, \hyperpage{85}
+
+  \indexspace
+
+  \item {B}
+    \subitem {MAT\_PARAMS\_S}, \hyperpage{23}
+  \item {badapple.h}
+    \subitem {rle}, \hyperpage{31}
+  \item {badapple/badapple.h}, \hyperpage{31}
+  \item {badapple/badapple.txt}, \hyperpage{32}
+  \item {badapple/main.c}, \hyperpage{32}
+  \item {banner}
+    \subitem {io.h}, \hyperpage{76}
+  \item {barebones\_clock}
+    \subitem {core\_portme.c}, \hyperpage{37}
+  \item {baud}
+    \subitem {DARKIO::DARKUART}, \hyperpage{18}
+  \item {bit\_extract}
+    \subitem {core\_matrix.c}, \hyperpage{57}
+  \item {blink/main.c}, \hyperpage{32}
+  \item {board\_cm}
+    \subitem {DARKIO}, \hyperpage{16}
+  \item {board\_id}
+    \subitem {DARKIO}, \hyperpage{16}
+  \item {board\_name}
+    \subitem {io.c}, \hyperpage{88}
+    \subitem {io.h}, \hyperpage{76}
+  \item {busy}
+    \subitem {I2C\_RegisterBits}, \hyperpage{20}
+
+  \indexspace
+
+  \item {C}
+    \subitem {MAT\_PARAMS\_S}, \hyperpage{23}
+  \item {calc\_func}
+    \subitem {core\_list\_join.c}, \hyperpage{51}
+  \item {check4rv32i}
+    \subitem {io.h}, \hyperpage{76}
+  \item {check\_data\_types}
+    \subitem {core\_util.c}, \hyperpage{62}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CLOCKS\_PER\_SEC}
+    \subitem {core\_portme.c}, \hyperpage{36}
+  \item {cmp\_complex}
+    \subitem {core\_list\_join.c}, \hyperpage{51}
+  \item {cmp\_idx}
+    \subitem {core\_list\_join.c}, \hyperpage{51}
+  \item {COMPILER\_FLAGS}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {COMPILER\_VERSION}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {copy\_info}
+    \subitem {core\_list\_join.c}, \hyperpage{51}
+  \item {core\_bench\_list}
+    \subitem {core\_list\_join.c}, \hyperpage{51}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {core\_bench\_matrix}
+    \subitem {core\_matrix.c}, \hyperpage{57}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {core\_bench\_state}
+    \subitem {core\_state.c}, \hyperpage{60}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_EXPONENT}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_FLOAT}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {core\_id}
+    \subitem {DARKIO}, \hyperpage{16}
+  \item {core\_init\_matrix}
+    \subitem {core\_matrix.c}, \hyperpage{57}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {core\_init\_state}
+    \subitem {core\_state.c}, \hyperpage{60}
+    \subitem {coremark.h}, \hyperpage{70}
+  \item {CORE\_INT}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_INVALID}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {core\_list\_find}
+    \subitem {core\_list\_join.c}, \hyperpage{52}
+  \item {core\_list\_init}
+    \subitem {core\_list\_join.c}, \hyperpage{52}
+    \subitem {coremark.h}, \hyperpage{70}
+  \item {core\_list\_insert\_new}
+    \subitem {core\_list\_join.c}, \hyperpage{52}
+  \item {core\_list\_join.c}
+    \subitem {calc\_func}, \hyperpage{51}
+    \subitem {cmp\_complex}, \hyperpage{51}
+    \subitem {cmp\_idx}, \hyperpage{51}
+    \subitem {copy\_info}, \hyperpage{51}
+    \subitem {core\_bench\_list}, \hyperpage{51}
+    \subitem {core\_list\_find}, \hyperpage{52}
+    \subitem {core\_list\_init}, \hyperpage{52}
+    \subitem {core\_list\_insert\_new}, \hyperpage{52}
+    \subitem {core\_list\_mergesort}, \hyperpage{52}
+    \subitem {core\_list\_remove}, \hyperpage{52}
+    \subitem {core\_list\_reverse}, \hyperpage{52}
+    \subitem {core\_list\_undo\_remove}, \hyperpage{53}
+    \subitem {list\_cmp}, \hyperpage{51}
+  \item {core\_list\_mergesort}
+    \subitem {core\_list\_join.c}, \hyperpage{52}
+  \item {core\_list\_remove}
+    \subitem {core\_list\_join.c}, \hyperpage{52}
+  \item {core\_list\_reverse}
+    \subitem {core\_list\_join.c}, \hyperpage{52}
+  \item {core\_list\_undo\_remove}
+    \subitem {core\_list\_join.c}, \hyperpage{53}
+  \item {core\_main.c}
+    \subitem {get\_seed}, \hyperpage{54}
+    \subitem {get\_seed\_32}, \hyperpage{54}
+    \subitem {get\_seed\_args}, \hyperpage{54}
+    \subitem {iterate}, \hyperpage{54}
+    \subitem {list\_known\_crc}, \hyperpage{55}
+    \subitem {main}, \hyperpage{54}
+    \subitem {matrix\_known\_crc}, \hyperpage{55}
+    \subitem {mem\_name}, \hyperpage{55}
+    \subitem {state\_known\_crc}, \hyperpage{55}
+    \subitem {static\_memblk}, \hyperpage{55}
+  \item {core\_matrix.c}
+    \subitem {bit\_extract}, \hyperpage{57}
+    \subitem {core\_bench\_matrix}, \hyperpage{57}
+    \subitem {core\_init\_matrix}, \hyperpage{57}
+    \subitem {matrix\_add\_const}, \hyperpage{58}
+    \subitem {matrix\_big}, \hyperpage{57}
+    \subitem {matrix\_clip}, \hyperpage{57}
+    \subitem {matrix\_mul\_const}, \hyperpage{58}
+    \subitem {matrix\_mul\_matrix}, \hyperpage{58}
+    \subitem {matrix\_mul\_matrix\_bitextract}, \hyperpage{58}
+    \subitem {matrix\_mul\_vect}, \hyperpage{58}
+    \subitem {matrix\_sum}, \hyperpage{59}
+    \subitem {matrix\_test}, \hyperpage{59}
+    \subitem {matrix\_test\_next}, \hyperpage{57}
+  \item {core\_portable}
+    \subitem {core\_portme.h}, \hyperpage{43}
+  \item {CORE\_PORTABLE\_S}, \hyperpage{15}
+    \subitem {portable\_id}, \hyperpage{15}
+  \item {core\_portme.c}
+    \subitem {barebones\_clock}, \hyperpage{37}
+    \subitem {CLOCKS\_PER\_SEC}, \hyperpage{36}
+    \subitem {default\_num\_contexts}, \hyperpage{38}
+    \subitem {EE\_TICKS\_PER\_SEC}, \hyperpage{36}
+    \subitem {get\_time}, \hyperpage{37}
+    \subitem {GETMYTIME}, \hyperpage{36}
+    \subitem {MYTIMEDIFF}, \hyperpage{36}
+    \subitem {portable\_fini}, \hyperpage{37}
+    \subitem {portable\_init}, \hyperpage{37}
+    \subitem {SAMPLE\_TIME\_IMPLEMENTATION}, \hyperpage{36}
+    \subitem {seed1\_volatile}, \hyperpage{38}
+    \subitem {seed2\_volatile}, \hyperpage{38}
+    \subitem {seed3\_volatile}, \hyperpage{38}
+    \subitem {seed4\_volatile}, \hyperpage{38}
+    \subitem {seed5\_volatile}, \hyperpage{38}
+    \subitem {start\_time}, \hyperpage{37}
+    \subitem {start\_time\_val}, \hyperpage{39}
+    \subitem {stop\_time}, \hyperpage{37}
+    \subitem {stop\_time\_val}, \hyperpage{39}
+    \subitem {time\_in\_secs}, \hyperpage{38}
+    \subitem {TIMER\_RES\_DIVIDER}, \hyperpage{36}
+  \item {core\_portme.h}
+    \subitem {align\_mem}, \hyperpage{40}
+    \subitem {COMPILER\_FLAGS}, \hyperpage{41}
+    \subitem {COMPILER\_VERSION}, \hyperpage{41}
+    \subitem {core\_portable}, \hyperpage{43}
+    \subitem {CORE\_TICKS}, \hyperpage{43}
+    \subitem {CORETIMETYPE}, \hyperpage{41}
+    \subitem {default\_num\_contexts}, \hyperpage{45}
+    \subitem {ee\_f32}, \hyperpage{43}
+    \subitem {ee\_printf}, \hyperpage{45}
+    \subitem {ee\_ptr\_int}, \hyperpage{44}
+    \subitem {ee\_s16}, \hyperpage{44}
+    \subitem {ee\_s32}, \hyperpage{44}
+    \subitem {ee\_size\_t}, \hyperpage{44}
+    \subitem {ee\_u16}, \hyperpage{44}
+    \subitem {ee\_u32}, \hyperpage{44}
+    \subitem {ee\_u8}, \hyperpage{44}
+    \subitem {HAS\_FLOAT}, \hyperpage{41}
+    \subitem {HAS\_PRINTF}, \hyperpage{41}
+    \subitem {HAS\_STDIO}, \hyperpage{41}
+    \subitem {HAS\_TIME\_H}, \hyperpage{41}
+    \subitem {MAIN\_HAS\_NOARGC}, \hyperpage{42}
+    \subitem {MAIN\_HAS\_NORETURN}, \hyperpage{42}
+    \subitem {MEM\_LOCATION}, \hyperpage{42}
+    \subitem {MEM\_METHOD}, \hyperpage{42}
+    \subitem {MULTITHREAD}, \hyperpage{42}
+    \subitem {NULL}, \hyperpage{42}
+    \subitem {portable\_fini}, \hyperpage{45}
+    \subitem {portable\_init}, \hyperpage{45}
+    \subitem {SEED\_METHOD}, \hyperpage{42}
+    \subitem {USE\_CLOCK}, \hyperpage{42}
+    \subitem {USE\_FORK}, \hyperpage{43}
+    \subitem {USE\_PTHREAD}, \hyperpage{43}
+    \subitem {USE\_SOCKET}, \hyperpage{43}
+    \subitem {VALIDATION\_RUN}, \hyperpage{43}
+  \item {core\_results}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {CORE\_S1}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_S2}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_SCIENTIFIC}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_START}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {CORE\_STATE}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {core\_state.c}
+    \subitem {core\_bench\_state}, \hyperpage{60}
+    \subitem {core\_init\_state}, \hyperpage{60}
+    \subitem {core\_state\_transition}, \hyperpage{60}
+    \subitem {ee\_isdigit}, \hyperpage{60}
+    \subitem {errpat}, \hyperpage{61}
+    \subitem {floatpat}, \hyperpage{61}
+    \subitem {intpat}, \hyperpage{61}
+    \subitem {scipat}, \hyperpage{61}
+  \item {core\_state\_e}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {core\_state\_transition}
+    \subitem {core\_state.c}, \hyperpage{60}
+  \item {CORE\_TICKS}
+    \subitem {core\_portme.h}, \hyperpage{43}
+  \item {core\_util.c}
+    \subitem {check\_data\_types}, \hyperpage{62}
+    \subitem {crc16}, \hyperpage{62}
+    \subitem {crcu16}, \hyperpage{63}
+    \subitem {crcu32}, \hyperpage{63}
+    \subitem {crcu8}, \hyperpage{63}
+    \subitem {get\_seed\_args}, \hyperpage{63}
+    \subitem {parseval}, \hyperpage{63}
+  \item {coremark.h}
+    \subitem {ALL\_ALGORITHMS\_MASK}, \hyperpage{65}
+    \subitem {check\_data\_types}, \hyperpage{69}
+    \subitem {core\_bench\_list}, \hyperpage{69}
+    \subitem {core\_bench\_matrix}, \hyperpage{69}
+    \subitem {core\_bench\_state}, \hyperpage{69}
+    \subitem {CORE\_EXPONENT}, \hyperpage{69}
+    \subitem {CORE\_FLOAT}, \hyperpage{69}
+    \subitem {core\_init\_matrix}, \hyperpage{69}
+    \subitem {core\_init\_state}, \hyperpage{70}
+    \subitem {CORE\_INT}, \hyperpage{69}
+    \subitem {CORE\_INVALID}, \hyperpage{69}
+    \subitem {core\_list\_init}, \hyperpage{70}
+    \subitem {core\_results}, \hyperpage{67}
+    \subitem {CORE\_S1}, \hyperpage{69}
+    \subitem {CORE\_S2}, \hyperpage{69}
+    \subitem {CORE\_SCIENTIFIC}, \hyperpage{69}
+    \subitem {CORE\_START}, \hyperpage{69}
+    \subitem {CORE\_STATE}, \hyperpage{68}
+    \subitem {core\_state\_e}, \hyperpage{67}
+    \subitem {crc16}, \hyperpage{70}
+    \subitem {crcu16}, \hyperpage{70}
+    \subitem {crcu32}, \hyperpage{70}
+    \subitem {crcu8}, \hyperpage{70}
+    \subitem {get\_time}, \hyperpage{71}
+    \subitem {ID\_LIST}, \hyperpage{65}
+    \subitem {ID\_MATRIX}, \hyperpage{66}
+    \subitem {ID\_STATE}, \hyperpage{66}
+    \subitem {iterate}, \hyperpage{71}
+    \subitem {list\_data}, \hyperpage{68}
+    \subitem {list\_head}, \hyperpage{68}
+    \subitem {MAIN\_RETURN\_TYPE}, \hyperpage{66}
+    \subitem {MAIN\_RETURN\_VAL}, \hyperpage{66}
+    \subitem {mat\_params}, \hyperpage{68}
+    \subitem {MATDAT}, \hyperpage{68}
+    \subitem {MATDAT\_INT}, \hyperpage{66}
+    \subitem {MATRES}, \hyperpage{68}
+    \subitem {MEM\_MALLOC}, \hyperpage{66}
+    \subitem {MEM\_STACK}, \hyperpage{66}
+    \subitem {MEM\_STATIC}, \hyperpage{66}
+    \subitem {NUM\_ALGORITHMS}, \hyperpage{67}
+    \subitem {NUM\_CORE\_STATES}, \hyperpage{69}
+    \subitem {parseval}, \hyperpage{71}
+    \subitem {portable\_free}, \hyperpage{71}
+    \subitem {portable\_malloc}, \hyperpage{71}
+    \subitem {secs\_ret}, \hyperpage{68}
+    \subitem {SEED\_ARG}, \hyperpage{67}
+    \subitem {SEED\_FUNC}, \hyperpage{67}
+    \subitem {SEED\_VOLATILE}, \hyperpage{67}
+    \subitem {start\_time}, \hyperpage{71}
+    \subitem {stop\_time}, \hyperpage{71}
+    \subitem {time\_in\_secs}, \hyperpage{72}
+    \subitem {TOTAL\_DATA\_SIZE}, \hyperpage{67}
+  \item {coremark/core\_portme.c}, \hyperpage{35}
+  \item {coremark/core\_portme.h}, \hyperpage{39}
+  \item {coremark/ee\_printf.c}, \hyperpage{46}
+  \item {coremark/README.md}, \hyperpage{50}
+  \item {coremark/src/core\_list\_join.c}, \hyperpage{50}
+  \item {coremark/src/core\_main.c}, \hyperpage{53}
+  \item {coremark/src/core\_matrix.c}, \hyperpage{56}
+  \item {coremark/src/core\_state.c}, \hyperpage{59}
+  \item {coremark/src/core\_util.c}, \hyperpage{62}
+  \item {coremark/src/coremark.h}, \hyperpage{64}
+  \item {CORETIMETYPE}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {crc}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+  \item {crc16}
+    \subitem {core\_util.c}, \hyperpage{62}
+    \subitem {coremark.h}, \hyperpage{70}
+  \item {crclist}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+  \item {crcmatrix}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+  \item {crcstate}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+  \item {crcu16}
+    \subitem {core\_util.c}, \hyperpage{63}
+    \subitem {coremark.h}, \hyperpage{70}
+  \item {crcu32}
+    \subitem {core\_util.c}, \hyperpage{63}
+    \subitem {coremark.h}, \hyperpage{70}
+  \item {crcu8}
+    \subitem {core\_util.c}, \hyperpage{63}
+    \subitem {coremark.h}, \hyperpage{70}
+
+  \indexspace
+
+  \item {DARKIO}, \hyperpage{15}
+    \subitem {board\_cm}, \hyperpage{16}
+    \subitem {board\_id}, \hyperpage{16}
+    \subitem {core\_id}, \hyperpage{16}
+    \subitem {gpio}, \hyperpage{16}
+    \subitem {gpio\_ctrl}, \hyperpage{16}
+    \subitem {i2c}, \hyperpage{17}
+    \subitem {irq}, \hyperpage{17}
+    \subitem {led}, \hyperpage{17}
+    \subitem {spi}, \hyperpage{17}
+    \subitem {timer}, \hyperpage{17}
+    \subitem {timeus}, \hyperpage{17}
+    \subitem {uart}, \hyperpage{17}
+  \item {DARKIO::DARKUART}, \hyperpage{18}
+    \subitem {baud}, \hyperpage{18}
+    \subitem {fifo}, \hyperpage{18}
+    \subitem {stat}, \hyperpage{18}
+  \item {darklibc/i2c.c}, \hyperpage{72}
+  \item {darklibc/i2c\_old.c}, \hyperpage{72}
+  \item {darklibc/include/i2c.h}, \hyperpage{73}
+  \item {darklibc/include/io.h}, \hyperpage{74}
+  \item {darklibc/include/spi.h}, \hyperpage{78}
+  \item {darklibc/include/stdio.h}, \hyperpage{83}
+  \item {darklibc/io.c}, \hyperpage{88}
+  \item {darklibc/spi.c}, \hyperpage{90}
+  \item {darklibc/stdio.c}, \hyperpage{90}
+  \item {darkshell/main.c}, \hyperpage{33}
+  \item {darkshell/README.md}, \hyperpage{50}
+  \item {data}
+    \subitem {I2C\_RegisterBits}, \hyperpage{20}
+    \subitem {programBoard}, \hyperpage{13}
+  \item {data16}
+    \subitem {list\_data\_s}, \hyperpage{21}
+  \item {data\_received}
+    \subitem {SPI\_RegisterBits}, \hyperpage{28}
+  \item {data\_to\_send}
+    \subitem {SPI\_RegisterBits}, \hyperpage{28}
+  \item {default\_num\_contexts}
+    \subitem {core\_portme.c}, \hyperpage{38}
+    \subitem {core\_portme.h}, \hyperpage{45}
+  \item {digits}
+    \subitem {ee\_printf.c}, \hyperpage{49}
+
+  \indexspace
+
+  \item {eaddr}
+    \subitem {ee\_printf.c}, \hyperpage{48}
+  \item {EBREAK}
+    \subitem {stdio.h}, \hyperpage{84}
+  \item {ee\_f32}
+    \subitem {core\_portme.h}, \hyperpage{43}
+  \item {ee\_isdigit}
+    \subitem {core\_state.c}, \hyperpage{60}
+  \item {ee\_printf}
+    \subitem {core\_portme.h}, \hyperpage{45}
+    \subitem {ee\_printf.c}, \hyperpage{48}
+  \item {ee\_printf.c}
+    \subitem {digits}, \hyperpage{49}
+    \subitem {eaddr}, \hyperpage{48}
+    \subitem {ee\_printf}, \hyperpage{48}
+    \subitem {ee\_vsprintf}, \hyperpage{48}
+    \subitem {HEX\_PREP}, \hyperpage{47}
+    \subitem {iaddr}, \hyperpage{48}
+    \subitem {is\_digit}, \hyperpage{47}
+    \subitem {LEFT}, \hyperpage{47}
+    \subitem {number}, \hyperpage{48}
+    \subitem {PLUS}, \hyperpage{47}
+    \subitem {SIGN}, \hyperpage{47}
+    \subitem {skip\_atoi}, \hyperpage{49}
+    \subitem {SPACE}, \hyperpage{47}
+    \subitem {strnlen}, \hyperpage{49}
+    \subitem {uart\_send\_char}, \hyperpage{49}
+    \subitem {upper\_digits}, \hyperpage{49}
+    \subitem {UPPERCASE}, \hyperpage{47}
+    \subitem {ZEROPAD}, \hyperpage{48}
+  \item {ee\_ptr\_int}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {ee\_s16}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {ee\_s32}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {ee\_size\_t}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {EE\_TICKS\_PER\_SEC}
+    \subitem {core\_portme.c}, \hyperpage{36}
+  \item {ee\_u16}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {ee\_u32}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {ee\_u8}
+    \subitem {core\_portme.h}, \hyperpage{44}
+  \item {ee\_vsprintf}
+    \subitem {ee\_printf.c}, \hyperpage{48}
+  \item {empty}
+    \subitem {SPI\_RegisterBits}, \hyperpage{28}
+  \item {EOF}
+    \subitem {stdio.h}, \hyperpage{84}
+  \item {err}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+  \item {errpat}
+    \subitem {core\_state.c}, \hyperpage{61}
+  \item {execs}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+
+  \indexspace
+
+  \item {fields}
+    \subitem {I2C\_Register}, \hyperpage{19}
+    \subitem {SPI\_Register}, \hyperpage{27}
+  \item {fifo}
+    \subitem {DARKIO::DARKUART}, \hyperpage{18}
+  \item {floatpat}
+    \subitem {core\_state.c}, \hyperpage{61}
+
+  \indexspace
+
+  \item {get\_mepc}
+    \subitem {io.h}, \hyperpage{76}
+  \item {get\_mie}
+    \subitem {io.h}, \hyperpage{76}
+  \item {get\_mtvec}
+    \subitem {io.h}, \hyperpage{76}
+  \item {get\_seed}
+    \subitem {core\_main.c}, \hyperpage{54}
+  \item {get\_seed\_32}
+    \subitem {core\_main.c}, \hyperpage{54}
+  \item {get\_seed\_args}
+    \subitem {core\_main.c}, \hyperpage{54}
+    \subitem {core\_util.c}, \hyperpage{63}
+  \item {get\_time}
+    \subitem {core\_portme.c}, \hyperpage{37}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {getchar}
+    \subitem {stdio.h}, \hyperpage{85}
+  \item {GETMYTIME}
+    \subitem {core\_portme.c}, \hyperpage{36}
+  \item {gets}
+    \subitem {stdio.c}, \hyperpage{92}
+    \subitem {stdio.h}, \hyperpage{85}
+  \item {gpio}
+    \subitem {DARKIO}, \hyperpage{16}
+  \item {gpio\_ctrl}
+    \subitem {DARKIO}, \hyperpage{16}
+
+  \indexspace
+
+  \item {HAS\_FLOAT}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {HAS\_PRINTF}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {HAS\_STDIO}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {HAS\_TIME\_H}
+    \subitem {core\_portme.h}, \hyperpage{41}
+  \item {HEX\_PREP}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+
+  \indexspace
+
+  \item {i2c}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {i2c.h}
+    \subitem {i2cReadByte}, \hyperpage{73}
+    \subitem {i2cSendByte}, \hyperpage{74}
+  \item {I2C\_Register}, \hyperpage{19}
+    \subitem {fields}, \hyperpage{19}
+    \subitem {raw}, \hyperpage{19}
+  \item {I2C\_RegisterBits}, \hyperpage{19}
+    \subitem {busy}, \hyperpage{20}
+    \subitem {data}, \hyperpage{20}
+    \subitem {n\_bytes}, \hyperpage{20}
+    \subitem {nack}, \hyperpage{20}
+    \subitem {req\_data}, \hyperpage{20}
+    \subitem {reserved}, \hyperpage{20}
+    \subitem {slaveAddress}, \hyperpage{21}
+    \subitem {start}, \hyperpage{21}
+    \subitem {subaddress}, \hyperpage{21}
+  \item {i2cReadByte}
+    \subitem {i2c.h}, \hyperpage{73}
+  \item {i2cSendByte}
+    \subitem {i2c.h}, \hyperpage{74}
+  \item {iaddr}
+    \subitem {ee\_printf.c}, \hyperpage{48}
+  \item {ID\_LIST}
+    \subitem {coremark.h}, \hyperpage{65}
+  \item {ID\_MATRIX}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {ID\_STATE}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {idx}
+    \subitem {list\_data\_s}, \hyperpage{21}
+  \item {info}
+    \subitem {list\_head\_s}, \hyperpage{22}
+  \item {intpat}
+    \subitem {core\_state.c}, \hyperpage{61}
+  \item {io}
+    \subitem {io.c}, \hyperpage{89}
+    \subitem {io.h}, \hyperpage{78}
+  \item {io.c}
+    \subitem {\_\_attribute\_\_}, \hyperpage{88}
+    \subitem {board\_name}, \hyperpage{88}
+    \subitem {io}, \hyperpage{89}
+    \subitem {kmem}, \hyperpage{89}
+    \subitem {mac}, \hyperpage{89}
+    \subitem {utimers}, \hyperpage{89}
+  \item {io.h}
+    \subitem {\_\_attribute\_\_}, \hyperpage{76}
+    \subitem {\_data}, \hyperpage{77}
+    \subitem {\_edata}, \hyperpage{77}
+    \subitem {\_etext}, \hyperpage{77}
+    \subitem {\_stack}, \hyperpage{77}
+    \subitem {\_text}, \hyperpage{78}
+    \subitem {banner}, \hyperpage{76}
+    \subitem {board\_name}, \hyperpage{76}
+    \subitem {check4rv32i}, \hyperpage{76}
+    \subitem {get\_mepc}, \hyperpage{76}
+    \subitem {get\_mie}, \hyperpage{76}
+    \subitem {get\_mtvec}, \hyperpage{76}
+    \subitem {io}, \hyperpage{78}
+    \subitem {IRQ\_TIMR}, \hyperpage{75}
+    \subitem {IRQ\_UART}, \hyperpage{75}
+    \subitem {kmem}, \hyperpage{78}
+    \subitem {set\_mepc}, \hyperpage{77}
+    \subitem {set\_mie}, \hyperpage{77}
+    \subitem {set\_mtvec}, \hyperpage{77}
+    \subitem {utimers}, \hyperpage{78}
+  \item {irq}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {IRQ\_TIMR}
+    \subitem {io.h}, \hyperpage{75}
+  \item {IRQ\_UART}
+    \subitem {io.h}, \hyperpage{75}
+  \item {is\_digit}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+  \item {iterate}
+    \subitem {core\_main.c}, \hyperpage{54}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {iterations}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+
+  \indexspace
+
+  \item {kmem}
+    \subitem {io.c}, \hyperpage{89}
+    \subitem {io.h}, \hyperpage{78}
+
+  \indexspace
+
+  \item {led}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {LEFT}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+  \item {list}
+    \subitem {RESULTS\_S}, \hyperpage{25}
+  \item {list\_cmp}
+    \subitem {core\_list\_join.c}, \hyperpage{51}
+  \item {list\_data}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {list\_data\_s}, \hyperpage{21}
+    \subitem {data16}, \hyperpage{21}
+    \subitem {idx}, \hyperpage{21}
+  \item {list\_head}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {list\_head\_s}, \hyperpage{22}
+    \subitem {info}, \hyperpage{22}
+    \subitem {next}, \hyperpage{22}
+  \item {list\_known\_crc}
+    \subitem {core\_main.c}, \hyperpage{55}
+
+  \indexspace
+
+  \item {mac}
+    \subitem {io.c}, \hyperpage{89}
+    \subitem {stdio.h}, \hyperpage{85}
+  \item {main}
+    \subitem {core\_main.c}, \hyperpage{54}
+    \subitem {main.c}, \hyperpage{32--34}
+  \item {main.c}
+    \subitem {main}, \hyperpage{32--34}
+    \subitem {wait}, \hyperpage{33}
+    \subitem {wait\_100us}, \hyperpage{33}
+  \item {MAIN\_HAS\_NOARGC}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {MAIN\_HAS\_NORETURN}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {MAIN\_RETURN\_TYPE}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {MAIN\_RETURN\_VAL}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {mandelbrot/main.c}, \hyperpage{34}
+  \item {mat}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {mat\_params}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {MAT\_PARAMS\_S}, \hyperpage{23}
+    \subitem {A}, \hyperpage{23}
+    \subitem {B}, \hyperpage{23}
+    \subitem {C}, \hyperpage{23}
+    \subitem {N}, \hyperpage{23}
+  \item {MATDAT}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {MATDAT\_INT}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {MATRES}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {matrix\_add\_const}
+    \subitem {core\_matrix.c}, \hyperpage{58}
+  \item {matrix\_big}
+    \subitem {core\_matrix.c}, \hyperpage{57}
+  \item {matrix\_clip}
+    \subitem {core\_matrix.c}, \hyperpage{57}
+  \item {matrix\_known\_crc}
+    \subitem {core\_main.c}, \hyperpage{55}
+  \item {matrix\_mul\_const}
+    \subitem {core\_matrix.c}, \hyperpage{58}
+  \item {matrix\_mul\_matrix}
+    \subitem {core\_matrix.c}, \hyperpage{58}
+  \item {matrix\_mul\_matrix\_bitextract}
+    \subitem {core\_matrix.c}, \hyperpage{58}
+  \item {matrix\_mul\_vect}
+    \subitem {core\_matrix.c}, \hyperpage{58}
+  \item {matrix\_sum}
+    \subitem {core\_matrix.c}, \hyperpage{59}
+  \item {matrix\_test}
+    \subitem {core\_matrix.c}, \hyperpage{59}
+  \item {matrix\_test\_next}
+    \subitem {core\_matrix.c}, \hyperpage{57}
+  \item {MEM\_LOCATION}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {MEM\_MALLOC}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {MEM\_METHOD}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {mem\_name}
+    \subitem {core\_main.c}, \hyperpage{55}
+  \item {MEM\_STACK}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {MEM\_STATIC}
+    \subitem {coremark.h}, \hyperpage{66}
+  \item {memblock}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {memcpy}
+    \subitem {stdio.c}, \hyperpage{93}
+    \subitem {stdio.h}, \hyperpage{85}
+  \item {memset}
+    \subitem {stdio.c}, \hyperpage{93}
+    \subitem {stdio.h}, \hyperpage{85}
+  \item {MULTITHREAD}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {MYTIMEDIFF}
+    \subitem {core\_portme.c}, \hyperpage{36}
+
+  \indexspace
+
+  \item {N}
+    \subitem {MAT\_PARAMS\_S}, \hyperpage{23}
+  \item {n\_bytes}
+    \subitem {I2C\_RegisterBits}, \hyperpage{20}
+  \item {n\_bytes\_received}
+    \subitem {SPI\_RegisterBits}, \hyperpage{28}
+  \item {n\_bytes\_to\_send}
+    \subitem {SPI\_RegisterBits}, \hyperpage{29}
+  \item {nack}
+    \subitem {I2C\_RegisterBits}, \hyperpage{20}
+  \item {next}
+    \subitem {list\_head\_s}, \hyperpage{22}
+  \item {NUL}
+    \subitem {stdio.h}, \hyperpage{84}
+  \item {NULL}
+    \subitem {core\_portme.h}, \hyperpage{42}
+    \subitem {stdio.h}, \hyperpage{84}
+  \item {NUM\_ALGORITHMS}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {NUM\_CORE\_STATES}
+    \subitem {coremark.h}, \hyperpage{69}
+  \item {number}
+    \subitem {ee\_printf.c}, \hyperpage{48}
+
+  \indexspace
+
+  \item {parseval}
+    \subitem {core\_util.c}, \hyperpage{63}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {PLUS}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+  \item {port}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {portable\_fini}
+    \subitem {core\_portme.c}, \hyperpage{37}
+    \subitem {core\_portme.h}, \hyperpage{45}
+  \item {portable\_free}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {portable\_id}
+    \subitem {CORE\_PORTABLE\_S}, \hyperpage{15}
+  \item {portable\_init}
+    \subitem {core\_portme.c}, \hyperpage{37}
+    \subitem {core\_portme.h}, \hyperpage{45}
+  \item {portable\_malloc}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {printf}
+    \subitem {stdio.c}, \hyperpage{93}
+    \subitem {stdio.h}, \hyperpage{86}
+  \item {programBoard}, \hyperpage{13}
+    \subitem {data}, \hyperpage{13}
+    \subitem {ser}, \hyperpage{13}
+  \item {programBoard.py}, \hyperpage{95}
+  \item {putchar}
+    \subitem {stdio.h}, \hyperpage{86}
+  \item {putd}
+    \subitem {stdio.h}, \hyperpage{86}
+  \item {putnum}
+    \subitem {stdio.c}, \hyperpage{93}
+  \item {puts}
+    \subitem {stdio.c}, \hyperpage{93}
+    \subitem {stdio.h}, \hyperpage{86}
+  \item {putstr}
+    \subitem {stdio.c}, \hyperpage{93}
+    \subitem {stdio.h}, \hyperpage{86}
+  \item {putx}
+    \subitem {stdio.h}, \hyperpage{86}
+
+  \indexspace
+
+  \item {raw}
+    \subitem {I2C\_Register}, \hyperpage{19}
+    \subitem {SPI\_Register}, \hyperpage{27}
+  \item {README.md}, \hyperpage{50}
+  \item {req\_data}
+    \subitem {I2C\_RegisterBits}, \hyperpage{20}
+  \item {reserved}
+    \subitem {I2C\_RegisterBits}, \hyperpage{20}
+  \item {RESULTS\_S}, \hyperpage{24}
+    \subitem {crc}, \hyperpage{25}
+    \subitem {crclist}, \hyperpage{25}
+    \subitem {crcmatrix}, \hyperpage{25}
+    \subitem {crcstate}, \hyperpage{25}
+    \subitem {err}, \hyperpage{25}
+    \subitem {execs}, \hyperpage{25}
+    \subitem {iterations}, \hyperpage{25}
+    \subitem {list}, \hyperpage{25}
+    \subitem {mat}, \hyperpage{26}
+    \subitem {memblock}, \hyperpage{26}
+    \subitem {port}, \hyperpage{26}
+    \subitem {seed1}, \hyperpage{26}
+    \subitem {seed2}, \hyperpage{26}
+    \subitem {seed3}, \hyperpage{26}
+    \subitem {size}, \hyperpage{26}
+  \item {rle}
+    \subitem {badapple.h}, \hyperpage{31}
+  \item {rx\_data\_ready}
+    \subitem {SPI\_RegisterBits}, \hyperpage{29}
+
+  \indexspace
+
+  \item {SAMPLE\_TIME\_IMPLEMENTATION}
+    \subitem {core\_portme.c}, \hyperpage{36}
+  \item {scipat}
+    \subitem {core\_state.c}, \hyperpage{61}
+  \item {secs\_ret}
+    \subitem {coremark.h}, \hyperpage{68}
+  \item {seed1}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {seed1\_volatile}
+    \subitem {core\_portme.c}, \hyperpage{38}
+  \item {seed2}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {seed2\_volatile}
+    \subitem {core\_portme.c}, \hyperpage{38}
+  \item {seed3}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {seed3\_volatile}
+    \subitem {core\_portme.c}, \hyperpage{38}
+  \item {seed4\_volatile}
+    \subitem {core\_portme.c}, \hyperpage{38}
+  \item {seed5\_volatile}
+    \subitem {core\_portme.c}, \hyperpage{38}
+  \item {SEED\_ARG}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {SEED\_FUNC}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {SEED\_METHOD}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {SEED\_VOLATILE}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {ser}
+    \subitem {programBoard}, \hyperpage{13}
+  \item {set\_mepc}
+    \subitem {io.h}, \hyperpage{77}
+  \item {set\_mie}
+    \subitem {io.h}, \hyperpage{77}
+  \item {set\_mtvec}
+    \subitem {io.h}, \hyperpage{77}
+  \item {SIGN}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+  \item {size}
+    \subitem {RESULTS\_S}, \hyperpage{26}
+  \item {skip\_atoi}
+    \subitem {ee\_printf.c}, \hyperpage{49}
+  \item {slaveAddress}
+    \subitem {I2C\_RegisterBits}, \hyperpage{21}
+  \item {SPACE}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+  \item {spi}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {spi.h}
+    \subitem {spi\_disable}, \hyperpage{79}
+    \subitem {spi\_enable}, \hyperpage{80}
+    \subitem {spi\_init}, \hyperpage{80}
+    \subitem {spi\_read\_multiple\_bytes}, \hyperpage{80}
+    \subitem {spi\_read\_single\_byte}, \hyperpage{80}
+    \subitem {spi\_send\_receive\_data}, \hyperpage{81}
+    \subitem {spi\_set\_clock\_frequency}, \hyperpage{81}
+    \subitem {spi\_set\_data\_mode}, \hyperpage{81}
+    \subitem {spi\_transaction\_single\_byte}, \hyperpage{81}
+    \subitem {spi\_write\_multiple\_bytes}, \hyperpage{82}
+    \subitem {spi\_write\_read\_multiple\_bytes}, \hyperpage{82}
+    \subitem {spi\_write\_read\_single\_byte}, \hyperpage{82}
+    \subitem {spi\_write\_single\_byte}, \hyperpage{83}
+  \item {spi\_disable}
+    \subitem {spi.h}, \hyperpage{79}
+  \item {spi\_enable}
+    \subitem {spi.h}, \hyperpage{80}
+  \item {spi\_init}
+    \subitem {spi.h}, \hyperpage{80}
+  \item {spi\_read\_multiple\_bytes}
+    \subitem {spi.h}, \hyperpage{80}
+  \item {spi\_read\_single\_byte}
+    \subitem {spi.h}, \hyperpage{80}
+  \item {SPI\_Register}, \hyperpage{27}
+    \subitem {fields}, \hyperpage{27}
+    \subitem {raw}, \hyperpage{27}
+  \item {SPI\_RegisterBits}, \hyperpage{28}
+    \subitem {data\_received}, \hyperpage{28}
+    \subitem {data\_to\_send}, \hyperpage{28}
+    \subitem {empty}, \hyperpage{28}
+    \subitem {n\_bytes\_received}, \hyperpage{28}
+    \subitem {n\_bytes\_to\_send}, \hyperpage{29}
+    \subitem {rx\_data\_ready}, \hyperpage{29}
+    \subitem {start}, \hyperpage{29}
+    \subitem {tx\_ready}, \hyperpage{29}
+  \item {spi\_send\_receive\_data}
+    \subitem {spi.h}, \hyperpage{81}
+  \item {spi\_set\_clock\_frequency}
+    \subitem {spi.h}, \hyperpage{81}
+  \item {spi\_set\_data\_mode}
+    \subitem {spi.h}, \hyperpage{81}
+  \item {spi\_transaction\_single\_byte}
+    \subitem {spi.h}, \hyperpage{81}
+  \item {spi\_write\_multiple\_bytes}
+    \subitem {spi.h}, \hyperpage{82}
+  \item {spi\_write\_read\_multiple\_bytes}
+    \subitem {spi.h}, \hyperpage{82}
+  \item {spi\_write\_read\_single\_byte}
+    \subitem {spi.h}, \hyperpage{82}
+  \item {spi\_write\_single\_byte}
+    \subitem {spi.h}, \hyperpage{83}
+  \item {start}
+    \subitem {I2C\_RegisterBits}, \hyperpage{21}
+    \subitem {SPI\_RegisterBits}, \hyperpage{29}
+  \item {start\_time}
+    \subitem {core\_portme.c}, \hyperpage{37}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {start\_time\_val}
+    \subitem {core\_portme.c}, \hyperpage{39}
+  \item {stat}
+    \subitem {DARKIO::DARKUART}, \hyperpage{18}
+  \item {state\_known\_crc}
+    \subitem {core\_main.c}, \hyperpage{55}
+  \item {static\_memblk}
+    \subitem {core\_main.c}, \hyperpage{55}
+  \item {stdio.c}
+    \subitem {\_\_div\_mod\_si3}, \hyperpage{91}
+    \subitem {\_\_divsi3}, \hyperpage{91}
+    \subitem {\_\_modsi3}, \hyperpage{91}
+    \subitem {\_\_mulsi3}, \hyperpage{91}
+    \subitem {\_\_udiv\_umod\_si3}, \hyperpage{92}
+    \subitem {\_\_udivsi3}, \hyperpage{92}
+    \subitem {\_\_umodsi3}, \hyperpage{92}
+    \subitem {\_\_umulsi3}, \hyperpage{92}
+    \subitem {atoi}, \hyperpage{92}
+    \subitem {gets}, \hyperpage{92}
+    \subitem {memcpy}, \hyperpage{93}
+    \subitem {memset}, \hyperpage{93}
+    \subitem {printf}, \hyperpage{93}
+    \subitem {putnum}, \hyperpage{93}
+    \subitem {puts}, \hyperpage{93}
+    \subitem {putstr}, \hyperpage{93}
+    \subitem {strcmp}, \hyperpage{94}
+    \subitem {strlen}, \hyperpage{94}
+    \subitem {strncmp}, \hyperpage{94}
+    \subitem {strtok}, \hyperpage{94}
+    \subitem {usleep}, \hyperpage{94}
+    \subitem {xtoi}, \hyperpage{94}
+  \item {stdio.h}
+    \subitem {atoi}, \hyperpage{85}
+    \subitem {EBREAK}, \hyperpage{84}
+    \subitem {EOF}, \hyperpage{84}
+    \subitem {getchar}, \hyperpage{85}
+    \subitem {gets}, \hyperpage{85}
+    \subitem {mac}, \hyperpage{85}
+    \subitem {memcpy}, \hyperpage{85}
+    \subitem {memset}, \hyperpage{85}
+    \subitem {NUL}, \hyperpage{84}
+    \subitem {NULL}, \hyperpage{84}
+    \subitem {printf}, \hyperpage{86}
+    \subitem {putchar}, \hyperpage{86}
+    \subitem {putd}, \hyperpage{86}
+    \subitem {puts}, \hyperpage{86}
+    \subitem {putstr}, \hyperpage{86}
+    \subitem {putx}, \hyperpage{86}
+    \subitem {strcmp}, \hyperpage{87}
+    \subitem {strlen}, \hyperpage{87}
+    \subitem {strncmp}, \hyperpage{87}
+    \subitem {strtok}, \hyperpage{87}
+    \subitem {usleep}, \hyperpage{87}
+    \subitem {xtoi}, \hyperpage{87}
+  \item {stop\_time}
+    \subitem {core\_portme.c}, \hyperpage{37}
+    \subitem {coremark.h}, \hyperpage{71}
+  \item {stop\_time\_val}
+    \subitem {core\_portme.c}, \hyperpage{39}
+  \item {strcmp}
+    \subitem {stdio.c}, \hyperpage{94}
+    \subitem {stdio.h}, \hyperpage{87}
+  \item {strlen}
+    \subitem {stdio.c}, \hyperpage{94}
+    \subitem {stdio.h}, \hyperpage{87}
+  \item {strncmp}
+    \subitem {stdio.c}, \hyperpage{94}
+    \subitem {stdio.h}, \hyperpage{87}
+  \item {strnlen}
+    \subitem {ee\_printf.c}, \hyperpage{49}
+  \item {strtok}
+    \subitem {stdio.c}, \hyperpage{94}
+    \subitem {stdio.h}, \hyperpage{87}
+  \item {subaddress}
+    \subitem {I2C\_RegisterBits}, \hyperpage{21}
+
+  \indexspace
+
+  \item {time\_in\_secs}
+    \subitem {core\_portme.c}, \hyperpage{38}
+    \subitem {coremark.h}, \hyperpage{72}
+  \item {timer}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {TIMER\_RES\_DIVIDER}
+    \subitem {core\_portme.c}, \hyperpage{36}
+  \item {timeus}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {TOTAL\_DATA\_SIZE}
+    \subitem {coremark.h}, \hyperpage{67}
+  \item {tx\_ready}
+    \subitem {SPI\_RegisterBits}, \hyperpage{29}
+
+  \indexspace
+
+  \item {uart}
+    \subitem {DARKIO}, \hyperpage{17}
+  \item {uart\_send\_char}
+    \subitem {ee\_printf.c}, \hyperpage{49}
+  \item {upper\_digits}
+    \subitem {ee\_printf.c}, \hyperpage{49}
+  \item {UPPERCASE}
+    \subitem {ee\_printf.c}, \hyperpage{47}
+  \item {USE\_CLOCK}
+    \subitem {core\_portme.h}, \hyperpage{42}
+  \item {USE\_FORK}
+    \subitem {core\_portme.h}, \hyperpage{43}
+  \item {USE\_PTHREAD}
+    \subitem {core\_portme.h}, \hyperpage{43}
+  \item {USE\_SOCKET}
+    \subitem {core\_portme.h}, \hyperpage{43}
+  \item {usleep}
+    \subitem {stdio.c}, \hyperpage{94}
+    \subitem {stdio.h}, \hyperpage{87}
+  \item {utimers}
+    \subitem {io.c}, \hyperpage{89}
+    \subitem {io.h}, \hyperpage{78}
+
+  \indexspace
+
+  \item {VALIDATION\_RUN}
+    \subitem {core\_portme.h}, \hyperpage{43}
+
+  \indexspace
+
+  \item {wait}
+    \subitem {main.c}, \hyperpage{33}
+  \item {wait\_100us}
+    \subitem {main.c}, \hyperpage{33}
+
+  \indexspace
+
+  \item {xtoi}
+    \subitem {stdio.c}, \hyperpage{94}
+    \subitem {stdio.h}, \hyperpage{87}
+
+  \indexspace
+
+  \item {ZEROPAD}
+    \subitem {ee\_printf.c}, \hyperpage{48}
+
+\end{theindex}

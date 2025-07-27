@@ -1,0 +1,135 @@
+\hypertarget{core__main_8c}{}\doxysection{coremark/src/core\+\_\+main.c File Reference}
+\label{core__main_8c}\index{coremark/src/core\_main.c@{coremark/src/core\_main.c}}
+{\ttfamily \#include \char`\"{}coremark.\+h\char`\"{}}\newline
+Include dependency graph for core\+\_\+main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{core__main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{core__main_8c_a45cef06b25d0d441f048e228f1e0a9ea}{get\+\_\+seed}}(x)~(\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}) \mbox{\hyperlink{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}{get\+\_\+seed\+\_\+args}}(x, argc, argv)
+\item 
+\#define \mbox{\hyperlink{core__main_8c_ae16308d2c2433aa92c62ce302df97f76}{get\+\_\+seed\+\_\+32}}(x)~\mbox{\hyperlink{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}{get\+\_\+seed\+\_\+args}}(x, argc, argv)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{core__main_8c_ad53b9c427e6ad4f3748b139e47e5f012}{iterate}} (void $\ast$pres)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{core__main_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}{get\+\_\+seed\+\_\+args}} (int i, int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{coremark_8h_a22542c7af4b03ae7af082258b55fc3ee}{M\+A\+I\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{core__main_8c_a1134c718ea4bec5d703c76b611699c80}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__main_8c_a693e563bd1e449bc8666f39fd8b95e2f}{list\+\_\+known\+\_\+crc}} \mbox{[}$\,$\mbox{]}
+\item 
+static \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__main_8c_acf305ae450b8f3c6e584e1c37feee961}{matrix\+\_\+known\+\_\+crc}} \mbox{[}$\,$\mbox{]}
+\item 
+static \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__main_8c_a6de51f7ba368dbe94d1e120b09a5538d}{state\+\_\+known\+\_\+crc}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} \mbox{\hyperlink{core__main_8c_a82c0eac7e251d900ce5ac67c3d9b10c1}{static\+\_\+memblk}} \mbox{[}\mbox{\hyperlink{coremark_8h_aed72f6a3211b781c1001bfb86e3dc1ac}{T\+O\+T\+A\+L\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}}\mbox{]}
+\item 
+char $\ast$ \mbox{\hyperlink{core__main_8c_a59587f29a5aa3cab37f16653f4f9e3a3}{mem\+\_\+name}} \mbox{[}3\mbox{]} = \{ \char`\"{}Static\char`\"{}, \char`\"{}Heap\char`\"{}, \char`\"{}Stack\char`\"{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{core__main_8c_a45cef06b25d0d441f048e228f1e0a9ea}\label{core__main_8c_a45cef06b25d0d441f048e228f1e0a9ea}} 
+\index{core\_main.c@{core\_main.c}!get\_seed@{get\_seed}}
+\index{get\_seed@{get\_seed}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{get\_seed}{get\_seed}}
+{\footnotesize\ttfamily \#define get\+\_\+seed(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~(\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}) \mbox{\hyperlink{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}{get\+\_\+seed\+\_\+args}}(x, argc, argv)}
+
+\mbox{\Hypertarget{core__main_8c_ae16308d2c2433aa92c62ce302df97f76}\label{core__main_8c_ae16308d2c2433aa92c62ce302df97f76}} 
+\index{core\_main.c@{core\_main.c}!get\_seed\_32@{get\_seed\_32}}
+\index{get\_seed\_32@{get\_seed\_32}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{get\_seed\_32}{get\_seed\_32}}
+{\footnotesize\ttfamily \#define get\+\_\+seed\+\_\+32(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~\mbox{\hyperlink{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}{get\+\_\+seed\+\_\+args}}(x, argc, argv)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{core__main_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}\label{core__main_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}} 
+\index{core\_main.c@{core\_main.c}!get\_seed\_args@{get\_seed\_args}}
+\index{get\_seed\_args@{get\_seed\_args}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{get\_seed\_args()}{get\_seed\_args()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} get\+\_\+seed\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__main_8c_ad53b9c427e6ad4f3748b139e47e5f012}\label{core__main_8c_ad53b9c427e6ad4f3748b139e47e5f012}} 
+\index{core\_main.c@{core\_main.c}!iterate@{iterate}}
+\index{iterate@{iterate}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{iterate()}{iterate()}}
+{\footnotesize\ttfamily void$\ast$ iterate (\begin{DoxyParamCaption}\item[{void $\ast$}]{pres }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__main_8c_a1134c718ea4bec5d703c76b611699c80}\label{core__main_8c_a1134c718ea4bec5d703c76b611699c80}} 
+\index{core\_main.c@{core\_main.c}!main@{main}}
+\index{main@{main}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a22542c7af4b03ae7af082258b55fc3ee}{M\+A\+I\+N\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+T\+Y\+PE}} main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{core__main_8c_a693e563bd1e449bc8666f39fd8b95e2f}\label{core__main_8c_a693e563bd1e449bc8666f39fd8b95e2f}} 
+\index{core\_main.c@{core\_main.c}!list\_known\_crc@{list\_known\_crc}}
+\index{list\_known\_crc@{list\_known\_crc}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{list\_known\_crc}{list\_known\_crc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} list\+\_\+known\+\_\+crc\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0xd4b0,}
+\DoxyCodeLine{                                   (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x3340,}
+\DoxyCodeLine{                                   (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x6a79,}
+\DoxyCodeLine{                                   (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0xe714,}
+\DoxyCodeLine{                                   (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0xe3c1 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{core__main_8c_acf305ae450b8f3c6e584e1c37feee961}\label{core__main_8c_acf305ae450b8f3c6e584e1c37feee961}} 
+\index{core\_main.c@{core\_main.c}!matrix\_known\_crc@{matrix\_known\_crc}}
+\index{matrix\_known\_crc@{matrix\_known\_crc}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{matrix\_known\_crc}{matrix\_known\_crc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} matrix\+\_\+known\+\_\+crc\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0xbe52,}
+\DoxyCodeLine{                                     (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x1199,}
+\DoxyCodeLine{                                     (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x5608,}
+\DoxyCodeLine{                                     (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x1fd7,}
+\DoxyCodeLine{                                     (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x0747 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{core__main_8c_a59587f29a5aa3cab37f16653f4f9e3a3}\label{core__main_8c_a59587f29a5aa3cab37f16653f4f9e3a3}} 
+\index{core\_main.c@{core\_main.c}!mem\_name@{mem\_name}}
+\index{mem\_name@{mem\_name}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{mem\_name}{mem\_name}}
+{\footnotesize\ttfamily char$\ast$ mem\+\_\+name\mbox{[}3\mbox{]} = \{ \char`\"{}Static\char`\"{}, \char`\"{}Heap\char`\"{}, \char`\"{}Stack\char`\"{} \}}
+
+\mbox{\Hypertarget{core__main_8c_a6de51f7ba368dbe94d1e120b09a5538d}\label{core__main_8c_a6de51f7ba368dbe94d1e120b09a5538d}} 
+\index{core\_main.c@{core\_main.c}!state\_known\_crc@{state\_known\_crc}}
+\index{state\_known\_crc@{state\_known\_crc}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{state\_known\_crc}{state\_known\_crc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} state\+\_\+known\+\_\+crc\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{ (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x5e47,}
+\DoxyCodeLine{                                    (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x39bf,}
+\DoxyCodeLine{                                    (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0xe5a4,}
+\DoxyCodeLine{                                    (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x8e3a,}
+\DoxyCodeLine{                                    (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\_u16}})0x8d84 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{core__main_8c_a82c0eac7e251d900ce5ac67c3d9b10c1}\label{core__main_8c_a82c0eac7e251d900ce5ac67c3d9b10c1}} 
+\index{core\_main.c@{core\_main.c}!static\_memblk@{static\_memblk}}
+\index{static\_memblk@{static\_memblk}!core\_main.c@{core\_main.c}}
+\doxysubsubsection{\texorpdfstring{static\_memblk}{static\_memblk}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} static\+\_\+memblk\mbox{[}\mbox{\hyperlink{coremark_8h_aed72f6a3211b781c1001bfb86e3dc1ac}{T\+O\+T\+A\+L\+\_\+\+D\+A\+T\+A\+\_\+\+S\+I\+ZE}}\mbox{]}}
+

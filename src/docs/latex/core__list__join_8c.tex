@@ -1,0 +1,126 @@
+\hypertarget{core__list__join_8c}{}\doxysection{coremark/src/core\+\_\+list\+\_\+join.c File Reference}
+\label{core__list__join_8c}\index{coremark/src/core\_list\_join.c@{coremark/src/core\_list\_join.c}}
+{\ttfamily \#include \char`\"{}coremark.\+h\char`\"{}}\newline
+Include dependency graph for core\+\_\+list\+\_\+join.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{core__list__join_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}}($\ast$ \mbox{\hyperlink{core__list__join_8c_aa6479960fc0bff590e0587da0d45e202}{list\+\_\+cmp}}) (\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$a, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$b, \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_a773854d7925c08d7ec0da7a066a8743b}{core\+\_\+list\+\_\+find}} (\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$list, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$info)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_ae03d5be9e1dee1216d82e24b09086c82}{core\+\_\+list\+\_\+reverse}} (\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$list)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_a878bcde009e0029aa74de7fe8a7ff1f0}{core\+\_\+list\+\_\+remove}} (\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$item)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_a45493ac55aa92eceec01396adcb1dd78}{core\+\_\+list\+\_\+undo\+\_\+remove}} (\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$item\+\_\+removed, \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$item\+\_\+modified)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_ab42dfd0563dfa2bb60d334bcf0b1312d}{core\+\_\+list\+\_\+insert\+\_\+new}} (\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$insert\+\_\+point, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$info, \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$$\ast$memblock, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$$\ast$datablock, \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$memblock\+\_\+end, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$datablock\+\_\+end)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_a4c21627de11bd5b9a01181f66380acbd}{core\+\_\+list\+\_\+mergesort}} (\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$list, \mbox{\hyperlink{core__list__join_8c_aa6479960fc0bff590e0587da0d45e202}{list\+\_\+cmp}} cmp, \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res)
+\item 
+\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} \mbox{\hyperlink{core__list__join_8c_acd172bd64c3091586d41795cf406587a}{calc\+\_\+func}} (\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} $\ast$pdata, \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{core__list__join_8c_a71ec5af7052f88125b6813f225f7ea46}{cmp\+\_\+complex}} (\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$a, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$b, \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{core__list__join_8c_aff12a89f95eef4acd783912dd97565fc}{cmp\+\_\+idx}} (\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$a, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$b, \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res)
+\item 
+void \mbox{\hyperlink{core__list__join_8c_af21d00c144165242bac2bd7e64b1938a}{copy\+\_\+info}} (\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$to, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$from)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__list__join_8c_a9bb1d84f79416080373c08c333dda856}{core\+\_\+bench\+\_\+list}} (\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} finder\+\_\+idx)
+\item 
+\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ \mbox{\hyperlink{core__list__join_8c_ae0fff4db15c3d2734218c1f4201c4b30}{core\+\_\+list\+\_\+init}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} blksize, \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$memblock, \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} seed)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{core__list__join_8c_aa6479960fc0bff590e0587da0d45e202}\label{core__list__join_8c_aa6479960fc0bff590e0587da0d45e202}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!list\_cmp@{list\_cmp}}
+\index{list\_cmp@{list\_cmp}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{list\_cmp}{list\_cmp}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}}($\ast$ list\+\_\+cmp) (\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$a, \mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$b, \mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$res)}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{core__list__join_8c_acd172bd64c3091586d41795cf406587a}\label{core__list__join_8c_acd172bd64c3091586d41795cf406587a}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!calc\_func@{calc\_func}}
+\index{calc\_func@{calc\_func}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{calc\_func()}{calc\_func()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} calc\+\_\+func (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} $\ast$}]{pdata,  }\item[{\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_a71ec5af7052f88125b6813f225f7ea46}\label{core__list__join_8c_a71ec5af7052f88125b6813f225f7ea46}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!cmp\_complex@{cmp\_complex}}
+\index{cmp\_complex@{cmp\_complex}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_complex()}{cmp\_complex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} cmp\+\_\+complex (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_aff12a89f95eef4acd783912dd97565fc}\label{core__list__join_8c_aff12a89f95eef4acd783912dd97565fc}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!cmp\_idx@{cmp\_idx}}
+\index{cmp\_idx@{cmp\_idx}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{cmp\_idx()}{cmp\_idx()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} cmp\+\_\+idx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{b,  }\item[{\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_af21d00c144165242bac2bd7e64b1938a}\label{core__list__join_8c_af21d00c144165242bac2bd7e64b1938a}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!copy\_info@{copy\_info}}
+\index{copy\_info@{copy\_info}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{copy\_info()}{copy\_info()}}
+{\footnotesize\ttfamily void copy\+\_\+info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{to,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{from }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_a9bb1d84f79416080373c08c333dda856}\label{core__list__join_8c_a9bb1d84f79416080373c08c333dda856}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_bench\_list@{core\_bench\_list}}
+\index{core\_bench\_list@{core\_bench\_list}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_bench\_list()}{core\_bench\_list()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} core\+\_\+bench\+\_\+list (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$}]{res,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{finder\+\_\+idx }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_a773854d7925c08d7ec0da7a066a8743b}\label{core__list__join_8c_a773854d7925c08d7ec0da7a066a8743b}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_find@{core\_list\_find}}
+\index{core\_list\_find@{core\_list\_find}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_find()}{core\_list\_find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ core\+\_\+list\+\_\+find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{list,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{info }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_ae0fff4db15c3d2734218c1f4201c4b30}\label{core__list__join_8c_ae0fff4db15c3d2734218c1f4201c4b30}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_init@{core\_list\_init}}
+\index{core\_list\_init@{core\_list\_init}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_init()}{core\_list\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}}$\ast$ core\+\_\+list\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{blksize,  }\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{memblock,  }\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{seed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_ab42dfd0563dfa2bb60d334bcf0b1312d}\label{core__list__join_8c_ab42dfd0563dfa2bb60d334bcf0b1312d}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_insert\_new@{core\_list\_insert\_new}}
+\index{core\_list\_insert\_new@{core\_list\_insert\_new}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_insert\_new()}{core\_list\_insert\_new()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ core\+\_\+list\+\_\+insert\+\_\+new (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{insert\+\_\+point,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{info,  }\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$$\ast$}]{memblock,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$$\ast$}]{datablock,  }\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{memblock\+\_\+end,  }\item[{\mbox{\hyperlink{coremark_8h_a31cf1e4bc10366cae64d0df756e68213}{list\+\_\+data}} $\ast$}]{datablock\+\_\+end }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_a4c21627de11bd5b9a01181f66380acbd}\label{core__list__join_8c_a4c21627de11bd5b9a01181f66380acbd}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_mergesort@{core\_list\_mergesort}}
+\index{core\_list\_mergesort@{core\_list\_mergesort}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_mergesort()}{core\_list\_mergesort()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ core\+\_\+list\+\_\+mergesort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{list,  }\item[{\mbox{\hyperlink{core__list__join_8c_aa6479960fc0bff590e0587da0d45e202}{list\+\_\+cmp}}}]{cmp,  }\item[{\mbox{\hyperlink{coremark_8h_add24c3017ccd7ca55e8a2a077c300928}{core\+\_\+results}} $\ast$}]{res }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_a878bcde009e0029aa74de7fe8a7ff1f0}\label{core__list__join_8c_a878bcde009e0029aa74de7fe8a7ff1f0}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_remove@{core\_list\_remove}}
+\index{core\_list\_remove@{core\_list\_remove}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_remove()}{core\_list\_remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ core\+\_\+list\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_ae03d5be9e1dee1216d82e24b09086c82}\label{core__list__join_8c_ae03d5be9e1dee1216d82e24b09086c82}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_reverse@{core\_list\_reverse}}
+\index{core\_list\_reverse@{core\_list\_reverse}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_reverse()}{core\_list\_reverse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ core\+\_\+list\+\_\+reverse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{list }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__list__join_8c_a45493ac55aa92eceec01396adcb1dd78}\label{core__list__join_8c_a45493ac55aa92eceec01396adcb1dd78}} 
+\index{core\_list\_join.c@{core\_list\_join.c}!core\_list\_undo\_remove@{core\_list\_undo\_remove}}
+\index{core\_list\_undo\_remove@{core\_list\_undo\_remove}!core\_list\_join.c@{core\_list\_join.c}}
+\doxysubsubsection{\texorpdfstring{core\_list\_undo\_remove()}{core\_list\_undo\_remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$ core\+\_\+list\+\_\+undo\+\_\+remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{item\+\_\+removed,  }\item[{\mbox{\hyperlink{coremark_8h_a81a82886df81c6da3ec7a2c0c2923d2e}{list\+\_\+head}} $\ast$}]{item\+\_\+modified }\end{DoxyParamCaption})}
+

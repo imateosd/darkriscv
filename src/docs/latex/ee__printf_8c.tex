@@ -1,0 +1,174 @@
+\hypertarget{ee__printf_8c}{}\doxysection{coremark/ee\+\_\+printf.c File Reference}
+\label{ee__printf_8c}\index{coremark/ee\_printf.c@{coremark/ee\_printf.c}}
+{\ttfamily \#include $<$io.\+h$>$}\newline
+{\ttfamily \#include $<$coremark.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+Include dependency graph for ee\+\_\+printf.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{ee__printf_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a31373af6ef84e6fc25d9a9133522e4a6}{Z\+E\+R\+O\+P\+AD}}~(1 $<$$<$ 0) /$\ast$ Pad with zero $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a9576d2d6eb782d532607bac077e87892}{S\+I\+GN}}~(1 $<$$<$ 1) /$\ast$ Unsigned/signed long $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a0ea7ff5947c5f5430a29fdd98391eb2a}{P\+L\+US}}~(1 $<$$<$ 2) /$\ast$ Show plus $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a5ff6e798033f03e74730e99f01936f84}{S\+P\+A\+CE}}~(1 $<$$<$ 3) /$\ast$ Spacer $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a437ef08681e7210d6678427030446a54}{L\+E\+FT}}~(1 $<$$<$ 4) /$\ast$ Left justified $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a0e42926482dabe191ff0da69991123d2}{H\+E\+X\+\_\+\+P\+R\+EP}}~(1 $<$$<$ 5) /$\ast$ 0x $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a7d27cdb240c1d7b6c693a4344c08216d}{U\+P\+P\+E\+R\+C\+A\+SE}}~(1 $<$$<$ 6) /$\ast$ \textquotesingle{}A\+B\+C\+D\+EF\textquotesingle{} $\ast$/
+\item 
+\#define \mbox{\hyperlink{ee__printf_8c_a2eb96152a52d739e41d16c53a2e419f3}{is\+\_\+digit}}(c)~((c) $>$= \textquotesingle{}0\textquotesingle{} \&\& (c) $<$= \textquotesingle{}9\textquotesingle{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}} \mbox{\hyperlink{ee__printf_8c_a643fec87b8e07797196fa832cca105b9}{strnlen}} (const char $\ast$s, \mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}} count)
+\item 
+static int \mbox{\hyperlink{ee__printf_8c_a3fa7c8ef8597579301cb4b5c59bc6d9a}{skip\+\_\+atoi}} (const char $\ast$$\ast$s)
+\item 
+static char $\ast$ \mbox{\hyperlink{ee__printf_8c_a633953c9dea9665a27202c40551e6a1d}{number}} (char $\ast$str, long num, int base, int size, int precision, int type)
+\item 
+static char $\ast$ \mbox{\hyperlink{ee__printf_8c_a359774bd032d949bfc1109fce74d90ec}{eaddr}} (char $\ast$str, unsigned char $\ast$addr, int size, int precision, int type)
+\item 
+static char $\ast$ \mbox{\hyperlink{ee__printf_8c_a8b705402fc428bed7a21f3cd40436f32}{iaddr}} (char $\ast$str, unsigned char $\ast$addr, int size, int precision, int type)
+\item 
+static int \mbox{\hyperlink{ee__printf_8c_a56734e741c0dd073565df625a76dfb5d}{ee\+\_\+vsprintf}} (char $\ast$buf, const char $\ast$fmt, va\+\_\+list args)
+\item 
+void \mbox{\hyperlink{ee__printf_8c_a26174f47b5fa9747f9187e27fe58438e}{uart\+\_\+send\+\_\+char}} (char c)
+\item 
+int \mbox{\hyperlink{ee__printf_8c_a49bdf44799fc8403daa1b97e3159a809}{ee\+\_\+printf}} (const char $\ast$fmt,...)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \mbox{\hyperlink{ee__printf_8c_ad27b3581399ea814fa77a0e76f7dba82}{digits}} = \char`\"{}0123456789abcdefghijklmnopqrstuvwxyz\char`\"{}
+\item 
+static char $\ast$ \mbox{\hyperlink{ee__printf_8c_aa6e779f9d181838ac59dcdcecd30bb7a}{upper\+\_\+digits}} = \char`\"{}0123456789A\+B\+C\+D\+E\+F\+G\+H\+I\+J\+K\+L\+M\+N\+O\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+YZ\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ee__printf_8c_a0e42926482dabe191ff0da69991123d2}\label{ee__printf_8c_a0e42926482dabe191ff0da69991123d2}} 
+\index{ee\_printf.c@{ee\_printf.c}!HEX\_PREP@{HEX\_PREP}}
+\index{HEX\_PREP@{HEX\_PREP}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{HEX\_PREP}{HEX\_PREP}}
+{\footnotesize\ttfamily \#define H\+E\+X\+\_\+\+P\+R\+EP~(1 $<$$<$ 5) /$\ast$ 0x $\ast$/}
+
+\mbox{\Hypertarget{ee__printf_8c_a2eb96152a52d739e41d16c53a2e419f3}\label{ee__printf_8c_a2eb96152a52d739e41d16c53a2e419f3}} 
+\index{ee\_printf.c@{ee\_printf.c}!is\_digit@{is\_digit}}
+\index{is\_digit@{is\_digit}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{is\_digit}{is\_digit}}
+{\footnotesize\ttfamily \#define is\+\_\+digit(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~((c) $>$= \textquotesingle{}0\textquotesingle{} \&\& (c) $<$= \textquotesingle{}9\textquotesingle{})}
+
+\mbox{\Hypertarget{ee__printf_8c_a437ef08681e7210d6678427030446a54}\label{ee__printf_8c_a437ef08681e7210d6678427030446a54}} 
+\index{ee\_printf.c@{ee\_printf.c}!LEFT@{LEFT}}
+\index{LEFT@{LEFT}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{LEFT}{LEFT}}
+{\footnotesize\ttfamily \#define L\+E\+FT~(1 $<$$<$ 4) /$\ast$ Left justified $\ast$/}
+
+\mbox{\Hypertarget{ee__printf_8c_a0ea7ff5947c5f5430a29fdd98391eb2a}\label{ee__printf_8c_a0ea7ff5947c5f5430a29fdd98391eb2a}} 
+\index{ee\_printf.c@{ee\_printf.c}!PLUS@{PLUS}}
+\index{PLUS@{PLUS}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{PLUS}{PLUS}}
+{\footnotesize\ttfamily \#define P\+L\+US~(1 $<$$<$ 2) /$\ast$ Show plus $\ast$/}
+
+\mbox{\Hypertarget{ee__printf_8c_a9576d2d6eb782d532607bac077e87892}\label{ee__printf_8c_a9576d2d6eb782d532607bac077e87892}} 
+\index{ee\_printf.c@{ee\_printf.c}!SIGN@{SIGN}}
+\index{SIGN@{SIGN}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{SIGN}{SIGN}}
+{\footnotesize\ttfamily \#define S\+I\+GN~(1 $<$$<$ 1) /$\ast$ Unsigned/signed long $\ast$/}
+
+\mbox{\Hypertarget{ee__printf_8c_a5ff6e798033f03e74730e99f01936f84}\label{ee__printf_8c_a5ff6e798033f03e74730e99f01936f84}} 
+\index{ee\_printf.c@{ee\_printf.c}!SPACE@{SPACE}}
+\index{SPACE@{SPACE}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{SPACE}{SPACE}}
+{\footnotesize\ttfamily \#define S\+P\+A\+CE~(1 $<$$<$ 3) /$\ast$ Spacer $\ast$/}
+
+\mbox{\Hypertarget{ee__printf_8c_a7d27cdb240c1d7b6c693a4344c08216d}\label{ee__printf_8c_a7d27cdb240c1d7b6c693a4344c08216d}} 
+\index{ee\_printf.c@{ee\_printf.c}!UPPERCASE@{UPPERCASE}}
+\index{UPPERCASE@{UPPERCASE}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{UPPERCASE}{UPPERCASE}}
+{\footnotesize\ttfamily \#define U\+P\+P\+E\+R\+C\+A\+SE~(1 $<$$<$ 6) /$\ast$ \textquotesingle{}A\+B\+C\+D\+EF\textquotesingle{} $\ast$/}
+
+\mbox{\Hypertarget{ee__printf_8c_a31373af6ef84e6fc25d9a9133522e4a6}\label{ee__printf_8c_a31373af6ef84e6fc25d9a9133522e4a6}} 
+\index{ee\_printf.c@{ee\_printf.c}!ZEROPAD@{ZEROPAD}}
+\index{ZEROPAD@{ZEROPAD}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{ZEROPAD}{ZEROPAD}}
+{\footnotesize\ttfamily \#define Z\+E\+R\+O\+P\+AD~(1 $<$$<$ 0) /$\ast$ Pad with zero $\ast$/}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ee__printf_8c_a359774bd032d949bfc1109fce74d90ec}\label{ee__printf_8c_a359774bd032d949bfc1109fce74d90ec}} 
+\index{ee\_printf.c@{ee\_printf.c}!eaddr@{eaddr}}
+\index{eaddr@{eaddr}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{eaddr()}{eaddr()}}
+{\footnotesize\ttfamily static char$\ast$ eaddr (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{unsigned char $\ast$}]{addr,  }\item[{int}]{size,  }\item[{int}]{precision,  }\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_a49bdf44799fc8403daa1b97e3159a809}\label{ee__printf_8c_a49bdf44799fc8403daa1b97e3159a809}} 
+\index{ee\_printf.c@{ee\_printf.c}!ee\_printf@{ee\_printf}}
+\index{ee\_printf@{ee\_printf}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{ee\_printf()}{ee\_printf()}}
+{\footnotesize\ttfamily int ee\+\_\+printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{fmt,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ee__printf_8c_a56734e741c0dd073565df625a76dfb5d}\label{ee__printf_8c_a56734e741c0dd073565df625a76dfb5d}} 
+\index{ee\_printf.c@{ee\_printf.c}!ee\_vsprintf@{ee\_vsprintf}}
+\index{ee\_vsprintf@{ee\_vsprintf}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{ee\_vsprintf()}{ee\_vsprintf()}}
+{\footnotesize\ttfamily static int ee\+\_\+vsprintf (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{const char $\ast$}]{fmt,  }\item[{va\+\_\+list}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_a8b705402fc428bed7a21f3cd40436f32}\label{ee__printf_8c_a8b705402fc428bed7a21f3cd40436f32}} 
+\index{ee\_printf.c@{ee\_printf.c}!iaddr@{iaddr}}
+\index{iaddr@{iaddr}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{iaddr()}{iaddr()}}
+{\footnotesize\ttfamily static char$\ast$ iaddr (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{unsigned char $\ast$}]{addr,  }\item[{int}]{size,  }\item[{int}]{precision,  }\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_a633953c9dea9665a27202c40551e6a1d}\label{ee__printf_8c_a633953c9dea9665a27202c40551e6a1d}} 
+\index{ee\_printf.c@{ee\_printf.c}!number@{number}}
+\index{number@{number}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{number()}{number()}}
+{\footnotesize\ttfamily static char$\ast$ number (\begin{DoxyParamCaption}\item[{char $\ast$}]{str,  }\item[{long}]{num,  }\item[{int}]{base,  }\item[{int}]{size,  }\item[{int}]{precision,  }\item[{int}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_a3fa7c8ef8597579301cb4b5c59bc6d9a}\label{ee__printf_8c_a3fa7c8ef8597579301cb4b5c59bc6d9a}} 
+\index{ee\_printf.c@{ee\_printf.c}!skip\_atoi@{skip\_atoi}}
+\index{skip\_atoi@{skip\_atoi}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{skip\_atoi()}{skip\_atoi()}}
+{\footnotesize\ttfamily static int skip\+\_\+atoi (\begin{DoxyParamCaption}\item[{const char $\ast$$\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_a643fec87b8e07797196fa832cca105b9}\label{ee__printf_8c_a643fec87b8e07797196fa832cca105b9}} 
+\index{ee\_printf.c@{ee\_printf.c}!strnlen@{strnlen}}
+\index{strnlen@{strnlen}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{strnlen()}{strnlen()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}} strnlen (\begin{DoxyParamCaption}\item[{const char $\ast$}]{s,  }\item[{\mbox{\hyperlink{core__portme_8h_a206631d1b2bdad13613535ad0a480b7f}{ee\+\_\+size\+\_\+t}}}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_a26174f47b5fa9747f9187e27fe58438e}\label{ee__printf_8c_a26174f47b5fa9747f9187e27fe58438e}} 
+\index{ee\_printf.c@{ee\_printf.c}!uart\_send\_char@{uart\_send\_char}}
+\index{uart\_send\_char@{uart\_send\_char}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{uart\_send\_char()}{uart\_send\_char()}}
+{\footnotesize\ttfamily void uart\+\_\+send\+\_\+char (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{ee__printf_8c_ad27b3581399ea814fa77a0e76f7dba82}\label{ee__printf_8c_ad27b3581399ea814fa77a0e76f7dba82}} 
+\index{ee\_printf.c@{ee\_printf.c}!digits@{digits}}
+\index{digits@{digits}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{digits}{digits}}
+{\footnotesize\ttfamily char$\ast$ digits = \char`\"{}0123456789abcdefghijklmnopqrstuvwxyz\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{ee__printf_8c_aa6e779f9d181838ac59dcdcecd30bb7a}\label{ee__printf_8c_aa6e779f9d181838ac59dcdcecd30bb7a}} 
+\index{ee\_printf.c@{ee\_printf.c}!upper\_digits@{upper\_digits}}
+\index{upper\_digits@{upper\_digits}!ee\_printf.c@{ee\_printf.c}}
+\doxysubsubsection{\texorpdfstring{upper\_digits}{upper\_digits}}
+{\footnotesize\ttfamily char$\ast$ upper\+\_\+digits = \char`\"{}0123456789A\+B\+C\+D\+E\+F\+G\+H\+I\+J\+K\+L\+M\+N\+O\+P\+Q\+R\+S\+T\+U\+V\+W\+X\+YZ\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+

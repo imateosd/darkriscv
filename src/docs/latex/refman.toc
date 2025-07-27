@@ -1,0 +1,433 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mark on Dark\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CV}{1}{chapter.1}%
+\contentsline {subsection}{\numberline {1.0.1}config example\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{1}{subsection.1.0.1}%
+\contentsline {subsection}{\numberline {1.0.2}make}{1}{subsection.1.0.2}%
+\contentsline {subsection}{\numberline {1.0.3}running}{1}{subsection.1.0.3}%
+\contentsline {paragraph}{\numberline {1.0.3.0.1}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C -\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O1\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:}{1}{paragraph.1.0.3.0.1}%
+\contentsline {paragraph}{\numberline {1.0.3.0.2}G\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C -\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O2}{2}{paragraph.1.0.3.0.2}%
+\contentsline {subsection}{\numberline {1.0.4}coremark/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hz}{2}{subsection.1.0.4}%
+\contentsline {chapter}{\numberline {2}Software}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tips and Tricks}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Dark\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CV Application}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Namespace Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Namespace List}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Data Structure Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Data Structures}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}File Index}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}File List}{11}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Namespace Documentation}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}program\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board Namespace Reference}{13}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Variable Documentation}{13}{subsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.1}data}{13}{subsubsection.7.1.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.1.2}ser}{13}{subsubsection.7.1.1.2}%
+\contentsline {chapter}{\numberline {8}Data Structure Documentation}{15}{chapter.8}%
+\contentsline {section}{\numberline {8.1}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}O\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}T\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}B\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S Struct Reference}{15}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Field Documentation}{15}{subsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.1.1}portable\_id}{15}{subsubsection.8.1.1.1}%
+\contentsline {section}{\numberline {8.2}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}K\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IO Struct Reference}{15}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Field Documentation}{16}{subsection.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.1.1}board\_cm}{16}{subsubsection.8.2.1.1}%
+\contentsline {subsubsection}{\numberline {8.2.1.2}board\_id}{16}{subsubsection.8.2.1.2}%
+\contentsline {subsubsection}{\numberline {8.2.1.3}core\_id}{16}{subsubsection.8.2.1.3}%
+\contentsline {subsubsection}{\numberline {8.2.1.4}gpio}{16}{subsubsection.8.2.1.4}%
+\contentsline {subsubsection}{\numberline {8.2.1.5}gpio\_ctrl}{17}{subsubsection.8.2.1.5}%
+\contentsline {subsubsection}{\numberline {8.2.1.6}i2c}{17}{subsubsection.8.2.1.6}%
+\contentsline {subsubsection}{\numberline {8.2.1.7}irq}{17}{subsubsection.8.2.1.7}%
+\contentsline {subsubsection}{\numberline {8.2.1.8}led}{17}{subsubsection.8.2.1.8}%
+\contentsline {subsubsection}{\numberline {8.2.1.9}spi}{17}{subsubsection.8.2.1.9}%
+\contentsline {subsubsection}{\numberline {8.2.1.10}timer}{17}{subsubsection.8.2.1.10}%
+\contentsline {subsubsection}{\numberline {8.2.1.11}timeus}{17}{subsubsection.8.2.1.11}%
+\contentsline {subsubsection}{\numberline {8.2.1.12}uart}{18}{subsubsection.8.2.1.12}%
+\contentsline {section}{\numberline {8.3}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}K\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IO\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}K\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RT Struct Reference}{18}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Field Documentation}{18}{subsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.1.1}baud}{18}{subsubsection.8.3.1.1}%
+\contentsline {subsubsection}{\numberline {8.3.1.2}fifo}{18}{subsubsection.8.3.1.2}%
+\contentsline {subsubsection}{\numberline {8.3.1.3}stat}{18}{subsubsection.8.3.1.3}%
+\contentsline {section}{\numberline {8.4}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Register Union Reference}{19}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Field Documentation}{19}{subsection.8.4.1}%
+\contentsline {subsubsection}{\numberline {8.4.1.1}fields}{19}{subsubsection.8.4.1.1}%
+\contentsline {subsubsection}{\numberline {8.4.1.2}raw}{19}{subsubsection.8.4.1.2}%
+\contentsline {section}{\numberline {8.5}I2\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Register\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bits Struct Reference}{19}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Field Documentation}{20}{subsection.8.5.1}%
+\contentsline {subsubsection}{\numberline {8.5.1.1}busy}{20}{subsubsection.8.5.1.1}%
+\contentsline {subsubsection}{\numberline {8.5.1.2}data}{20}{subsubsection.8.5.1.2}%
+\contentsline {subsubsection}{\numberline {8.5.1.3}n\_bytes}{20}{subsubsection.8.5.1.3}%
+\contentsline {subsubsection}{\numberline {8.5.1.4}nack}{20}{subsubsection.8.5.1.4}%
+\contentsline {subsubsection}{\numberline {8.5.1.5}req\_data}{20}{subsubsection.8.5.1.5}%
+\contentsline {subsubsection}{\numberline {8.5.1.6}reserved}{21}{subsubsection.8.5.1.6}%
+\contentsline {subsubsection}{\numberline {8.5.1.7}slaveAddress}{21}{subsubsection.8.5.1.7}%
+\contentsline {subsubsection}{\numberline {8.5.1.8}start}{21}{subsubsection.8.5.1.8}%
+\contentsline {subsubsection}{\numberline {8.5.1.9}subaddress}{21}{subsubsection.8.5.1.9}%
+\contentsline {section}{\numberline {8.6}list\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{21}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Field Documentation}{21}{subsection.8.6.1}%
+\contentsline {subsubsection}{\numberline {8.6.1.1}data16}{21}{subsubsection.8.6.1.1}%
+\contentsline {subsubsection}{\numberline {8.6.1.2}idx}{22}{subsubsection.8.6.1.2}%
+\contentsline {section}{\numberline {8.7}list\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}head\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}s Struct Reference}{22}{section.8.7}%
+\contentsline {subsection}{\numberline {8.7.1}Field Documentation}{22}{subsection.8.7.1}%
+\contentsline {subsubsection}{\numberline {8.7.1.1}info}{22}{subsubsection.8.7.1.1}%
+\contentsline {subsubsection}{\numberline {8.7.1.2}next}{23}{subsubsection.8.7.1.2}%
+\contentsline {section}{\numberline {8.8}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}T\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S Struct Reference}{23}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Field Documentation}{23}{subsection.8.8.1}%
+\contentsline {subsubsection}{\numberline {8.8.1.1}A}{23}{subsubsection.8.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.8.1.2}B}{23}{subsubsection.8.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.8.1.3}C}{23}{subsubsection.8.8.1.3}%
+\contentsline {subsubsection}{\numberline {8.8.1.4}N}{24}{subsubsection.8.8.1.4}%
+\contentsline {section}{\numberline {8.9}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}U\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}T\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}S Struct Reference}{24}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Field Documentation}{25}{subsection.8.9.1}%
+\contentsline {subsubsection}{\numberline {8.9.1.1}crc}{25}{subsubsection.8.9.1.1}%
+\contentsline {subsubsection}{\numberline {8.9.1.2}crclist}{25}{subsubsection.8.9.1.2}%
+\contentsline {subsubsection}{\numberline {8.9.1.3}crcmatrix}{25}{subsubsection.8.9.1.3}%
+\contentsline {subsubsection}{\numberline {8.9.1.4}crcstate}{25}{subsubsection.8.9.1.4}%
+\contentsline {subsubsection}{\numberline {8.9.1.5}err}{25}{subsubsection.8.9.1.5}%
+\contentsline {subsubsection}{\numberline {8.9.1.6}execs}{25}{subsubsection.8.9.1.6}%
+\contentsline {subsubsection}{\numberline {8.9.1.7}iterations}{25}{subsubsection.8.9.1.7}%
+\contentsline {subsubsection}{\numberline {8.9.1.8}list}{26}{subsubsection.8.9.1.8}%
+\contentsline {subsubsection}{\numberline {8.9.1.9}mat}{26}{subsubsection.8.9.1.9}%
+\contentsline {subsubsection}{\numberline {8.9.1.10}memblock}{26}{subsubsection.8.9.1.10}%
+\contentsline {subsubsection}{\numberline {8.9.1.11}port}{26}{subsubsection.8.9.1.11}%
+\contentsline {subsubsection}{\numberline {8.9.1.12}seed1}{26}{subsubsection.8.9.1.12}%
+\contentsline {subsubsection}{\numberline {8.9.1.13}seed2}{26}{subsubsection.8.9.1.13}%
+\contentsline {subsubsection}{\numberline {8.9.1.14}seed3}{26}{subsubsection.8.9.1.14}%
+\contentsline {subsubsection}{\numberline {8.9.1.15}size}{27}{subsubsection.8.9.1.15}%
+\contentsline {section}{\numberline {8.10}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Register Union Reference}{27}{section.8.10}%
+\contentsline {subsection}{\numberline {8.10.1}Field Documentation}{27}{subsection.8.10.1}%
+\contentsline {subsubsection}{\numberline {8.10.1.1}fields}{27}{subsubsection.8.10.1.1}%
+\contentsline {subsubsection}{\numberline {8.10.1.2}raw}{28}{subsubsection.8.10.1.2}%
+\contentsline {section}{\numberline {8.11}S\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}P\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}I\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Register\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bits Struct Reference}{28}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Field Documentation}{28}{subsection.8.11.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.1}data\_received}{28}{subsubsection.8.11.1.1}%
+\contentsline {subsubsection}{\numberline {8.11.1.2}data\_to\_send}{28}{subsubsection.8.11.1.2}%
+\contentsline {subsubsection}{\numberline {8.11.1.3}empty}{28}{subsubsection.8.11.1.3}%
+\contentsline {subsubsection}{\numberline {8.11.1.4}n\_bytes\_received}{29}{subsubsection.8.11.1.4}%
+\contentsline {subsubsection}{\numberline {8.11.1.5}n\_bytes\_to\_send}{29}{subsubsection.8.11.1.5}%
+\contentsline {subsubsection}{\numberline {8.11.1.6}rx\_data\_ready}{29}{subsubsection.8.11.1.6}%
+\contentsline {subsubsection}{\numberline {8.11.1.7}start}{29}{subsubsection.8.11.1.7}%
+\contentsline {subsubsection}{\numberline {8.11.1.8}tx\_ready}{29}{subsubsection.8.11.1.8}%
+\contentsline {chapter}{\numberline {9}File Documentation}{31}{chapter.9}%
+\contentsline {section}{\numberline {9.1}badapple/badapple.h File Reference}{31}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Variable Documentation}{31}{subsection.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.1.1.1}rle}{31}{subsubsection.9.1.1.1}%
+\contentsline {section}{\numberline {9.2}badapple/badapple.txt File Reference}{32}{section.9.2}%
+\contentsline {section}{\numberline {9.3}badapple/main.c File Reference}{32}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Function Documentation}{32}{subsection.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.3.1.1}main()}{32}{subsubsection.9.3.1.1}%
+\contentsline {section}{\numberline {9.4}blink/main.c File Reference}{32}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Function Documentation}{33}{subsection.9.4.1}%
+\contentsline {subsubsection}{\numberline {9.4.1.1}main()}{33}{subsubsection.9.4.1.1}%
+\contentsline {subsubsection}{\numberline {9.4.1.2}wait()}{33}{subsubsection.9.4.1.2}%
+\contentsline {subsubsection}{\numberline {9.4.1.3}wait\_100us()}{33}{subsubsection.9.4.1.3}%
+\contentsline {section}{\numberline {9.5}darkshell/main.c File Reference}{33}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Function Documentation}{34}{subsection.9.5.1}%
+\contentsline {subsubsection}{\numberline {9.5.1.1}main()}{34}{subsubsection.9.5.1.1}%
+\contentsline {section}{\numberline {9.6}mandelbrot/main.c File Reference}{34}{section.9.6}%
+\contentsline {subsection}{\numberline {9.6.1}Function Documentation}{34}{subsection.9.6.1}%
+\contentsline {subsubsection}{\numberline {9.6.1.1}main()}{34}{subsubsection.9.6.1.1}%
+\contentsline {section}{\numberline {9.7}coremark/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}portme.c File Reference}{35}{section.9.7}%
+\contentsline {subsection}{\numberline {9.7.1}Macro Definition Documentation}{36}{subsection.9.7.1}%
+\contentsline {subsubsection}{\numberline {9.7.1.1}CLOCKS\_PER\_SEC}{36}{subsubsection.9.7.1.1}%
+\contentsline {subsubsection}{\numberline {9.7.1.2}EE\_TICKS\_PER\_SEC}{36}{subsubsection.9.7.1.2}%
+\contentsline {subsubsection}{\numberline {9.7.1.3}GETMYTIME}{36}{subsubsection.9.7.1.3}%
+\contentsline {subsubsection}{\numberline {9.7.1.4}MYTIMEDIFF}{36}{subsubsection.9.7.1.4}%
+\contentsline {subsubsection}{\numberline {9.7.1.5}SAMPLE\_TIME\_IMPLEMENTATION}{36}{subsubsection.9.7.1.5}%
+\contentsline {subsubsection}{\numberline {9.7.1.6}TIMER\_RES\_DIVIDER}{37}{subsubsection.9.7.1.6}%
+\contentsline {subsection}{\numberline {9.7.2}Function Documentation}{37}{subsection.9.7.2}%
+\contentsline {subsubsection}{\numberline {9.7.2.1}barebones\_clock()}{37}{subsubsection.9.7.2.1}%
+\contentsline {subsubsection}{\numberline {9.7.2.2}get\_time()}{37}{subsubsection.9.7.2.2}%
+\contentsline {subsubsection}{\numberline {9.7.2.3}portable\_fini()}{37}{subsubsection.9.7.2.3}%
+\contentsline {subsubsection}{\numberline {9.7.2.4}portable\_init()}{37}{subsubsection.9.7.2.4}%
+\contentsline {subsubsection}{\numberline {9.7.2.5}start\_time()}{37}{subsubsection.9.7.2.5}%
+\contentsline {subsubsection}{\numberline {9.7.2.6}stop\_time()}{38}{subsubsection.9.7.2.6}%
+\contentsline {subsubsection}{\numberline {9.7.2.7}time\_in\_secs()}{38}{subsubsection.9.7.2.7}%
+\contentsline {subsection}{\numberline {9.7.3}Variable Documentation}{38}{subsection.9.7.3}%
+\contentsline {subsubsection}{\numberline {9.7.3.1}default\_num\_contexts}{38}{subsubsection.9.7.3.1}%
+\contentsline {subsubsection}{\numberline {9.7.3.2}seed1\_volatile}{38}{subsubsection.9.7.3.2}%
+\contentsline {subsubsection}{\numberline {9.7.3.3}seed2\_volatile}{38}{subsubsection.9.7.3.3}%
+\contentsline {subsubsection}{\numberline {9.7.3.4}seed3\_volatile}{38}{subsubsection.9.7.3.4}%
+\contentsline {subsubsection}{\numberline {9.7.3.5}seed4\_volatile}{38}{subsubsection.9.7.3.5}%
+\contentsline {subsubsection}{\numberline {9.7.3.6}seed5\_volatile}{39}{subsubsection.9.7.3.6}%
+\contentsline {subsubsection}{\numberline {9.7.3.7}start\_time\_val}{39}{subsubsection.9.7.3.7}%
+\contentsline {subsubsection}{\numberline {9.7.3.8}stop\_time\_val}{39}{subsubsection.9.7.3.8}%
+\contentsline {section}{\numberline {9.8}coremark/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}portme.h File Reference}{39}{section.9.8}%
+\contentsline {subsection}{\numberline {9.8.1}Macro Definition Documentation}{40}{subsection.9.8.1}%
+\contentsline {subsubsection}{\numberline {9.8.1.1}align\_mem}{41}{subsubsection.9.8.1.1}%
+\contentsline {subsubsection}{\numberline {9.8.1.2}COMPILER\_FLAGS}{41}{subsubsection.9.8.1.2}%
+\contentsline {subsubsection}{\numberline {9.8.1.3}COMPILER\_VERSION}{41}{subsubsection.9.8.1.3}%
+\contentsline {subsubsection}{\numberline {9.8.1.4}CORETIMETYPE}{41}{subsubsection.9.8.1.4}%
+\contentsline {subsubsection}{\numberline {9.8.1.5}HAS\_FLOAT}{41}{subsubsection.9.8.1.5}%
+\contentsline {subsubsection}{\numberline {9.8.1.6}HAS\_PRINTF}{41}{subsubsection.9.8.1.6}%
+\contentsline {subsubsection}{\numberline {9.8.1.7}HAS\_STDIO}{41}{subsubsection.9.8.1.7}%
+\contentsline {subsubsection}{\numberline {9.8.1.8}HAS\_TIME\_H}{42}{subsubsection.9.8.1.8}%
+\contentsline {subsubsection}{\numberline {9.8.1.9}MAIN\_HAS\_NOARGC}{42}{subsubsection.9.8.1.9}%
+\contentsline {subsubsection}{\numberline {9.8.1.10}MAIN\_HAS\_NORETURN}{42}{subsubsection.9.8.1.10}%
+\contentsline {subsubsection}{\numberline {9.8.1.11}MEM\_LOCATION}{42}{subsubsection.9.8.1.11}%
+\contentsline {subsubsection}{\numberline {9.8.1.12}MEM\_METHOD}{42}{subsubsection.9.8.1.12}%
+\contentsline {subsubsection}{\numberline {9.8.1.13}MULTITHREAD}{42}{subsubsection.9.8.1.13}%
+\contentsline {subsubsection}{\numberline {9.8.1.14}NULL}{42}{subsubsection.9.8.1.14}%
+\contentsline {subsubsection}{\numberline {9.8.1.15}SEED\_METHOD}{42}{subsubsection.9.8.1.15}%
+\contentsline {subsubsection}{\numberline {9.8.1.16}USE\_CLOCK}{43}{subsubsection.9.8.1.16}%
+\contentsline {subsubsection}{\numberline {9.8.1.17}USE\_FORK}{43}{subsubsection.9.8.1.17}%
+\contentsline {subsubsection}{\numberline {9.8.1.18}USE\_PTHREAD}{43}{subsubsection.9.8.1.18}%
+\contentsline {subsubsection}{\numberline {9.8.1.19}USE\_SOCKET}{43}{subsubsection.9.8.1.19}%
+\contentsline {subsubsection}{\numberline {9.8.1.20}VALIDATION\_RUN}{43}{subsubsection.9.8.1.20}%
+\contentsline {subsection}{\numberline {9.8.2}Typedef Documentation}{43}{subsection.9.8.2}%
+\contentsline {subsubsection}{\numberline {9.8.2.1}core\_portable}{43}{subsubsection.9.8.2.1}%
+\contentsline {subsubsection}{\numberline {9.8.2.2}CORE\_TICKS}{43}{subsubsection.9.8.2.2}%
+\contentsline {subsubsection}{\numberline {9.8.2.3}ee\_f32}{44}{subsubsection.9.8.2.3}%
+\contentsline {subsubsection}{\numberline {9.8.2.4}ee\_ptr\_int}{44}{subsubsection.9.8.2.4}%
+\contentsline {subsubsection}{\numberline {9.8.2.5}ee\_s16}{44}{subsubsection.9.8.2.5}%
+\contentsline {subsubsection}{\numberline {9.8.2.6}ee\_s32}{44}{subsubsection.9.8.2.6}%
+\contentsline {subsubsection}{\numberline {9.8.2.7}ee\_size\_t}{44}{subsubsection.9.8.2.7}%
+\contentsline {subsubsection}{\numberline {9.8.2.8}ee\_u16}{44}{subsubsection.9.8.2.8}%
+\contentsline {subsubsection}{\numberline {9.8.2.9}ee\_u32}{44}{subsubsection.9.8.2.9}%
+\contentsline {subsubsection}{\numberline {9.8.2.10}ee\_u8}{44}{subsubsection.9.8.2.10}%
+\contentsline {subsection}{\numberline {9.8.3}Function Documentation}{45}{subsection.9.8.3}%
+\contentsline {subsubsection}{\numberline {9.8.3.1}ee\_printf()}{45}{subsubsection.9.8.3.1}%
+\contentsline {subsubsection}{\numberline {9.8.3.2}portable\_fini()}{45}{subsubsection.9.8.3.2}%
+\contentsline {subsubsection}{\numberline {9.8.3.3}portable\_init()}{45}{subsubsection.9.8.3.3}%
+\contentsline {subsection}{\numberline {9.8.4}Variable Documentation}{45}{subsection.9.8.4}%
+\contentsline {subsubsection}{\numberline {9.8.4.1}default\_num\_contexts}{45}{subsubsection.9.8.4.1}%
+\contentsline {section}{\numberline {9.9}coremark/ee\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}printf.c File Reference}{46}{section.9.9}%
+\contentsline {subsection}{\numberline {9.9.1}Macro Definition Documentation}{47}{subsection.9.9.1}%
+\contentsline {subsubsection}{\numberline {9.9.1.1}HEX\_PREP}{47}{subsubsection.9.9.1.1}%
+\contentsline {subsubsection}{\numberline {9.9.1.2}is\_digit}{47}{subsubsection.9.9.1.2}%
+\contentsline {subsubsection}{\numberline {9.9.1.3}LEFT}{47}{subsubsection.9.9.1.3}%
+\contentsline {subsubsection}{\numberline {9.9.1.4}PLUS}{47}{subsubsection.9.9.1.4}%
+\contentsline {subsubsection}{\numberline {9.9.1.5}SIGN}{47}{subsubsection.9.9.1.5}%
+\contentsline {subsubsection}{\numberline {9.9.1.6}SPACE}{47}{subsubsection.9.9.1.6}%
+\contentsline {subsubsection}{\numberline {9.9.1.7}UPPERCASE}{48}{subsubsection.9.9.1.7}%
+\contentsline {subsubsection}{\numberline {9.9.1.8}ZEROPAD}{48}{subsubsection.9.9.1.8}%
+\contentsline {subsection}{\numberline {9.9.2}Function Documentation}{48}{subsection.9.9.2}%
+\contentsline {subsubsection}{\numberline {9.9.2.1}eaddr()}{48}{subsubsection.9.9.2.1}%
+\contentsline {subsubsection}{\numberline {9.9.2.2}ee\_printf()}{48}{subsubsection.9.9.2.2}%
+\contentsline {subsubsection}{\numberline {9.9.2.3}ee\_vsprintf()}{48}{subsubsection.9.9.2.3}%
+\contentsline {subsubsection}{\numberline {9.9.2.4}iaddr()}{48}{subsubsection.9.9.2.4}%
+\contentsline {subsubsection}{\numberline {9.9.2.5}number()}{49}{subsubsection.9.9.2.5}%
+\contentsline {subsubsection}{\numberline {9.9.2.6}skip\_atoi()}{49}{subsubsection.9.9.2.6}%
+\contentsline {subsubsection}{\numberline {9.9.2.7}strnlen()}{49}{subsubsection.9.9.2.7}%
+\contentsline {subsubsection}{\numberline {9.9.2.8}uart\_send\_char()}{49}{subsubsection.9.9.2.8}%
+\contentsline {subsection}{\numberline {9.9.3}Variable Documentation}{49}{subsection.9.9.3}%
+\contentsline {subsubsection}{\numberline {9.9.3.1}digits}{49}{subsubsection.9.9.3.1}%
+\contentsline {subsubsection}{\numberline {9.9.3.2}upper\_digits}{49}{subsubsection.9.9.3.2}%
+\contentsline {section}{\numberline {9.10}coremark/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ME.md File Reference}{50}{section.9.10}%
+\contentsline {section}{\numberline {9.11}darkshell/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ME.md File Reference}{50}{section.9.11}%
+\contentsline {section}{\numberline {9.12}R\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}A\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}M\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}E.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{50}{section.9.12}%
+\contentsline {section}{\numberline {9.13}coremark/src/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}join.c File Reference}{50}{section.9.13}%
+\contentsline {subsection}{\numberline {9.13.1}Typedef Documentation}{51}{subsection.9.13.1}%
+\contentsline {subsubsection}{\numberline {9.13.1.1}list\_cmp}{51}{subsubsection.9.13.1.1}%
+\contentsline {subsection}{\numberline {9.13.2}Function Documentation}{51}{subsection.9.13.2}%
+\contentsline {subsubsection}{\numberline {9.13.2.1}calc\_func()}{51}{subsubsection.9.13.2.1}%
+\contentsline {subsubsection}{\numberline {9.13.2.2}cmp\_complex()}{51}{subsubsection.9.13.2.2}%
+\contentsline {subsubsection}{\numberline {9.13.2.3}cmp\_idx()}{51}{subsubsection.9.13.2.3}%
+\contentsline {subsubsection}{\numberline {9.13.2.4}copy\_info()}{51}{subsubsection.9.13.2.4}%
+\contentsline {subsubsection}{\numberline {9.13.2.5}core\_bench\_list()}{52}{subsubsection.9.13.2.5}%
+\contentsline {subsubsection}{\numberline {9.13.2.6}core\_list\_find()}{52}{subsubsection.9.13.2.6}%
+\contentsline {subsubsection}{\numberline {9.13.2.7}core\_list\_init()}{52}{subsubsection.9.13.2.7}%
+\contentsline {subsubsection}{\numberline {9.13.2.8}core\_list\_insert\_new()}{52}{subsubsection.9.13.2.8}%
+\contentsline {subsubsection}{\numberline {9.13.2.9}core\_list\_mergesort()}{52}{subsubsection.9.13.2.9}%
+\contentsline {subsubsection}{\numberline {9.13.2.10}core\_list\_remove()}{52}{subsubsection.9.13.2.10}%
+\contentsline {subsubsection}{\numberline {9.13.2.11}core\_list\_reverse()}{53}{subsubsection.9.13.2.11}%
+\contentsline {subsubsection}{\numberline {9.13.2.12}core\_list\_undo\_remove()}{53}{subsubsection.9.13.2.12}%
+\contentsline {section}{\numberline {9.14}coremark/src/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}main.c File Reference}{53}{section.9.14}%
+\contentsline {subsection}{\numberline {9.14.1}Macro Definition Documentation}{54}{subsection.9.14.1}%
+\contentsline {subsubsection}{\numberline {9.14.1.1}get\_seed}{54}{subsubsection.9.14.1.1}%
+\contentsline {subsubsection}{\numberline {9.14.1.2}get\_seed\_32}{54}{subsubsection.9.14.1.2}%
+\contentsline {subsection}{\numberline {9.14.2}Function Documentation}{54}{subsection.9.14.2}%
+\contentsline {subsubsection}{\numberline {9.14.2.1}get\_seed\_args()}{54}{subsubsection.9.14.2.1}%
+\contentsline {subsubsection}{\numberline {9.14.2.2}iterate()}{54}{subsubsection.9.14.2.2}%
+\contentsline {subsubsection}{\numberline {9.14.2.3}main()}{55}{subsubsection.9.14.2.3}%
+\contentsline {subsection}{\numberline {9.14.3}Variable Documentation}{55}{subsection.9.14.3}%
+\contentsline {subsubsection}{\numberline {9.14.3.1}list\_known\_crc}{55}{subsubsection.9.14.3.1}%
+\contentsline {subsubsection}{\numberline {9.14.3.2}matrix\_known\_crc}{55}{subsubsection.9.14.3.2}%
+\contentsline {subsubsection}{\numberline {9.14.3.3}mem\_name}{55}{subsubsection.9.14.3.3}%
+\contentsline {subsubsection}{\numberline {9.14.3.4}state\_known\_crc}{55}{subsubsection.9.14.3.4}%
+\contentsline {subsubsection}{\numberline {9.14.3.5}static\_memblk}{56}{subsubsection.9.14.3.5}%
+\contentsline {section}{\numberline {9.15}coremark/src/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}matrix.c File Reference}{56}{section.9.15}%
+\contentsline {subsection}{\numberline {9.15.1}Macro Definition Documentation}{57}{subsection.9.15.1}%
+\contentsline {subsubsection}{\numberline {9.15.1.1}bit\_extract}{57}{subsubsection.9.15.1.1}%
+\contentsline {subsubsection}{\numberline {9.15.1.2}matrix\_big}{57}{subsubsection.9.15.1.2}%
+\contentsline {subsubsection}{\numberline {9.15.1.3}matrix\_clip}{57}{subsubsection.9.15.1.3}%
+\contentsline {subsubsection}{\numberline {9.15.1.4}matrix\_test\_next}{57}{subsubsection.9.15.1.4}%
+\contentsline {subsection}{\numberline {9.15.2}Function Documentation}{57}{subsection.9.15.2}%
+\contentsline {subsubsection}{\numberline {9.15.2.1}core\_bench\_matrix()}{57}{subsubsection.9.15.2.1}%
+\contentsline {subsubsection}{\numberline {9.15.2.2}core\_init\_matrix()}{58}{subsubsection.9.15.2.2}%
+\contentsline {subsubsection}{\numberline {9.15.2.3}matrix\_add\_const()}{58}{subsubsection.9.15.2.3}%
+\contentsline {subsubsection}{\numberline {9.15.2.4}matrix\_mul\_const()}{58}{subsubsection.9.15.2.4}%
+\contentsline {subsubsection}{\numberline {9.15.2.5}matrix\_mul\_matrix()}{58}{subsubsection.9.15.2.5}%
+\contentsline {subsubsection}{\numberline {9.15.2.6}matrix\_mul\_matrix\_bitextract()}{58}{subsubsection.9.15.2.6}%
+\contentsline {subsubsection}{\numberline {9.15.2.7}matrix\_mul\_vect()}{59}{subsubsection.9.15.2.7}%
+\contentsline {subsubsection}{\numberline {9.15.2.8}matrix\_sum()}{59}{subsubsection.9.15.2.8}%
+\contentsline {subsubsection}{\numberline {9.15.2.9}matrix\_test()}{59}{subsubsection.9.15.2.9}%
+\contentsline {section}{\numberline {9.16}coremark/src/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state.c File Reference}{59}{section.9.16}%
+\contentsline {subsection}{\numberline {9.16.1}Function Documentation}{60}{subsection.9.16.1}%
+\contentsline {subsubsection}{\numberline {9.16.1.1}core\_bench\_state()}{60}{subsubsection.9.16.1.1}%
+\contentsline {subsubsection}{\numberline {9.16.1.2}core\_init\_state()}{60}{subsubsection.9.16.1.2}%
+\contentsline {subsubsection}{\numberline {9.16.1.3}core\_state\_transition()}{60}{subsubsection.9.16.1.3}%
+\contentsline {subsubsection}{\numberline {9.16.1.4}ee\_isdigit()}{61}{subsubsection.9.16.1.4}%
+\contentsline {subsection}{\numberline {9.16.2}Variable Documentation}{61}{subsection.9.16.2}%
+\contentsline {subsubsection}{\numberline {9.16.2.1}errpat}{61}{subsubsection.9.16.2.1}%
+\contentsline {subsubsection}{\numberline {9.16.2.2}floatpat}{61}{subsubsection.9.16.2.2}%
+\contentsline {subsubsection}{\numberline {9.16.2.3}intpat}{61}{subsubsection.9.16.2.3}%
+\contentsline {subsubsection}{\numberline {9.16.2.4}scipat}{61}{subsubsection.9.16.2.4}%
+\contentsline {section}{\numberline {9.17}coremark/src/core\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}util.c File Reference}{62}{section.9.17}%
+\contentsline {subsection}{\numberline {9.17.1}Function Documentation}{62}{subsection.9.17.1}%
+\contentsline {subsubsection}{\numberline {9.17.1.1}check\_data\_types()}{62}{subsubsection.9.17.1.1}%
+\contentsline {subsubsection}{\numberline {9.17.1.2}crc16()}{63}{subsubsection.9.17.1.2}%
+\contentsline {subsubsection}{\numberline {9.17.1.3}crcu16()}{63}{subsubsection.9.17.1.3}%
+\contentsline {subsubsection}{\numberline {9.17.1.4}crcu32()}{63}{subsubsection.9.17.1.4}%
+\contentsline {subsubsection}{\numberline {9.17.1.5}crcu8()}{63}{subsubsection.9.17.1.5}%
+\contentsline {subsubsection}{\numberline {9.17.1.6}get\_seed\_args()}{63}{subsubsection.9.17.1.6}%
+\contentsline {subsubsection}{\numberline {9.17.1.7}parseval()}{63}{subsubsection.9.17.1.7}%
+\contentsline {section}{\numberline {9.18}coremark/src/coremark.h File Reference}{64}{section.9.18}%
+\contentsline {subsection}{\numberline {9.18.1}Macro Definition Documentation}{65}{subsection.9.18.1}%
+\contentsline {subsubsection}{\numberline {9.18.1.1}ALL\_ALGORITHMS\_MASK}{65}{subsubsection.9.18.1.1}%
+\contentsline {subsubsection}{\numberline {9.18.1.2}ID\_LIST}{66}{subsubsection.9.18.1.2}%
+\contentsline {subsubsection}{\numberline {9.18.1.3}ID\_MATRIX}{66}{subsubsection.9.18.1.3}%
+\contentsline {subsubsection}{\numberline {9.18.1.4}ID\_STATE}{66}{subsubsection.9.18.1.4}%
+\contentsline {subsubsection}{\numberline {9.18.1.5}MAIN\_RETURN\_TYPE}{66}{subsubsection.9.18.1.5}%
+\contentsline {subsubsection}{\numberline {9.18.1.6}MAIN\_RETURN\_VAL}{66}{subsubsection.9.18.1.6}%
+\contentsline {subsubsection}{\numberline {9.18.1.7}MATDAT\_INT}{66}{subsubsection.9.18.1.7}%
+\contentsline {subsubsection}{\numberline {9.18.1.8}MEM\_MALLOC}{66}{subsubsection.9.18.1.8}%
+\contentsline {subsubsection}{\numberline {9.18.1.9}MEM\_STACK}{66}{subsubsection.9.18.1.9}%
+\contentsline {subsubsection}{\numberline {9.18.1.10}MEM\_STATIC}{67}{subsubsection.9.18.1.10}%
+\contentsline {subsubsection}{\numberline {9.18.1.11}NUM\_ALGORITHMS}{67}{subsubsection.9.18.1.11}%
+\contentsline {subsubsection}{\numberline {9.18.1.12}SEED\_ARG}{67}{subsubsection.9.18.1.12}%
+\contentsline {subsubsection}{\numberline {9.18.1.13}SEED\_FUNC}{67}{subsubsection.9.18.1.13}%
+\contentsline {subsubsection}{\numberline {9.18.1.14}SEED\_VOLATILE}{67}{subsubsection.9.18.1.14}%
+\contentsline {subsubsection}{\numberline {9.18.1.15}TOTAL\_DATA\_SIZE}{67}{subsubsection.9.18.1.15}%
+\contentsline {subsection}{\numberline {9.18.2}Typedef Documentation}{67}{subsection.9.18.2}%
+\contentsline {subsubsection}{\numberline {9.18.2.1}core\_results}{67}{subsubsection.9.18.2.1}%
+\contentsline {subsubsection}{\numberline {9.18.2.2}core\_state\_e}{68}{subsubsection.9.18.2.2}%
+\contentsline {subsubsection}{\numberline {9.18.2.3}list\_data}{68}{subsubsection.9.18.2.3}%
+\contentsline {subsubsection}{\numberline {9.18.2.4}list\_head}{68}{subsubsection.9.18.2.4}%
+\contentsline {subsubsection}{\numberline {9.18.2.5}mat\_params}{68}{subsubsection.9.18.2.5}%
+\contentsline {subsubsection}{\numberline {9.18.2.6}MATDAT}{68}{subsubsection.9.18.2.6}%
+\contentsline {subsubsection}{\numberline {9.18.2.7}MATRES}{68}{subsubsection.9.18.2.7}%
+\contentsline {subsubsection}{\numberline {9.18.2.8}secs\_ret}{68}{subsubsection.9.18.2.8}%
+\contentsline {subsection}{\numberline {9.18.3}Enumeration Type Documentation}{68}{subsection.9.18.3}%
+\contentsline {subsubsection}{\numberline {9.18.3.1}CORE\_STATE}{68}{subsubsection.9.18.3.1}%
+\contentsline {subsection}{\numberline {9.18.4}Function Documentation}{69}{subsection.9.18.4}%
+\contentsline {subsubsection}{\numberline {9.18.4.1}check\_data\_types()}{69}{subsubsection.9.18.4.1}%
+\contentsline {subsubsection}{\numberline {9.18.4.2}core\_bench\_list()}{69}{subsubsection.9.18.4.2}%
+\contentsline {subsubsection}{\numberline {9.18.4.3}core\_bench\_matrix()}{69}{subsubsection.9.18.4.3}%
+\contentsline {subsubsection}{\numberline {9.18.4.4}core\_bench\_state()}{69}{subsubsection.9.18.4.4}%
+\contentsline {subsubsection}{\numberline {9.18.4.5}core\_init\_matrix()}{70}{subsubsection.9.18.4.5}%
+\contentsline {subsubsection}{\numberline {9.18.4.6}core\_init\_state()}{70}{subsubsection.9.18.4.6}%
+\contentsline {subsubsection}{\numberline {9.18.4.7}core\_list\_init()}{70}{subsubsection.9.18.4.7}%
+\contentsline {subsubsection}{\numberline {9.18.4.8}crc16()}{70}{subsubsection.9.18.4.8}%
+\contentsline {subsubsection}{\numberline {9.18.4.9}crcu16()}{70}{subsubsection.9.18.4.9}%
+\contentsline {subsubsection}{\numberline {9.18.4.10}crcu32()}{70}{subsubsection.9.18.4.10}%
+\contentsline {subsubsection}{\numberline {9.18.4.11}crcu8()}{71}{subsubsection.9.18.4.11}%
+\contentsline {subsubsection}{\numberline {9.18.4.12}get\_time()}{71}{subsubsection.9.18.4.12}%
+\contentsline {subsubsection}{\numberline {9.18.4.13}iterate()}{71}{subsubsection.9.18.4.13}%
+\contentsline {subsubsection}{\numberline {9.18.4.14}parseval()}{71}{subsubsection.9.18.4.14}%
+\contentsline {subsubsection}{\numberline {9.18.4.15}portable\_free()}{71}{subsubsection.9.18.4.15}%
+\contentsline {subsubsection}{\numberline {9.18.4.16}portable\_malloc()}{71}{subsubsection.9.18.4.16}%
+\contentsline {subsubsection}{\numberline {9.18.4.17}start\_time()}{71}{subsubsection.9.18.4.17}%
+\contentsline {subsubsection}{\numberline {9.18.4.18}stop\_time()}{72}{subsubsection.9.18.4.18}%
+\contentsline {subsubsection}{\numberline {9.18.4.19}time\_in\_secs()}{72}{subsubsection.9.18.4.19}%
+\contentsline {section}{\numberline {9.19}darklibc/i2c.c File Reference}{72}{section.9.19}%
+\contentsline {section}{\numberline {9.20}darklibc/i2c\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}old.c File Reference}{72}{section.9.20}%
+\contentsline {section}{\numberline {9.21}darklibc/include/i2c.h File Reference}{73}{section.9.21}%
+\contentsline {subsection}{\numberline {9.21.1}Function Documentation}{73}{subsection.9.21.1}%
+\contentsline {subsubsection}{\numberline {9.21.1.1}i2cReadByte()}{74}{subsubsection.9.21.1.1}%
+\contentsline {subsubsection}{\numberline {9.21.1.2}i2cSendByte()}{74}{subsubsection.9.21.1.2}%
+\contentsline {section}{\numberline {9.22}darklibc/include/io.h File Reference}{74}{section.9.22}%
+\contentsline {subsection}{\numberline {9.22.1}Macro Definition Documentation}{75}{subsection.9.22.1}%
+\contentsline {subsubsection}{\numberline {9.22.1.1}IRQ\_TIMR}{75}{subsubsection.9.22.1.1}%
+\contentsline {subsubsection}{\numberline {9.22.1.2}IRQ\_UART}{75}{subsubsection.9.22.1.2}%
+\contentsline {subsection}{\numberline {9.22.2}Function Documentation}{76}{subsection.9.22.2}%
+\contentsline {subsubsection}{\numberline {9.22.2.1}\_\_attribute\_\_()}{76}{subsubsection.9.22.2.1}%
+\contentsline {subsubsection}{\numberline {9.22.2.2}banner()}{76}{subsubsection.9.22.2.2}%
+\contentsline {subsubsection}{\numberline {9.22.2.3}board\_name()}{76}{subsubsection.9.22.2.3}%
+\contentsline {subsubsection}{\numberline {9.22.2.4}check4rv32i()}{76}{subsubsection.9.22.2.4}%
+\contentsline {subsubsection}{\numberline {9.22.2.5}get\_mepc()}{76}{subsubsection.9.22.2.5}%
+\contentsline {subsubsection}{\numberline {9.22.2.6}get\_mie()}{76}{subsubsection.9.22.2.6}%
+\contentsline {subsubsection}{\numberline {9.22.2.7}get\_mtvec()}{77}{subsubsection.9.22.2.7}%
+\contentsline {subsubsection}{\numberline {9.22.2.8}set\_mepc()}{77}{subsubsection.9.22.2.8}%
+\contentsline {subsubsection}{\numberline {9.22.2.9}set\_mie()}{77}{subsubsection.9.22.2.9}%
+\contentsline {subsubsection}{\numberline {9.22.2.10}set\_mtvec()}{77}{subsubsection.9.22.2.10}%
+\contentsline {subsection}{\numberline {9.22.3}Variable Documentation}{77}{subsection.9.22.3}%
+\contentsline {subsubsection}{\numberline {9.22.3.1}\_data}{77}{subsubsection.9.22.3.1}%
+\contentsline {subsubsection}{\numberline {9.22.3.2}\_edata}{77}{subsubsection.9.22.3.2}%
+\contentsline {subsubsection}{\numberline {9.22.3.3}\_etext}{77}{subsubsection.9.22.3.3}%
+\contentsline {subsubsection}{\numberline {9.22.3.4}\_stack}{78}{subsubsection.9.22.3.4}%
+\contentsline {subsubsection}{\numberline {9.22.3.5}\_text}{78}{subsubsection.9.22.3.5}%
+\contentsline {subsubsection}{\numberline {9.22.3.6}io}{78}{subsubsection.9.22.3.6}%
+\contentsline {subsubsection}{\numberline {9.22.3.7}kmem}{78}{subsubsection.9.22.3.7}%
+\contentsline {subsubsection}{\numberline {9.22.3.8}utimers}{78}{subsubsection.9.22.3.8}%
+\contentsline {section}{\numberline {9.23}darklibc/include/spi.h File Reference}{78}{section.9.23}%
+\contentsline {subsection}{\numberline {9.23.1}Function Documentation}{79}{subsection.9.23.1}%
+\contentsline {subsubsection}{\numberline {9.23.1.1}spi\_disable()}{80}{subsubsection.9.23.1.1}%
+\contentsline {subsubsection}{\numberline {9.23.1.2}spi\_enable()}{80}{subsubsection.9.23.1.2}%
+\contentsline {subsubsection}{\numberline {9.23.1.3}spi\_init()}{80}{subsubsection.9.23.1.3}%
+\contentsline {subsubsection}{\numberline {9.23.1.4}spi\_read\_multiple\_bytes()}{80}{subsubsection.9.23.1.4}%
+\contentsline {subsubsection}{\numberline {9.23.1.5}spi\_read\_single\_byte()}{80}{subsubsection.9.23.1.5}%
+\contentsline {subsubsection}{\numberline {9.23.1.6}spi\_send\_receive\_data()}{81}{subsubsection.9.23.1.6}%
+\contentsline {subsubsection}{\numberline {9.23.1.7}spi\_set\_clock\_frequency()}{81}{subsubsection.9.23.1.7}%
+\contentsline {subsubsection}{\numberline {9.23.1.8}spi\_set\_data\_mode()}{81}{subsubsection.9.23.1.8}%
+\contentsline {subsubsection}{\numberline {9.23.1.9}spi\_transaction\_single\_byte()}{81}{subsubsection.9.23.1.9}%
+\contentsline {subsubsection}{\numberline {9.23.1.10}spi\_write\_multiple\_bytes()}{82}{subsubsection.9.23.1.10}%
+\contentsline {subsubsection}{\numberline {9.23.1.11}spi\_write\_read\_multiple\_bytes()}{82}{subsubsection.9.23.1.11}%
+\contentsline {subsubsection}{\numberline {9.23.1.12}spi\_write\_read\_single\_byte()}{82}{subsubsection.9.23.1.12}%
+\contentsline {subsubsection}{\numberline {9.23.1.13}spi\_write\_single\_byte()}{83}{subsubsection.9.23.1.13}%
+\contentsline {section}{\numberline {9.24}darklibc/include/stdio.h File Reference}{83}{section.9.24}%
+\contentsline {subsection}{\numberline {9.24.1}Macro Definition Documentation}{84}{subsection.9.24.1}%
+\contentsline {subsubsection}{\numberline {9.24.1.1}EBREAK}{84}{subsubsection.9.24.1.1}%
+\contentsline {subsubsection}{\numberline {9.24.1.2}EOF}{84}{subsubsection.9.24.1.2}%
+\contentsline {subsubsection}{\numberline {9.24.1.3}NUL}{84}{subsubsection.9.24.1.3}%
+\contentsline {subsubsection}{\numberline {9.24.1.4}NULL}{85}{subsubsection.9.24.1.4}%
+\contentsline {subsection}{\numberline {9.24.2}Function Documentation}{85}{subsection.9.24.2}%
+\contentsline {subsubsection}{\numberline {9.24.2.1}atoi()}{85}{subsubsection.9.24.2.1}%
+\contentsline {subsubsection}{\numberline {9.24.2.2}getchar()}{85}{subsubsection.9.24.2.2}%
+\contentsline {subsubsection}{\numberline {9.24.2.3}gets()}{85}{subsubsection.9.24.2.3}%
+\contentsline {subsubsection}{\numberline {9.24.2.4}mac()}{85}{subsubsection.9.24.2.4}%
+\contentsline {subsubsection}{\numberline {9.24.2.5}memcpy()}{85}{subsubsection.9.24.2.5}%
+\contentsline {subsubsection}{\numberline {9.24.2.6}memset()}{86}{subsubsection.9.24.2.6}%
+\contentsline {subsubsection}{\numberline {9.24.2.7}printf()}{86}{subsubsection.9.24.2.7}%
+\contentsline {subsubsection}{\numberline {9.24.2.8}putchar()}{86}{subsubsection.9.24.2.8}%
+\contentsline {subsubsection}{\numberline {9.24.2.9}putd()}{86}{subsubsection.9.24.2.9}%
+\contentsline {subsubsection}{\numberline {9.24.2.10}puts()}{86}{subsubsection.9.24.2.10}%
+\contentsline {subsubsection}{\numberline {9.24.2.11}putstr()}{86}{subsubsection.9.24.2.11}%
+\contentsline {subsubsection}{\numberline {9.24.2.12}putx()}{87}{subsubsection.9.24.2.12}%
+\contentsline {subsubsection}{\numberline {9.24.2.13}strcmp()}{87}{subsubsection.9.24.2.13}%
+\contentsline {subsubsection}{\numberline {9.24.2.14}strlen()}{87}{subsubsection.9.24.2.14}%
+\contentsline {subsubsection}{\numberline {9.24.2.15}strncmp()}{87}{subsubsection.9.24.2.15}%
+\contentsline {subsubsection}{\numberline {9.24.2.16}strtok()}{87}{subsubsection.9.24.2.16}%
+\contentsline {subsubsection}{\numberline {9.24.2.17}usleep()}{87}{subsubsection.9.24.2.17}%
+\contentsline {subsubsection}{\numberline {9.24.2.18}xtoi()}{88}{subsubsection.9.24.2.18}%
+\contentsline {section}{\numberline {9.25}darklibc/io.c File Reference}{88}{section.9.25}%
+\contentsline {subsection}{\numberline {9.25.1}Function Documentation}{88}{subsection.9.25.1}%
+\contentsline {subsubsection}{\numberline {9.25.1.1}\_\_attribute\_\_()}{88}{subsubsection.9.25.1.1}%
+\contentsline {subsubsection}{\numberline {9.25.1.2}board\_name()}{89}{subsubsection.9.25.1.2}%
+\contentsline {subsubsection}{\numberline {9.25.1.3}mac()}{89}{subsubsection.9.25.1.3}%
+\contentsline {subsection}{\numberline {9.25.2}Variable Documentation}{89}{subsection.9.25.2}%
+\contentsline {subsubsection}{\numberline {9.25.2.1}io}{89}{subsubsection.9.25.2.1}%
+\contentsline {subsubsection}{\numberline {9.25.2.2}kmem}{89}{subsubsection.9.25.2.2}%
+\contentsline {subsubsection}{\numberline {9.25.2.3}utimers}{89}{subsubsection.9.25.2.3}%
+\contentsline {section}{\numberline {9.26}darklibc/spi.c File Reference}{90}{section.9.26}%
+\contentsline {section}{\numberline {9.27}darklibc/stdio.c File Reference}{90}{section.9.27}%
+\contentsline {subsection}{\numberline {9.27.1}Function Documentation}{91}{subsection.9.27.1}%
+\contentsline {subsubsection}{\numberline {9.27.1.1}\_\_div\_mod\_si3()}{91}{subsubsection.9.27.1.1}%
+\contentsline {subsubsection}{\numberline {9.27.1.2}\_\_divsi3()}{91}{subsubsection.9.27.1.2}%
+\contentsline {subsubsection}{\numberline {9.27.1.3}\_\_modsi3()}{91}{subsubsection.9.27.1.3}%
+\contentsline {subsubsection}{\numberline {9.27.1.4}\_\_mulsi3()}{92}{subsubsection.9.27.1.4}%
+\contentsline {subsubsection}{\numberline {9.27.1.5}\_\_udiv\_umod\_si3()}{92}{subsubsection.9.27.1.5}%
+\contentsline {subsubsection}{\numberline {9.27.1.6}\_\_udivsi3()}{92}{subsubsection.9.27.1.6}%
+\contentsline {subsubsection}{\numberline {9.27.1.7}\_\_umodsi3()}{92}{subsubsection.9.27.1.7}%
+\contentsline {subsubsection}{\numberline {9.27.1.8}\_\_umulsi3()}{92}{subsubsection.9.27.1.8}%
+\contentsline {subsubsection}{\numberline {9.27.1.9}atoi()}{92}{subsubsection.9.27.1.9}%
+\contentsline {subsubsection}{\numberline {9.27.1.10}gets()}{93}{subsubsection.9.27.1.10}%
+\contentsline {subsubsection}{\numberline {9.27.1.11}memcpy()}{93}{subsubsection.9.27.1.11}%
+\contentsline {subsubsection}{\numberline {9.27.1.12}memset()}{93}{subsubsection.9.27.1.12}%
+\contentsline {subsubsection}{\numberline {9.27.1.13}printf()}{93}{subsubsection.9.27.1.13}%
+\contentsline {subsubsection}{\numberline {9.27.1.14}putnum()}{93}{subsubsection.9.27.1.14}%
+\contentsline {subsubsection}{\numberline {9.27.1.15}puts()}{93}{subsubsection.9.27.1.15}%
+\contentsline {subsubsection}{\numberline {9.27.1.16}putstr()}{94}{subsubsection.9.27.1.16}%
+\contentsline {subsubsection}{\numberline {9.27.1.17}strcmp()}{94}{subsubsection.9.27.1.17}%
+\contentsline {subsubsection}{\numberline {9.27.1.18}strlen()}{94}{subsubsection.9.27.1.18}%
+\contentsline {subsubsection}{\numberline {9.27.1.19}strncmp()}{94}{subsubsection.9.27.1.19}%
+\contentsline {subsubsection}{\numberline {9.27.1.20}strtok()}{94}{subsubsection.9.27.1.20}%
+\contentsline {subsubsection}{\numberline {9.27.1.21}usleep()}{94}{subsubsection.9.27.1.21}%
+\contentsline {subsubsection}{\numberline {9.27.1.22}xtoi()}{95}{subsubsection.9.27.1.22}%
+\contentsline {section}{\numberline {9.28}program\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Board.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}py File Reference}{95}{section.9.28}%
+\contentsline {chapter}{Index}{97}{section*.92}%

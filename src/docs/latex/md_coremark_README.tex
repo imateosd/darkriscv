@@ -1,0 +1,79 @@
+\hypertarget{md_coremark_README_autotoc_md1}{}\doxysubsection{config example\+:}\label{md_coremark_README_autotoc_md1}
+$\ast$$\ast$\+Because coremark is relatively large, it is nearly 30KB ({\ttfamily src/coremark/coremark.\+o}) after compiling with -\/O2 optimization level. Therefore, the following modifications need to be made before making.$\ast$$\ast$ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{// rtl/config.vh}
+\DoxyCodeLine{`ifdef \_\_HARVARD\_\_}
+\DoxyCodeLine{    `define MLEN 14 // MEM[13:0] -\/> 16KBytes LENGTH = 0x4000}
+\DoxyCodeLine{`else}
+\DoxyCodeLine{    `define MLEN 15 // MEM[14:0] -\/> 32KBytes LENGTH = 0x8000}
+\DoxyCodeLine{`endif}
+\end{DoxyCode}
+\hypertarget{md_coremark_README_autotoc_md2}{}\doxysubsection{make}\label{md_coremark_README_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make <install> <CROSS=riscv32-\/unknown-\/elf CCPATH=/opt/riscv32-\/gcc/bin ARCH=rv32e APPLICATION=coremark HARVARD=1>}
+\end{DoxyCode}
+\hypertarget{md_coremark_README_autotoc_md3}{}\doxysubsection{running}\label{md_coremark_README_autotoc_md3}
+{\bfseries{board\+:scarab\+\_\+minispartan6-\/plus\+\_\+lx9 100M\+Hz}} \hypertarget{md_coremark_README_autotoc_md4}{}\doxyparagraph{G\+C\+C -\/\+O1\+:}\label{md_coremark_README_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{boot0: text@0+13512 data@16384+2732 stack@32768 (13652 bytes free)}
+\DoxyCodeLine{board: scarab minispartan6-\/plus lx9 (id=13)             }
+\DoxyCodeLine{build: Tue, 31 May 2022 10:46:38 +0800 for rv32e        }
+\DoxyCodeLine{core0: darkriscv@100MHz with: rv32e }
+\DoxyCodeLine{uart0: 115200 bps (div=868)}
+\DoxyCodeLine{timr0: frequency=1000000Hz (io.timer=99)}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{CoreMark start in 24029 us.}
+\DoxyCodeLine{2K performance run parameters for coremark.}
+\DoxyCodeLine{CoreMark Size    : 666}
+\DoxyCodeLine{Total ticks      : 52034539}
+\DoxyCodeLine{Total time (secs): 52}
+\DoxyCodeLine{Iterations/Sec   : 76}
+\DoxyCodeLine{Iterations       : 4000}
+\DoxyCodeLine{Compiler version : GCC11.1.0}
+\DoxyCodeLine{Compiler flags   : -\/O1 -\/DPERFORMANCE\_RUN=1}
+\DoxyCodeLine{Memory location  : STACK}
+\DoxyCodeLine{seedcrc          : 0xe9f5}
+\DoxyCodeLine{[0]crclist       : 0xe714}
+\DoxyCodeLine{[0]crcmatrix     : 0x1fd7}
+\DoxyCodeLine{[0]crcstate      : 0x8e3a}
+\DoxyCodeLine{[0]crcfinal      : 0x65c5}
+\DoxyCodeLine{Correct operation validated. See README.md for run and reporting rules.}
+\DoxyCodeLine{CoreMark finish in 52102812 us.}
+\end{DoxyCode}
+\hypertarget{md_coremark_README_autotoc_md5}{}\doxyparagraph{G\+C\+C -\/\+O2}\label{md_coremark_README_autotoc_md5}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{CoreMark start in 24020 us.}
+\DoxyCodeLine{boot0: text@0+15848 data@16384+2700 stack@32768 (13684 bytes free)}
+\DoxyCodeLine{board: scarab minispartan6-\/plus lx9 (id=13)}
+\DoxyCodeLine{build: Mon, 30 May 2022 22:35:55 +0800 for rv32e}
+\DoxyCodeLine{core0: darkriscv@100MHz with: rv32e }
+\DoxyCodeLine{uart0: 115200 bps (div=868)}
+\DoxyCodeLine{timr0: frequency=1000000Hz (io.timer=99)}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{CoreMark start in 24020 us.}
+\DoxyCodeLine{2K performance run parameters for coremark.}
+\DoxyCodeLine{CoreMark Size    : 666}
+\DoxyCodeLine{Total ticks      : 44265590}
+\DoxyCodeLine{Total time (secs): 44}
+\DoxyCodeLine{Iterations/Sec   : 90}
+\DoxyCodeLine{Iterations       : 4000}
+\DoxyCodeLine{Compiler version : GCC11.1.0}
+\DoxyCodeLine{Compiler flags   : -\/O2 -\/DPERFORMANCE\_RUN=1}
+\DoxyCodeLine{Memory location  : STACK}
+\DoxyCodeLine{seedcrc          : 0xe9f5}
+\DoxyCodeLine{[0]crclist       : 0xe714}
+\DoxyCodeLine{[0]crcmatrix     : 0x1fd7}
+\DoxyCodeLine{[0]crcstate      : 0x8e3a}
+\DoxyCodeLine{[0]crcfinal      : 0x65c5}
+\DoxyCodeLine{Correct operation validated. See README.md for run and reporting rules.}
+\DoxyCodeLine{CoreMark finish in 44333828 us.}
+\end{DoxyCode}
+\hypertarget{md_coremark_README_autotoc_md6}{}\doxysubsection{coremark/\+M\+Hz}\label{md_coremark_README_autotoc_md6}
+\href{https://github.com/eembc/coremark/issues/41}{\texttt{ How to calculate the coremark score i.\+e. coremark/\+M\+Hz ?}}
+
+coremark code from \href{https://github.com/eembc/coremark/tree/b24e397f7103061b3673261d292a0667bd3bc1b8}{\texttt{ coremark@b24e397}}. 

@@ -1,0 +1,72 @@
+\hypertarget{core__util_8c}{}\doxysection{coremark/src/core\+\_\+util.c File Reference}
+\label{core__util_8c}\index{coremark/src/core\_util.c@{coremark/src/core\_util.c}}
+{\ttfamily \#include \char`\"{}coremark.\+h\char`\"{}}\newline
+Include dependency graph for core\+\_\+util.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{core__util_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{core__util_8c_a91af1f73ce5c38b9bdb2ccb249db0bfe}{parseval}} (char $\ast$valstring)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} \mbox{\hyperlink{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}{get\+\_\+seed\+\_\+args}} (int i, int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__util_8c_af668c6333b787038a655d7df8c5cd6ba}{crcu8}} (\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} data, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__util_8c_a8665383f7afec115990015cccdd39903}{crcu16}} (\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} newval, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__util_8c_a490f737fe99e6fa4bd8e26fc400b10f8}{crcu32}} (\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}} newval, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} \mbox{\hyperlink{core__util_8c_a22f3d50bfdc8bdc8c4dd66faaedcca39}{crc16}} (\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}} newval, \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc)
+\item 
+\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} \mbox{\hyperlink{core__util_8c_af7d821e88b1927d0e2665b211a3245ee}{check\+\_\+data\+\_\+types}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{core__util_8c_af7d821e88b1927d0e2665b211a3245ee}\label{core__util_8c_af7d821e88b1927d0e2665b211a3245ee}} 
+\index{core\_util.c@{core\_util.c}!check\_data\_types@{check\_data\_types}}
+\index{check\_data\_types@{check\_data\_types}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{check\_data\_types()}{check\_data\_types()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}} check\+\_\+data\+\_\+types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__util_8c_a22f3d50bfdc8bdc8c4dd66faaedcca39}\label{core__util_8c_a22f3d50bfdc8bdc8c4dd66faaedcca39}} 
+\index{core\_util.c@{core\_util.c}!crc16@{crc16}}
+\index{crc16@{crc16}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{crc16()}{crc16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crc16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a87a26b71797a8b4f0a9102a55efaecce}{ee\+\_\+s16}}}]{newval,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__util_8c_a8665383f7afec115990015cccdd39903}\label{core__util_8c_a8665383f7afec115990015cccdd39903}} 
+\index{core\_util.c@{core\_util.c}!crcu16@{crcu16}}
+\index{crcu16@{crcu16}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{crcu16()}{crcu16()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crcu16 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{newval,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__util_8c_a490f737fe99e6fa4bd8e26fc400b10f8}\label{core__util_8c_a490f737fe99e6fa4bd8e26fc400b10f8}} 
+\index{core\_util.c@{core\_util.c}!crcu32@{crcu32}}
+\index{crcu32@{crcu32}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{crcu32()}{crcu32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crcu32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_a815bd12245c4f8c30b26170adfbb0dbb}{ee\+\_\+u32}}}]{newval,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__util_8c_af668c6333b787038a655d7df8c5cd6ba}\label{core__util_8c_af668c6333b787038a655d7df8c5cd6ba}} 
+\index{core\_util.c@{core\_util.c}!crcu8@{crcu8}}
+\index{crcu8@{crcu8}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{crcu8()}{crcu8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}} crcu8 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{core__portme_8h_ad2d1361107b8064d37cc19eaa06248c2}{ee\+\_\+u8}}}]{data,  }\item[{\mbox{\hyperlink{core__portme_8h_a6c154274618c47554763b12ee0981b0a}{ee\+\_\+u16}}}]{crc }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}\label{core__util_8c_aae0c7c214d630f1bc7cdef22ce1dee4b}} 
+\index{core\_util.c@{core\_util.c}!get\_seed\_args@{get\_seed\_args}}
+\index{get\_seed\_args@{get\_seed\_args}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{get\_seed\_args()}{get\_seed\_args()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} get\+\_\+seed\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{core__util_8c_a91af1f73ce5c38b9bdb2ccb249db0bfe}\label{core__util_8c_a91af1f73ce5c38b9bdb2ccb249db0bfe}} 
+\index{core\_util.c@{core\_util.c}!parseval@{parseval}}
+\index{parseval@{parseval}!core\_util.c@{core\_util.c}}
+\doxysubsubsection{\texorpdfstring{parseval()}{parseval()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__portme_8h_ad101ac908cc458a5efdb3ed9b818a1cb}{ee\+\_\+s32}} parseval (\begin{DoxyParamCaption}\item[{char $\ast$}]{valstring }\end{DoxyParamCaption})}
+

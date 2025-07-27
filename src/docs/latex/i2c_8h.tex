@@ -1,0 +1,80 @@
+\hypertarget{i2c_8h}{}\doxysection{darklibc/include/i2c.h File Reference}
+\label{i2c_8h}\index{darklibc/include/i2c.h@{darklibc/include/i2c.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for i2c.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{i2c_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{i2c_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structI2C__RegisterBits}{I2\+C\+\_\+\+Register\+Bits}}
+\item 
+union \mbox{\hyperlink{unionI2C__Register}{I2\+C\+\_\+\+Register}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{i2c_8h_a3078bc337728e6bba7e46185d509b543}{i2c\+Send\+Byte}} (char, char, char)
+\begin{DoxyCompactList}\small\item\em Sends a single byte via I2C. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{i2c_8h_afcd4e5187502bf8932a1bc0fcb8cec88}{i2c\+Read\+Byte}} (char, char)
+\begin{DoxyCompactList}\small\item\em Reads a single byte via I2C. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{i2c_8h_afcd4e5187502bf8932a1bc0fcb8cec88}\label{i2c_8h_afcd4e5187502bf8932a1bc0fcb8cec88}} 
+\index{i2c.h@{i2c.h}!i2cReadByte@{i2cReadByte}}
+\index{i2cReadByte@{i2cReadByte}!i2c.h@{i2c.h}}
+\doxysubsubsection{\texorpdfstring{i2cReadByte()}{i2cReadByte()}}
+{\footnotesize\ttfamily char i2c\+Read\+Byte (\begin{DoxyParamCaption}\item[{char}]{,  }\item[{char}]{ }\end{DoxyParamCaption})}
+
+
+
+Reads a single byte via I2C. 
+
+This function reads a byte from a specific slave device and subaddress over I2C.
+
+
+\begin{DoxyParams}{Parameters}
+{\em slave\+Address} & The I2C slave device address. \\
+\hline
+{\em subaddress} & The register/subaddress within the slave device. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char The byte read, or -\/1 on error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{i2c_8h_a3078bc337728e6bba7e46185d509b543}\label{i2c_8h_a3078bc337728e6bba7e46185d509b543}} 
+\index{i2c.h@{i2c.h}!i2cSendByte@{i2cSendByte}}
+\index{i2cSendByte@{i2cSendByte}!i2c.h@{i2c.h}}
+\doxysubsubsection{\texorpdfstring{i2cSendByte()}{i2cSendByte()}}
+{\footnotesize\ttfamily void i2c\+Send\+Byte (\begin{DoxyParamCaption}\item[{char}]{,  }\item[{char}]{,  }\item[{char}]{ }\end{DoxyParamCaption})}
+
+
+
+Sends a single byte via I2C. 
+
+This function sends a byte to a specific slave device and subaddress over I2C.
+
+
+\begin{DoxyParams}{Parameters}
+{\em slave\+Address} & The I2C slave device address. \\
+\hline
+{\em subaddress} & The register/subaddress within the slave device. \\
+\hline
+{\em byte\+To\+Send} & The byte of data to be transmitted. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 on success, -\/1 if no A\+CK received or if I2C is busy. 
+\end{DoxyReturn}
