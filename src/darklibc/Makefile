@@ -95,9 +95,9 @@ OCFLAGS = -O binary # --reverse-bytes=4 # workaround for darkriscv big-endian bl
 ODFLAGS = -D
 
 PROJ = darklibc
-OBJS = stdio.o io.o util.o i2c.o spi.o #small.o # start.o
-ASMS = stdio.s io.s i2c.s spi.s 
-SRCS = stdio.c io.c i2c.c spi.c util.s #small.s # start.s
+OBJS = stdio.o io.o util.o i2c.o spi.o gpio.o utils.o #small.o # start.o
+ASMS = stdio.s io.s i2c.s spi.s gpio.s utils.s
+SRCS = stdio.c io.c i2c.c spi.c util.s gpio.c utils.c #small.s # start.s
 
 DEPS = $(SRCS) $(ASMS) $(OBJS)
 

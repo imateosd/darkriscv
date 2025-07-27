@@ -94,7 +94,7 @@ SECTIONS
 
         /* enable this in order to use the uart boot! */
 #if !HARVARD
-        . = 512;
+        . = 1024;
 #endif
         _text = .;
         *(.text*)

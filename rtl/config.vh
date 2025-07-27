@@ -35,7 +35,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // darkriscv configuration
 ////////////////////////////////////////////////////////////////////////////////
-
+`define DEBUG
 // pipeline stages:
 //
 // 2-stage version: core and memory in different clock edges result in less
@@ -215,7 +215,7 @@
 //`define AVNET_MICROBOARD_LX9
 //`define XILINX_AC701_A200
 //`define QMTECH_SDRAM_LX16
-`define BASYS_3_A35 // IMD
+`define BASYS_3_A35
 
 // the following defines are automatically defined:
 
@@ -405,7 +405,6 @@
 `ifdef BASYS_3_A35 //IMD
     `define BOARD_ID 19
     `define BOARD_CK 100000000
-//    `define INVRES 0
 `endif
 
 
@@ -413,7 +412,7 @@
 // - the reset button is working
 // - the LED is blinking at 1Hz
 // - the UART is looped
-// `define TESTMODE  
+// `define TESTMODE
 
 `ifndef BOARD_ID
     `define BOARD_ID 0

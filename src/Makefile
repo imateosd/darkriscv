@@ -29,8 +29,8 @@
 # Add your application here:
 
 
-# APPLICATION = blink
-APPLICATION = darkshell
+APPLICATION = blink
+# APPLICATION = darkshell
 #APPLICATION = coremark
 #APPLICATION = badapple
 #APPLICATION = mandelbrot
@@ -148,7 +148,7 @@ clean:
 	$(AS) $(ASFLAGS) -c $< -o $@
 
 %.s: %.c Makefile
-	$(CC) $(CCFLAGS) -S $< -o $@
+	$(CC) -x assembler-with-cpp $(CCFLAGS) -S $< -o $@
 
 $(PROJ).ld: $(PROJ).lds Makefile
 	$(CPP) $(CPFLAGS) $(PROJ).lds $(PROJ).ld
@@ -179,7 +179,7 @@ $(PROJ).mem: $(PROJ).o
 	hexdump -ve '1/4 "%08x\n"' $(PROJ).bin > $@
 	# uncomment for big-endian
 	#xxd -p -c 4 -g 4 $< > $@
-	dd if=$(PROJ).bin of=$(PROJ)_uart.bin skip=512 bs=1
+	dd if=$(PROJ).bin of=$(PROJ)_uart.bin skip=1024 bs=1
 	rm $(PROJ).bin
 	# uncomment for MIF file
 	#awk 'BEGIN { print "DEPTH = 1024;\nWIDTH = 32;\nADDRESS_RADIX = HEX;\nDATA_RADIX = HEX;\nCONTENT\nBEGIN" } { printf("%08x : %s\n",NR-1,$1); } END { print "END;" }' < $(PROJ).mem > $(PROJ).mif

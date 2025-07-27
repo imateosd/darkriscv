@@ -28,8 +28,8 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
  */
 
-	.option pic
-	.section .text
+    .option pic
+    .section .text
 	.align	2
     .globl  _start
 
@@ -49,54 +49,86 @@ _start:
 
 _thread_lock:
     bne a2,x0,_thread_lock
-    
-    /* check simulation, skip uart boot */
 
-    la  a1,0x80000000
-    lb  a0,0(a1)
-    beq a0,x0,_normal_boot
+/* Small delay before reading button */
+#    li t0, 10000
+#_delay_loop:
+#    addi t0, t0, -1
+#    bnez t0, _delay_loop
 
-/*
-    uart boot here:
-    
-    - check for uart 3x w/ 1s timeout
-    - case there is data, download it to main()
-    - otherwise, go to normal boot
-*/
+/* Check boot select pin @ 0x8000002A, bit 0 */
+    lui     t0, 0x80000       # Load upper 20 bits of address 0x80000028 into t0
+    lw      t1, 0x28(t0)      # Load word from memory address 0x80000028 into t1
+    srli    t2, t1, 16        # Shift right logical by 16 bits to bring bit 16 to LSB
+    andi    t2, t2, 1         # Mask LSB to isolate bit 16 value
+    # Now t2 == 1 if bit 16 was set, a2 == 0 if not
 
-    li  a0,'u'
+    # print gpio read
+    addi a0, t2, '0'          # convert to ASCII
     call _uart_putchar
 
-    la a3,main
-    li a4,5
+    # andi a2,a2,1 # Mask LSB
+
+    beq  t2, x0, _normal_boot   # If not pressed, jump to normal boot
+
+/******************************
+ * BOOTLOADER MODE START HERE *
+ ******************************/
+ /*
+    uart boot hereÑ
+
+    - get size of program
+    - get bytes for program and write them to memory
+*/
+_uart_boot_forever:
+    li a0, 'b'
+    call _uart_putchar
+
+    la a3,1024 # Program address
     li a5,8192000
 
-    _uart_boot_loop1:
+uart_b0:
+    # Get first byte
+    addi a0,a5,0    # set timeout
+    call _uart_getchar
+    blt a0, x0, uart_b0
+    addi t0,a0,0        # t0 = LSB
 
-        _uart_boot_loop2:
+uart_b1:
+    # Read second byte (MSB)
+    addi a0,a5,0    # set timeout
+    call _uart_getchar
+    blt a0, x0, uart_b1
+    addi t1,a0,0  # t1 = MSB
 
-            addi a0,a5,0
-            call _uart_getchar
+    slli t1, t1, 8           # shift MSB to high byte
+    or t2, t0, t1            # t2 = full 16-bit counter
 
-            blt a0,x0,_uart_boot_exit
+uart_program_rx_loop:
+    
+    li a0,'.' # Indicate inside loop 
+    call _uart_putchar
+    
+    addi a0,a5,0 # Get next byte
+    call _uart_getchar 
 
-            sb a0,0(a3)
-            addi a3,a3,1
+    blt a0,x0, uart_program_rx_loop # If timeout restart loop
 
-            j _uart_boot_loop2
+    sb a0,0(a3)
+    addi a3,a3,1
 
-        _uart_boot_exit:
+    addi t2, t2, -1
+    bne t2, x0, uart_program_rx_loop
 
-        li a0,'.'
-        call _uart_putchar
-        addi a4,a4,-1
-        bgt a4,x0,_uart_boot_loop1
-
-    li  a0,'b'
-
+    li  a0,'b' # Indicate done rx loop
     call _uart_putchar
 
-/*
+# go on to main
+
+/******************************
+ * NORMAL BOOT FOLLOWS HERE   *
+ ******************************/
+ /*
     normal boot here:
 
     - call main
@@ -129,10 +161,10 @@ _normal_boot:
     lla a3,_rle_banner
     lla a5,_rle_dict
 
-     lbu a4,0(a3)
-   
+    lbu a4,0(a3)
+
     _rle_banner_loop1:
- 
+
         srli a0,a4,6
         add a0,a0,a5
         lbu a0,0(a0)
@@ -154,10 +186,10 @@ _normal_boot:
 
     _str_banner_loop3:
 
-        lbu a0,0(a3)
-        call _uart_putchar
-        addi a3,a3,1
-        bne a0,x0,_str_banner_loop3
+    lbu a0,0(a3)
+    call _uart_putchar
+    addi a3,a3,1
+    bne a0,x0,_str_banner_loop3
 
     /* RLL banner code end */
 
@@ -171,7 +203,7 @@ _normal_boot:
 	call	main
 
 	j	_start
-
+    
 /* 
     uart_putchar:
     

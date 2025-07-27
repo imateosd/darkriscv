@@ -31,33 +31,71 @@
 `timescale 1ns / 1ps
 `include "config.vh"
 
-module darksocv
-(
+module darksocv(
     input wire       XCLK,      // external clock
     input wire       XRES,      // external reset
+    input wire       XBOOTSEL,  // bootsel button
 
     input wire       UART_RXD,  // UART receive line
     output wire      UART_TXD,  // UART transmit line
 
-    output wire[3:0] LED,       // on-board leds
-    output wire[3:0] DEBUG,      // osciloscope
-    inout  wire[7:0] GPIO,       // gpio
+    output wire[7:0] CAT,
+    output wire[3:0] AN,
+
+    output wire[11:0]LED,       // on-board leds
+    output wire[3:0] DEBUG,      // osciloscope (in the case of the basys3, connected to LEDs)
+    inout  wire[11:0]GPIO,       // gpio
+    
+    input wire[15:0] XSW,        // switches
+    input wire[2:0]  XBTN,       // buttons
     
     inout wire       I2C_SDA,    // I2C SDA
     inout wire       I2C_SCL,    // I2C SCL
     
-    output wire      SPI_CLK,     // SPI CLK
+    output wire      SPI_CLK,     // SPI CLK 
     input wire       SPI_MISO,    // SPI MISO
     output wire      SPI_MOSI,    // SPI MOSI
-    output wire      SPI_CS     // SPI CS
+    output wire      SPI_CS1,     // SPI CS1
+    output wire      SPI_CS2,     // SPI CS2
+    output wire      SPI_CS3      // SPI CS3
 );
 
     wire CLK,RES;
         
     darkpll darkpll0(.XCLK(XCLK),.XRES(XRES),.CLK(CLK),.RES(RES));
 
-    // ro/rw memories
+    // synchronise XBOOTSEL
+    wire BOOTSEL;
+    synchronizer bootsel_synchronizer (.in(XBOOTSEL), .CLK(CLK), .out(BOOTSEL) );
+    
+    // debounce XBOOTSEL?
+    
+    // Synchronize switches
+    genvar j;
+    wire [15:0] SW;
+    generate
+    for (j = 0; j < 16; j = j + 1) begin : sw_sync
+        synchronizer u_sync_sw (
+            .in(XSW[j]),
+            .CLK(CLK),
+            .out(SW[j])
+        );
+    end
+    endgenerate
 
+    // Synchronize buttons
+    wire [2:0] BTN;
+    generate
+    for (j = 0; j < 3; j = j + 1) begin : btn_sync
+        synchronizer u_sync_btn (
+            .in(XBTN[j]),
+            .CLK(CLK),
+            .out(BTN[j])
+        );
+    end
+    endgenerate
+
+    // ro/rw memories
 `ifdef __HARVARD__
 
     reg [31:0] ROM [0:2**`MLEN/4-1]; // ro memory
@@ -133,12 +171,16 @@ module darksocv
     wire        RW;
 `endif
 
-    wire [31:0] IOMUX [0:6];
+    wire [31:0] IOMUX [0:11];
 
     reg  [15:0] GPIO_OUT_FF = 0;
     reg  [15:0] GPIO_IN_FF;
     reg  [15:0] GPIO_CTRL_FF = 0; // 0 input, 1 output
     reg  [15:0] GPIO_DATA_FF = 0;
+    reg  [15:0] GPIO_FNCTN_FF = 0; // Control uso normal = 0, PWM = 1 
+    reg  [32:0] PWM_CTRL_FF = 0; // [31:24] pwm4 duty cycle, [23:16] pwm3 duty cycle, [15:8] pwm2 duty cycle, [7:0] pwm1 duty cycle
+    reg  [15:0] SW_DATA_FF  = 0;
+    reg  [15:0] BTN_DATA_FF = 0;
     
     reg  [15:0] LEDFF  = 0;
 
@@ -302,11 +344,12 @@ module darksocv
     //assign DATAI = DADDR[31] ? IOMUX[DADDR[3:2]]  : RAMFF;
     //assign DATAI = DADDR[31] ? IOMUXFF : RAMFF;
 //    assign DATAI = XADDR[31] ? IOMUX[ XADDR[4] == 1 ? XADDR[4:2] == 3'b111 ? 3'b101 : XADDR[4:2] : XADDR[3:2]] : RAMFF;
-    assign DATAI = XADDR[31] ? IOMUX[ XADDR[4] == 1 ? XADDR[4:2] : XADDR[3:2]] : RAMFF;
+//    assign DATAI = XADDR[31] ? IOMUX[ XADDR[4] == 1 ? XADDR[4:2] : XADDR[3:2]] : RAMFF;
+    assign DATAI = XADDR[31] ? IOMUX[ XADDR[5:2] ] : RAMFF;
 
 
     // io for debug
-
+   
     reg [7:0] IREQ = 0;
     reg [7:0] IACK = 0;
 
@@ -326,14 +369,52 @@ module darksocv
 `endif
 
     //For I2C Master
-    wire [7:0]  i2c_data_out;
+    wire [7:0]  i2c_rdata;
     wire        i2c_valid_out;
     wire        i2c_valid_out_latched;
     wire        i2c_req_data_chunk;
     wire        i2c_req_data_latched;
     wire        i2c_busy;
     wire        i2c_nack;
-
+    wire [7:0]  i2c_wdata;
+    wire [15:0] i2c_subaddress;
+    wire [7:0]  i2c_slave_address;
+    `ifdef DEBUG
+    wire [3:0]  i2c_master_state;
+    wire [3:0]  i2c_master_next_state;
+    wire        i2c_reg_sda_o;
+    wire [7:0]  i2c_address;
+    wire        i2c_rw;
+    wire [15:0] i2c_sub_addr;
+    wire        i2c_sub_len;
+    wire [23:0] i2c_byte_len;
+    wire        i2c_en_scl;
+    wire        i2c_byte_sent;
+    wire [23:0] i2c_num_byte_sent;
+    wire [2:0]  i2c_cntr;
+    wire [7:0]  i2c_byte_sr;
+    wire        i2c_read_sub_addr_sent_flag;
+    wire [7:0]  i2c_data_to_write;
+    wire [7:0]  i2c_data_in_sr;
+ 
+    //400KHz clock generation
+    wire i2c_clk_i2c;
+    wire [15:0] i2c_clk_i2c_cntr;
+    
+    //sampling sda and scl
+    wire        i2c_sda_prev;
+    wire [1:0]  i2c_sda_curr;
+    wire        i2c_scl_prev;
+    wire        i2c_scl_curr;
+    wire        i2c_ack_in_prog;
+    wire        i2c_ack_nack;
+    wire        i2c_en_end_indicator;
+    wire        i2c_grab_next_data;
+    wire        i2c_scl_is_high;
+    wire        i2c_scl_is_low;
+    `endif
+    
+    
     // For SPI Master
     wire        spi_tx_ready;
     wire        spi_tx_ready_latched;
@@ -341,6 +422,35 @@ module darksocv
     wire        spi_rx_data_ready_latched;
     wire [7:0]  spi_rx_byte;
     wire [1:0]  spi_rx_count; // [$clog2(MAX_BYTES_PER_CS+1)-1:0] en este caso con lo que hay escrito en la instanciación [1:0]
+    wire        spi_cs;
+
+    // For PWM modules
+    wire [15:0] PWM_OUT;
+    wire        PWM1_OUT1, PWM1_OUT2;
+    wire        PWM2_OUT1, PWM2_OUT2;
+    wire        PWM3_OUT1, PWM3_OUT2;
+    wire        PWM4_OUT1, PWM4_OUT2;
+
+    // For 7seg display driver;
+    wire [3:0]  SSDISP_NUM1;
+    wire        SSDISP_EN1;
+    wire        SSDISP_PT1;
+    wire [3:0]  SSDISP_NUM2;
+    wire        SSDISP_EN2;
+    wire        SSDISP_PT2;
+    wire [3:0]  SSDISP_NUM3;
+    wire        SSDISP_EN3;
+    wire        SSDISP_PT3;
+    wire [3:0]  SSDISP_NUM4;
+    wire        SSDISP_EN4;
+    wire        SSDISP_PT4;
+    
+    wire [7:0]  CAT1;
+    wire [7:0]  CAT2;
+    wire [7:0]  CAT3;
+    wire [7:0]  CAT4;
+    
+    reg  [31:0] SSDISP_REG_FF;
 
     assign IOMUX[0] = { BOARD_IRQ, CORE_ID, BOARD_CM, BOARD_ID };
     //assign IOMUX[1] = from UART!
@@ -348,12 +458,16 @@ module darksocv
     assign IOMUX[3] = TIMERFF;
     assign IOMUX[4] = TIMEUS;
     assign IOMUX[5] = {8'd0, spi_tx_ready_latched, spi_rx_byte, spi_rx_data_ready_latched, spi_rx_count, 12'd0}; // SPI
-//    assign IOMUX[6] = {20'd0, busy, req_data_chunk, nack, valid_out, data_out};
-    assign IOMUX[6] = {i2c_busy, i2c_req_data_latched, i2c_nack, i2c_valid_out_latched, 20'd0, i2c_data_out}; // I2C
-    assign IOMUX[7] = { 16'd0, GPIO_CTRL_FF }; // GPIO
-    
-    
-    
+    assign IOMUX[6] = {i2c_slave_address, i2c_subaddress, i2c_rdata}; // I2C data
+    `ifdef DEBUG
+    assign IOMUX[7] = {3'd0, i2c_cntr, i2c_grab_next_data ,i2c_data_in_sr, i2c_master_next_state, i2c_master_state, i2c_busy, i2c_req_data_latched, i2c_nack, i2c_valid_out_latched, 5'd0}; // I2C ctrl
+    `else
+    assign IOMUX[7] = {23'd0, i2c_busy, i2c_req_data_latched, i2c_nack, i2c_valid_out_latched, 5'd0}; // I2C ctrl
+    `endif
+    assign IOMUX[8] = { 16'd0, GPIO_CTRL_FF }; // GPIO
+    assign IOMUX[9] = { 32'd0 }; // MUX_CNTRL reg
+    assign IOMUX[10] = { BTN_DATA_FF, SW_DATA_FF }; // BTN and SWITCHES states
+    assign IOMUX[11] = { SSDISP_REG_FF }; // BTN and SWITCHES states
 
     reg [31:0] TIMER = 0;
 
@@ -365,10 +479,12 @@ module darksocv
             TIMERFF <= (`BOARD_CK/1000000)-1; // timer set to 1MHz by default
             IREQ <= 0;
             IACK <= 0;
-            LEDFF <= 8'h00;
-            GPIO_CTRL_FF <= 8'hff; // Default to all outputs
-            GPIO_OUT_FF <= 8'h00;
-            GPIO_IN_FF <= 8'h00;
+            LEDFF <= 16'h00;
+            GPIO_CTRL_FF <= 16'hff; // Default to all outputs
+            GPIO_OUT_FF <= 16'h00;
+            GPIO_IN_FF <= 16'h00;
+            SSDISP_REG_FF <= 16'h00;
+            PWM_CTRL_FF <= 16'h00;
         end else
         begin
             // Write operations
@@ -388,43 +504,16 @@ module darksocv
                             IACK[0] <= DATAO[0+24] ? IREQ[0] : IACK[0];
                         end 
                     32'h8000_0008: LEDFF <= DATAO[15:0];    // Write to LEDFF (outputs)
-                    32'h8000_000a: begin
-                            GPIO_OUT_FF <= DATAO[31:16]; // Write to GPIO_OUT_FF outputs    
-                        end
+                    32'h8000_000a: GPIO_OUT_FF <= DATAO[31:16]; // Write to GPIO_OUT_FF outputs    
                     32'h8000_000c: TIMERFF <= DATAO[31:0];
-                    32'h8000_001c: GPIO_CTRL_FF <= DATAO[15:0]; // Set GPIO direction
+                    32'h8000_0020: GPIO_CTRL_FF <= DATAO[15:0]; // Set GPIO direction
+                    32'h8000_0022: GPIO_FNCTN_FF <= DATAO[31:16]; // Set GPIO functionality
+                    32'h8000_0024: PWM_CTRL_FF <= DATAO[31:0];    // Set PWM duty cycle
+                    32'h8000_002C: SSDISP_REG_FF <= DATAO[31:0];  // Set 7 seg display configuration
                 endcase
             end
-//            if(WR&&DADDR[31]&&DADDR[3:0]==5'b01000)
-//            begin
-//                LEDFF <= DATAO[15:0];
-//            end
-    
-//            if(WR&&DADDR[31]&&DADDR[3:0]==5'b01010)
-//            begin
-//                GPIO_OUT_FF <= DATAO[31:16];
-//            end    
-    
-//            if(WR&&DADDR[31]&&DADDR[4:0]==5'b01100)
-//            begin
-//                TIMERFF <= DATAO[31:0];
-//            end
 
-//            if(WR&&DADDR[31]&&DADDR[4:0]==5'b00011)
-//            begin
-//                //$display("clear io.irq = %x (ireq=%x, iack=%x)",DATAO[32:24],IREQ,IACK);
-    
-//                IACK[7] <= DATAO[7+24] ? IREQ[7] : IACK[7];
-//                IACK[6] <= DATAO[6+24] ? IREQ[6] : IACK[6];
-//                IACK[5] <= DATAO[5+24] ? IREQ[5] : IACK[5];
-//                IACK[4] <= DATAO[4+24] ? IREQ[4] : IACK[4];
-//                IACK[3] <= DATAO[3+24] ? IREQ[3] : IACK[3];
-//                IACK[2] <= DATAO[2+24] ? IREQ[2] : IACK[2];
-//                IACK[1] <= DATAO[1+24] ? IREQ[1] : IACK[1];
-//                IACK[0] <= DATAO[0+24] ? IREQ[0] : IACK[0];
-//            end
-
-    
+     
             if(TIMERFF)
             begin
                 TIMER <= TIMER ? TIMER-1 : TIMERFF;
@@ -441,9 +530,11 @@ module darksocv
             end
             
             // Capture input values only for pins configured as inputs
-            GPIO_IN_FF <= GPIO & ~GPIO_CTRL_FF; //TODO process GPIO before usage!
+            GPIO_IN_FF <= GPIO & ~GPIO_CTRL_FF;
             // Actualizar el FF de estado de los GPIO (recoje el estado de entrada y de salida de los pines)                         
             GPIO_DATA_FF <= (GPIO_OUT_FF & GPIO_CTRL_FF) | (GPIO_IN_FF & ~GPIO_CTRL_FF);
+            BTN_DATA_FF <= { 12'd0, BTN, BOOTSEL} ;
+            SW_DATA_FF <= SW;
 
        end
     end
@@ -483,20 +574,52 @@ module darksocv
       .DEBUG(UDEBUG)
     );
     
+    
+    ConfigurableRegister #(
+        .WIDTH(8)
+    ) i2c_wdata_register (
+        .clk(CLK),
+        .rst(RES),
+        .en(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000),
+        .data_in(DATAO[7:0]),
+        .data_out(i2c_wdata)
+    );
+
+    ConfigurableRegister #(
+        .WIDTH(16)
+    ) i2c_subaddress_register (
+        .clk(CLK),
+        .rst(RES),
+        .en(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000),
+        .data_in(DATAO[23:8]),
+        .data_out(i2c_subaddress)
+    );
+    
+    ConfigurableRegister #(
+        .WIDTH(16)
+    ) i2c_slave_address_register (
+        .clk(CLK),
+        .rst(RES),
+        .en(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000),
+        .data_in(DATAO[31:24]),
+        .data_out(i2c_slave_address)
+    );
+    
+        
     i2c_master
     i2c_master0
     (
         .i_clk(CLK),
         .reset_n(!RES),
-        .i_addr_w_rw( DATAO[23:16] ),       //7 bit address, LSB is the read write bit, with 0 being write, 1 being read
-        .i_sub_addr( DATAO[15:8] ),        //contains sub addr to send to slave, partition is decided on bit_sel
-        .i_sub_len( 1'b0 ),          //denotes whether working with an 8 bit or 16 bit sub_addr, 0 is 8bit, 1 is 16 bit
-        .i_byte_len( {29'd0, DATAO[26:24]} ),        //denotes whether a single or sequential read or write will be performed (denotes number of bytes to read or write)
-        .i_data_write( DATAO[7:0] ),           //Data to write if performing write action              
-        .req_trans(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11000 && DATAO[27]), // When the 'start' bit of the i2c register is written, the transaction is requested to start
+        .i_addr_w_rw( i2c_slave_address ),       //7 bit address, LSB is the read write bit, with 0 being write, 1 being read
+        .i_sub_addr( i2c_subaddress ),           //contains sub addr to send to slave, partition is decided on bit_sel
+        .i_sub_len( DATAO[4] ),                  //denotes whether working with an 8 bit or 16 bit sub_addr, 0 no use of subaddress, 1 is 8bit subaddress, and 2 is 16 bit
+        .i_byte_len( {21'd0, DATAO[3:1]} ),      //denotes whether a single or sequential read or write will be performed (denotes number of bytes to read or write)
+        .i_data_write( i2c_wdata ),              //Data to write if performing write action              
+        .req_trans(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b11100 && DATAO[0]), // When the 'start' bit of the i2c register is written, the transaction is requested to start
 
         /** For Reads **/
-        .data_out(i2c_data_out),
+        .data_out(i2c_rdata ),
         .valid_out(i2c_valid_out),
    
          /** I2C Lines **/
@@ -504,9 +627,45 @@ module darksocv
         .sda_o(I2C_SDA),
         
         /** Comms to Master Module **/
-        .req_data_chunk(i2c_req_data_chunk),//Request master to send new data chunk in i_data_write
-        .busy(i2c_busy),                    //denotes whether module is currently communicating with a slave
+        .req_data_chunk(i2c_req_data_chunk), //Request master to send new data chunk in i_data_write
+        .busy(i2c_busy),                     //denotes whether module is currently communicating with a slave
         .nack(i2c_nack)
+        
+        // For debug 
+       `ifdef DEBUG
+       ,
+        .state(i2c_master_state),
+        .next_state(i2c_master_next_state),
+        .reg_sda_o(i2c_reg_sda_o),
+        .addr(i2c_address),
+        .rw(i2c_rw),
+        .sub_addr(i2c_sub_addr),
+        .sub_len(i2c_sub_len),
+        .byte_len(i2c_byte_len),
+        .en_scl(i2c_en_scl),
+        .byte_sent(i2c_byte_sent),
+        .num_byte_sent(i2c_num_byte_sent),
+        .cntr(i2c_cntr),
+        .byte_sr(i2c_byte_sr),
+        .read_sub_addr_sent_flag(i2c_read_sub_addr_sent_flag),
+        .data_to_write(i2c_data_to_write),
+        .data_in_sr(i2c_data_in_sr),
+        //400KHz clock generation
+         .clk_i2c(i2c_clk_i2c),
+         .clk_i2c_cntr(i2c_clk_i2c_cntr),
+                  
+         //sampling sda and scl
+        .sda_prev(i2c_sda_prev),
+        .sda_curr(i2c_sda_curr),
+        .scl_prev(i2c_scl_prev),
+        .scl_curr(i2c_scl_curr),
+        .ack_in_prog(i2c_ack_in_prog),
+        .ack_nack(i2c_ack_nack),
+        .en_end_indicator(i2c_en_end_indicator),
+        .grab_next_data(i2c_grab_next_data),
+        .scl_is_high(i2c_scl_is_high),
+        .scl_is_low(i2c_scl_is_low)
+        `endif
     );
     
     flag_register
@@ -530,17 +689,19 @@ module darksocv
     );
     
     
-// Instantiation of SPI_Master_With_Single_CS
+    // Instantiation of SPI_Master_With_Single_CS
     SPI_Master_With_Single_CS #(
         .SPI_MODE(0),               // SPI Mode: 0, 1, 2, or 3 // TODO make configurable
-        .CLKS_PER_HALF_BIT(2),       // Number of clock cycles per half bit (baud rate control)
-        .MAX_BYTES_PER_CS(2),        // Maximum number of bytes per CS low period
+        .CLKS_PER_HALF_BIT(50),     // Number of clock cycles per half bit (baud rate control) -- Set SPI_CLL to 1MHz
+                                    // CLKS_PER_HALF_BIT - Sets frequency of o_SPI_Clk.  o_SPI_Clk is
+                                    // derived from i_Clk.  Set to integer number of clocks for each
+                                    // half-bit of SPI data.  E.g. 100 MHz i_Clk, CLKS_PER_HALF_BIT = 2
+                                    // would create o_SPI_CLK of 25 MHz.  Must be >= 2
+        .MAX_BYTES_PER_CS(2),        // Maximum number of bytes per CS low period ? This doesn't work?
         .CS_INACTIVE_CLKS(1)         // Number of clocks CS remains inactive between transfers
     ) 
     spi_master0(
         // Control/Data Signals
-        
-        
         .i_Rst_L(!RES),              // Active-low reset signal
         .i_Clk(CLK),                 // Clock signal
     
@@ -559,9 +720,22 @@ module darksocv
         .o_SPI_Clk(SPI_CLK),         // SPI clock output
         .i_SPI_MISO(SPI_MISO),       // SPI MISO input (Master In, Slave Out)
         .o_SPI_MOSI(SPI_MOSI),       // SPI MOSI output (Master Out, Slave In)
-        .o_SPI_CS_n(SPI_CS)          // Chip select output (active low)
+        .o_SPI_CS_n(spi_cs)          // Chip select output (active low)
     );
+    
+    // Para tener más de un chip select
+    // DATAO[25:24] es slave_select
+    reg [1:0] slave_select = 2'b00;
+    always @(posedge CLK or negedge RES) begin
+        if (RES)
+            slave_select <= 2'b00;         // Resetear el register a 0
+        else if( (!HLT && WR) && (DATAO[11] && (DADDR[31]&&DADDR[4:0]==5'b10100) ) )      // DADDR[4:0]==5'b10100 indica que el contenido de DATAO se refiere al módulo SPI.
+            slave_select <= DATAO[25:24];  
+    end
 
+    assign SPI_CS1 = (spi_cs | ~(slave_select == 2'b01) );
+    assign SPI_CS2 = (spi_cs | ~(slave_select == 2'b10) );
+    assign SPI_CS3 = (spi_cs | ~(slave_select == 2'b11) );
 
     flag_register
     spi_tx_ready_flag_register
@@ -569,22 +743,68 @@ module darksocv
         .clk(CLK),
         .rst_n(!RES),
         .flag_in(spi_tx_ready),
-        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[23]), // clear via writing 1 to the bit on software
+        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[23]), // borrado escribiendo un 1 en software al bit correspondiente
         .flag_out(spi_tx_ready_latched)
     );
     
-    flag_register 
+    flag_register
     spi_rx_data_ready_flag_register
     (
         .clk(CLK),
         .rst_n(!RES),
         .flag_in(spi_rx_data_ready),
-        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[14]), // clear via writing 1 to the bit on software
+        .clear(!HLT&&WR&&DADDR[31]&&DADDR[4:0]==5'b10100 && DATAO[14]), // borrado escribiendo un 1 en software al bit correspondiente
         .flag_out(spi_rx_data_ready_latched)
     );
 
-    // darkriscv
+    // PWM 
+    PWM_module pwm1_module(
+        .clk(CLK),
+        .pwm_duty(PWM_CTRL_FF[7:0]),
+        .rst(!RES),
+        .pwm_pin1(PWM1_OUT1),
+        .pwm_pin2(PWM1_OUT2)
+    );
+    
+    PWM_module pwm2_module(
+        .clk(CLK),
+        .pwm_duty(PWM_CTRL_FF[15:8]),
+        .rst(!RES),
+        .pwm_pin1(PWM2_OUT1),
+        .pwm_pin2(PWM2_OUT2)
+    );
+    
+     PWM_module pwm3_module(
+        .clk(CLK),
+        .pwm_duty(PWM_CTRL_FF[23:16]),
+        .rst(!RES),
+        .pwm_pin1(PWM3_OUT1),
+        .pwm_pin2(PWM3_OUT2)
+    );
+    
+     PWM_module pwm4_module(
+        .clk(CLK),
+        .pwm_duty(PWM_CTRL_FF[31:24]),
+        .rst(!RES),
+        .pwm_pin1(PWM4_OUT1),
+        .pwm_pin2(PWM4_OUT2)
+    );
 
+    // Connect PWM outputs to PWM buffer
+    assign PWM_OUT[3:0] = {PWM1_OUT2, PWM1_OUT1, PWM1_OUT2, PWM1_OUT1};
+    assign PWM_OUT[7:4] = {PWM2_OUT2, PWM2_OUT1, PWM2_OUT2, PWM2_OUT1};
+    assign PWM_OUT[11:8] = {PWM3_OUT2, PWM3_OUT1, PWM3_OUT2, PWM3_OUT1};
+    assign PWM_OUT[15:12] = {PWM4_OUT2, PWM4_OUT1, PWM4_OUT2, PWM4_OUT1};
+
+    // Instanciación del controlador de displays
+    display_driver_4x display_ctrl_inst(
+        .SSDISP_REG_FF(SSDISP_REG_FF),  // Conecta el registro de entrada
+        .CLK(CLK),                      // Conecta el reloj del sistema
+        .AN(AN),                        // Salida: señales de ánodo
+        .CAT(CAT)                       // Salida: señales de cátodo (segmentos)
+    );
+
+    // darkriscv
     wire [3:0] KDEBUG;
 
     wire IDLE;
@@ -645,21 +865,22 @@ module darksocv
         BLINK <= RES ? 0 : BLINK ? BLINK-1 : `BOARD_CK;
 	 end
 	 
-	 assign LED = (BLINK < (`BOARD_CK/2)) ? -1 : 0;
+	 assign LED[3:0] = (BLINK < (`BOARD_CK/2)) ? -1 : 0;
 	 assign UART_TXD = UART_RXD;
 `else
-    assign LED   = LEDFF[3:0];
+    assign LED   = LEDFF[11:0];
 `endif
 	 
     assign DEBUG = { XTIMER, KDEBUG[2:0] }; // UDEBUG;
     
     // GPIO Pin Control
-    genvar j;
+//    genvar j;
     generate
         for (j = 0; j < 8; j = j + 1) begin : gpio_loop
-            assign GPIO[j] = GPIO_CTRL_FF[j] ? GPIO_OUT_FF[j] : 1'bz; // Tristate logic for output
+            assign GPIO[j] = GPIO_CTRL_FF[j] ? (GPIO_FNCTN_FF[j] ? PWM_OUT[j] : GPIO_OUT_FF[j]): 1'bz; // Tristate logic for output
         end
     endgenerate
+    
 
 `ifdef SIMULATION
 

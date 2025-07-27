@@ -55,9 +55,18 @@ struct DARKIO {
     unsigned int timeus;    // 10/11/12/13
 
     unsigned int spi;       // 14/15/16/17
-    unsigned int i2c;       // 18/19/1a/1b
+    unsigned int i2c_data;  // 18/19/1a/1b
+    unsigned int i2c_ctrl;  // 1c/1d/1e/1f
 
-    unsigned short gpio_ctrl;  // 1c/1d
+    unsigned short gpio_ctrl;     // 20/21
+    unsigned short gpio_function; // 22/23
+
+    unsigned int pwm_control; // 24/25/26/27
+
+    unsigned short switches; // 28/29
+    unsigned short buttons;  // 2a/2b
+
+    unsigned int display_control; // 2c/2d/2e/2f
 };
 
 extern volatile struct DARKIO *io;
