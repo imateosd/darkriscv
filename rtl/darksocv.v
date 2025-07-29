@@ -44,7 +44,7 @@ module darksocv(
 
     output wire[11:0]LED,       // on-board leds
     output wire[3:0] DEBUG,      // osciloscope (in the case of the basys3, connected to LEDs)
-    inout  wire[11:0]GPIO,       // gpio
+    inout  wire[15:0]GPIO,       // gpio
     
     input wire[15:0] XSW,        // switches
     input wire[2:0]  XBTN,       // buttons
@@ -876,7 +876,7 @@ module darksocv(
     // GPIO Pin Control
 //    genvar j;
     generate
-        for (j = 0; j < 8; j = j + 1) begin : gpio_loop
+        for (j = 0; j < 16; j = j + 1) begin : gpio_loop
             assign GPIO[j] = GPIO_CTRL_FF[j] ? (GPIO_FNCTN_FF[j] ? PWM_OUT[j] : GPIO_OUT_FF[j]): 1'bz; // Tristate logic for output
         end
     endgenerate
