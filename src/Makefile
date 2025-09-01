@@ -29,7 +29,7 @@
 # Add your application here:
 
 
-APPLICATION = blink
+APPLICATION = demo
 # APPLICATION = darkshell
 #APPLICATION = coremark
 #APPLICATION = badapple
