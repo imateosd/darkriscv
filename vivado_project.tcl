@@ -20,35 +20,31 @@
 #
 # 1. This project restoration tcl script (.tcl) that was generated.
 #
-# 2. The following source(s) files that were local or imported into the original project.
-#    (Please see the '$orig_proj_dir' and '$origin_dir' variable setting below at the start of the script)
 #
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/vivado_project/darksimv_behav.wcfg"
+# 2. The following remote source files that were added to the original project:-
 #
-# 3. The following remote source files that were added to the original project:-
-#
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/common/7sdisplay_driver.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/pwm/PWM_module.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/spi/SPI_Master.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/spi/SPI_Master_With_Single_CS.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/config.vh"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/darkpll.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/darkriscv.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/darkuart.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/common/display_driver_n4.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/common/flag_register.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/i2c/i2c_master.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/common/register.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/common/synchronizer.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/darksocv.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/rtl/darkcache.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/boards/digilent_basys3_a35/Basys3_GPIO.xdc"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/sim/darksimv.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/sim/SPI_Master_With_Single_CS_TB.sv"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/sim/I2Csim.v"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/src/darksocv.mem"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/src/darksocv.rom.mem"
-#    "C:/Users/Irene/Documents/VivadoProjects/TFM/TFM/irene_darkriscv/src/darksocv.ram.mem"
+#    "rtl/common/7sdisplay_driver.v"
+#    "rtl/pwm/PWM_module.v"
+#    "rtl/spi/SPI_Master.v"
+#    "rtl/spi/SPI_Master_With_Single_CS.v"
+#    "rtl/config.vh"
+#    "rtl/darkpll.v"
+#    "rtl/darkriscv.v"
+#    "rtl/darkuart.v"
+#    "rtl/common/display_driver_n4.v"
+#    "rtl/common/flag_register.v"
+#    "rtl/i2c/i2c_master.v"
+#    "rtl/common/register.v"
+#    "rtl/common/synchronizer.v"
+#    "rtl/darksocv.v"
+#    "rtl/darkcache.v"
+#    "boards/digilent_basys3_a35/Basys3_GPIO.xdc"
+#    "sim/darksimv.v"
+#    "sim/SPI_Master_With_Single_CS_TB.sv"
+#    "sim/I2Csim.v"
+#    "src/darksocv.mem"
+#    "src/darksocv.rom.mem"
+#    "src/darksocv.ram.mem"
 #
 #*****************************************************************************************
 
@@ -232,12 +228,6 @@ set files [list \
  [file normalize "${origin_dir}/src/darksocv.ram.mem"] \
 ]
 add_files -norecurse -fileset $obj $files
-
-# Add local files from the original project (-no_copy_sources specified)
-set files [list \
- [file normalize "${origin_dir}/vivado_project/darksimv_behav.wcfg" ]\
-]
-set added_files [add_files -fileset sim_1 $files]
 
 # Set 'sim_1' fileset file properties for remote files
 set file "$origin_dir/sim/SPI_Master_With_Single_CS_TB.sv"
